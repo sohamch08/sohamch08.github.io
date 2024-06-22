@@ -1,0 +1,165 @@
+html {
+  background-color: #D6E8F5;
+  /* background-color: #fdfdfd; */
+}
+body {
+  font-family: 'Roboto Slab', serif;
+  color: #333333;
+  font-size: 18px;
+}
+p {
+  line-height: 1.5rem;
+}
+table {
+  table-layout: fixed;
+}
+
+#heading {
+  font-family: "Comic Sans MS";
+  font-size: 70px;
+}
+
+
+
+#intro {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 5px;
+  place-items: center;
+}
+
+#intro img {
+  width:300px;
+  border-radius: 50%;
+}
+#intro div {
+  font-size: large;
+}
+
+a {
+  color: #3238d4;
+}
+a:visited {
+  color: #ca2323;
+  background-color: transparent;
+  text-decoration: none;
+}
+.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+}
+
+:root {
+  --font-serif: Helvetica, Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+}
+
+/*
+            Navbar container 
+                                      */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: sans-serif;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-right: 10px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #4d4d4d;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.card {
+  margin-bottom: 3rem;
+  width: 80%;
+  margin: 10%;  
+  position: relative;
+  margin-top: 0px;
+}
+
+.card-background {
+  background-color: #A9D3FF;
+  border-radius: 15px;
+  position: absolute;
+  width: 100%;
+  inset: 0;
+}
+.card-content {
+  position: relative;
+  padding: 2w0px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.tophead {
+  font-family: 'Lugrasimo', cursive;
+  margin-left: 10px;
+}
+h2, h3{
+  font-family: 'Noto Serif', serif;
+}
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url("./fonts/ComicSansMS3.ttf");
+}
