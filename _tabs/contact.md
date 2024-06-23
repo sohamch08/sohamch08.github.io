@@ -7,5 +7,10 @@ permalink: /contact/
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+
+
+# Contact
+I am free to discuss academics or research or career paths. Feel free to reach out to me through mail. I check my mails regularly so you will get reply soon.
+
+>**Email:** sohamc@cmi.ac.in / sohamchatterjee999@gmail.com<br>
+>**Phone No:** +91 869 752-4909 / +91 943 354-8242
