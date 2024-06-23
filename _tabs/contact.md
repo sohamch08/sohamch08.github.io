@@ -1,5 +1,6 @@
 ---
 # the default layout is 'page'
+layout: default
 title: Contact
 icon: fas fa-info-circle
 permalink: /contact/
