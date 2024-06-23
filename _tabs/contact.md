@@ -1,8 +1,9 @@
 ---
 # the default layout is 'page'
+title: Contact
 icon: fas fa-info-circle
+permalink: /contact/
 order: 4
-permalink: /about/
 ---
 
 > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
