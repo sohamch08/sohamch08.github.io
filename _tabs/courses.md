@@ -59,3 +59,19 @@ Jan-Apr 2024 (Sem 6)
 3.  Quantum Information Theory
 4.  Economics
 
+|Name   |Columns                               |
+|-------|--------------------------------------|
+|PRIMARY|{::nomarkdown}<ul><li>id</li></ul>{:/}|
+
+
++---------+----------+
+| Name    | Columns  |
++=========+==========+
+| PRIMARY | - id one |
+|         | - id two |
++---------+----------+
+| Name    | Columns  |
++=========+==========+
+| PRIMARY | - id one |
+|         | - id two |
++---------+----------+
