@@ -211,12 +211,11 @@ Course-work presentation (Parallel Algorithms and Complexity), CMI
 		<h5>Duration: May - Jul, 2024</h5>
 		<p class="newlist">
 		<ul>
-			<li>I read the papers<ul> <li>'Bipartite Perfect Matching is in \(Quasi-NC\)' by Fenner, Gurjar and  Thierauf</li>
-			<li>'Linear Matroid Intersection Is in \(Quasi-NC\)' by Gurjar and Thierauf</li>
+			<li>I read the papers:<ul> <li>Bipartite Perfect Matching is in \(Quasi-NC\) by Fenner, Gurjar and  Thierauf</li>
+			<li>Linear Matroid Intersection Is in \(Quasi-NC\) by Gurjar and Thierauf</li>
 			<li>Fractional Linear Matroid Matching is in \(Quasi-NC\) by Gurjar, Oki, Raj</li>
-			</ul></li>
-		<li>In addition I learned about Matroid Polytopes and Their Properties from the paper 'Linear Matroid Intersection Is in \(Quasi-NC\)' by Gurjar and Thierauf and the generalization of the idea of using cycles with nonzero circulations in case of polytopes</li>
-		<li>I also read the paper 'Fractional Linear Matroid Matching is in \(Quasi-NC\)' which generalizes this idea further more by allowing half-integral vertices in the matroid matching polytope.</li>
+			</ul>
+		and learned how the idea of giving every cycle a nonzero circulations is generalized from bipartite graphs to matroid intersection polytopes to allowing half intergral vertices in matroid matching polytopes</li>
 		<li>Additionally I read about isolating a path connecting the source vertex and sink vertex in a black-box layered graph from the paper 'Derandomizing Isolation in Space-Bounded Settings' by Melkebeek and Prakriya.</li>
 		</ul>
 		</p>
