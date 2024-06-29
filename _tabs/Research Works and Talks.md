@@ -118,7 +118,7 @@ li.newlist::before {
   content: '';
   display: block;
   width: 100%;
-  height: 0.7rem;
+  height: 0.5rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -143,7 +143,8 @@ h3.newlist::before {
   content: counter(list);
   /* padding: 1rem; */
   border-radius: 50%;
-  background-color: var(--c1);
+  border-width: 2px;
+  border: 3px solid var(--c1);
   color: white;
 }
 
