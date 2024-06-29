@@ -211,9 +211,9 @@ Course-work presentation (Parallel Algorithms and Complexity), CMI
 		<h5>Duration: May - Jul, 2024</h5>
 		<p class="newlist">
 		<ul>
-			<li>I read the papers:<ul> <li>Bipartite Perfect Matching is in \(Quasi-NC\) by Fenner, Gurjar and  Thierauf</li>
-			<li>Linear Matroid Intersection Is in \(Quasi-NC\) by Gurjar and Thierauf</li>
-			<li>Fractional Linear Matroid Matching is in \(Quasi-NC\) by Gurjar, Oki, Raj</li>
+			<li>I read the papers:<ul> <li>Bipartite Perfect Matching is in  Quasi-NC  by Fenner, Gurjar and  Thierauf</li>
+			<li>Linear Matroid Intersection Is in Quasi-NC by Gurjar and Thierauf</li>
+			<li>Fractional Linear Matroid Matching is in Quasi-NC by Gurjar, Oki, Raj</li>
 			</ul>
 		and learned how the idea of giving every cycle a nonzero circulations is generalized from bipartite graphs to matroid intersection polytopes to allowing half intergral vertices in matroid matching polytopes</li>
 		<li>Additionally I read about isolating a path connecting the source vertex and sink vertex in a black-box layered graph from the paper 'Derandomizing Isolation in Space-Bounded Settings' by Melkebeek and Prakriya.</li>
@@ -242,10 +242,10 @@ Course-work presentation (Parallel Algorithms and Complexity), CMI
 		</h5>
 		<p class="newlist">
 		<ul>
-			<li>I read `Discovering the roots: Uniform closure results for algebraic classes under factoring' by Pranjal Dutta, Nitin Saxena and Amit Sinhababu  where I learned how to factorize arithmetic circuits and why \(VP\) is closed under factorization. Also leanred how Polynomial Identity Testing and Multivariate Factorizations are equivalent from `Equivalence of Polynomial Identity Testing and Deterministic Multivariate Polynomial Factorization' by Swastik Kopparty, Shubhangi Saraf, Amir Shpilka</li>
-		<li>Also read the Kaltofen's proof of \(VP\) closed under factorization.</li>
-		<li>I also read how \(VBP\) is closed under factorization from Amit Sinhababu and Thomas Tierauf's paper `Factorization of Polynomials given by Arithmetic Branching Programs'</li>
-		<li>I also learned about the difficulties about proving factor closure for \(VF\) from the above mentioned two papers</li>
+			<li>I read `Discovering the roots: Uniform closure results for algebraic classes under factoring' by Pranjal Dutta, Nitin Saxena and Amit Sinhababu  where I learned how to factorize arithmetic circuits and why  VP  is closed under factorization. Also leanred how Polynomial Identity Testing and Multivariate Factorizations are equivalent from `Equivalence of Polynomial Identity Testing and Deterministic Multivariate Polynomial Factorization' by Swastik Kopparty, Shubhangi Saraf, Amir Shpilka</li>
+		<li>Also read the Kaltofen's proof of  VP  closed under factorization.</li>
+		<li>I also read how  VBP  is closed under factorization from Amit Sinhababu and Thomas Tierauf's paper `Factorization of Polynomials given by Arithmetic Branching Programs'</li>
+		<li>I also learned about the difficulties about proving factor closure for  VF  from the above mentioned two papers</li>
 		<li>I read about factorization of formulas with individual degree bounded form the paper `Factors of low individual degree polynomials' by Rafael Oliveira and we were trying to remove the condition for formulas</li>
 		</ul>
 		</p>
@@ -274,9 +274,9 @@ Course-work presentation (Parallel Algorithms and Complexity), CMI
 		</h5>
 		<p class="newlist">
 		<ul>
-			<li>I read the first 3 chapters of the book `Number Theoryin the Spirit of Ramanujan' by Bruce C Berndt and learned about \(q\)-series</li>
+			<li>I read the first 3 chapters of the book `Number Theoryin the Spirit of Ramanujan' by Bruce C Berndt and learned about  q -series</li>
 		<li>Also read the paper 
-		Matching coefficients in the series expansions of certain \(q\)-products and their reciprocals' by Nayandeep Deka Baruah, Hirakjyoti Das</li>
+		Matching coefficients in the series expansions of certain  q -products and their reciprocals' by Nayandeep Deka Baruah, Hirakjyoti Das</li>
 		</ul>
 		</p>
 	</li>
