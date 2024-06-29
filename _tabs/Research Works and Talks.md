@@ -85,7 +85,7 @@ strong {
 
 <style>
 p.newlist {
-  margin: 0rem;
+  margin: 1rem;
   /* line-height: 1.6; */
 }
 
@@ -128,7 +128,7 @@ li.newlist::before {
 h3.newlist {
   display: flex;
   align-items: center; /* Change this to center */
-  margin: 0 0 3rem;
+  margin: 1rem 1rem 1rem;
   color: white;
 }
 
@@ -148,15 +148,15 @@ h3.newlist::before {
   color: white;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 40em) {
   li.newlist {
     /* margin: 3rem auto; */
-    padding: 2rem 1rem 1rem;
+    padding: 3rem 1rem 1rem;
   }
 
   h3.newlist {
     font-size: 1.5rem;
-    margin: 0 0 0.5rem;
+    margin: 1 0 0.5rem;
   }
 
   h3.newlist::before {
