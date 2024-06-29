@@ -81,9 +81,14 @@ strong {
   </li>
 </ol>
 </body> -->
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
 <style>
 p.newlist {
-  margin: 0;
+  margin: 0rem;
   /* line-height: 1.6; */
 }
 
@@ -148,7 +153,7 @@ h3.newlist::before {
 @media (min-width: 30em) {
   li.newlist {
     /* margin: 3rem auto; */
-    padding: 3rem 1rem 1rem;
+    padding: 2rem 1rem 1rem;
   }
 
   h3.newlist {
@@ -160,29 +165,86 @@ h3.newlist::before {
     margin-right: 1.5rem;
   }
 }
+.right{
+    float:right;
+}
+
+.left{
+    float:left;
+}
 </style>
 
+
 <body>
+
 <ol class="newlist" style="--length: 10" role="list">
 	<li class="newlist" style="--i: 1">
 		<h3 class="newlist">Polyhedral Combinatorics and Derandomization of Isolation Lemma</h3>
-		<p class="newlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+		<h3>
+		<span class="right">May - Jul, 2024</span><span class="left">Supervisor: <a href="https://www.cse.iitb.ac.in/~rgurjar/">Rohit Gurjar</a>, IIT Mumbai</span><br/><br/>
+		</h3>
+		<p class="newlist">
+		<ul>
+			<li>I read the paper 'Bipartite Perfect Matching is in \(Quasi-NC\)' by Fenner Gurjar Thierauf</li>
+		<li>In addition I learned about Matroid Polytopes and Their Properties from the paper 'Linear Matroid Intersection Is in \(Quasi-NC\)' by Gurjar and Thierauf and the generalization of the idea of using cycles with nonzero circulations in case of polytopes</li>
+		<li>I also read the paper 'Fractional Linear Matroid Matching is in \(Quasi-NC\)' which generalizes this idea further more by allowing half-integral vertices in the matroid matching polytope.</li>
+		<li>Additionally I read about isolating a path connecting the source vertex and sink vertex in a black-box layered graph from the paper 'Derandomizing Isolation in Space-Bounded Settings' by Melkebeek and Prakriya.</li>
+		</ul>
+		</p>
 	</li>
 	<li class="newlist" style="--i: 2">
-		<h3 class="newlist">Quantum Property Testing of Junta Functions and Partially Symmetric Functions.</h3>
-		<p class="newlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+		<h3 class="newlist">Quantum Property Testing of Junta Functions and Partially Symmetric Functions</h3>
+		<h3>
+		<span class="right">Dec, 2023</span><span class="left">Supervisor: <a href="https://sites.google.com/site/homepagearijitghosh/">Arijit Ghosh</a>, Indian Statistical Institute, Kolkata</span><br/><br/>
+		</h3>
+		<p class="newlist">
+		<ul>
+			<li>I read the survey `Quantum boolean functions' by Ashley Montanaro, Tobias J. Osborne and learned  about Fourier analysis of boolean functions in Quantum setting and Testing and Learning algorithms for Stabilizer states</li>
+		<li>I learned about Classical Junta Testing from Eric Blais' paper Testing Juntas Nearly Optimally and then read about Quantum Junta Testing Algorithm from `Testing and Learning Quantum Juntas Nearly Optimally' by Thomas Chen, Shivam Nadimpalli, Henry Yuen</li>
+		<li>Also learned about Partially Symmetric Boolean Functions and it's classical algorthm of testing partially symmetric functions from the paper `Partially Symmetric Functions are Efficiently Isomorphism-Testable' by Eric Blais, Amit Weinstein, Yuichi Yoshida</li>
+		</ul>
+		</p>
 	</li>
 	<li class="newlist" style="--i: 3">
 		<h3 class="newlist">Factorization of Arithmetic Circuits in Algebraic Complexity Theory</h3>
-		<p class="newlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+		<h3>
+		<span class="right">May - Jul, 2023</span><span class="left">Supervisor: <a href="https://www.cse.iitk.ac.in/users/nitin/">Nitin Saxena</a>, IIT Kanpur</span><br/><br/>
+		</h3>
+		<p class="newlist">
+		<ul>
+			<li>I read `Discovering the roots: Uniform closure results for algebraic classes under factoring' by Pranjal Dutta, Nitin Saxena and Amit Sinhababu  where I learned how to factorize arithmetic circuits and why \(VP\) is closed under factorization. Also leanred how Polynomial Identity Testing and Multivariate Factorizations are equivalent from `Equivalence of Polynomial Identity Testing and Deterministic Multivariate Polynomial Factorization' by Swastik Kopparty, Shubhangi Saraf, Amir Shpilka</li>
+		<li>Also read the Kaltofen's proof of \(VP\) closed under factorization.</li>
+		<li>I also read how \(VBP\) is closed under factorization from Amit Sinhababu and Thomas Tierauf's paper `Factorization of Polynomials given by Arithmetic Branching Programs'</li>
+		<li>I also learned about the difficulties about proving factor closure for \(VF\) from the above mentioned two papers</li>
+		<li>I read about factorization of formulas with individual degree bounded form the paper `Factors of low individual degree polynomials' by Rafael Oliveira and we were trying to remove the condition for formulas</li>
+		</ul>
+		</p>
 	</li>
 	<li class="newlist" style="--i: 4">
 		<h3 class="newlist">Computational Number Theroy and Algebra for Algebraic Comlexity Theory</h3>
-		<p class="newlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+		<h3>
+		<span class="right">May - Jul, 2023</span><span class="left">Supervisor: <a href="https://www.cse.iitk.ac.in/users/nitin/">Nitin Saxena</a>, IIT Kanpur</span><br/><br/>
+		</h3>
+		<p class="newlist">
+		<ul>
+		<li>I learned about Computational Number Theory and Algebra from Nitin Saxena's Course and read the book `Modern Computer Algebra' by Von Zur Gathen and Jurgen Gerhard</li>
+		<li>Also I learned about Arithmetic Circuits from <a href="https://www.nowpublishers.com/article/Details/TCS-039">Amir Shpilka's Survey</a> and 
+	<a href="https://github.com/dasarpmar/lowerbounds-survey">Ramprasad Saptharishi's Survey</a> on Arithmetic Circuits.</li>
+		</ul>
+		</p>
 	</li>
 	<li class="newlist" style="--i: 5">
 		<h3 class="newlist">Ramanujan’s work on theta functions and $q$-series and their connections with number theory</h3>
-		<p class="newlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+		<h3>
+		<span class="right">May - Jul, 2022</span><span class="left">Supervisor: <a href="https://www.iitg.ac.in/rupam/">Rupam Barman</a>, IIT Guahati</span><br/><br/>
+		</h3>
+		<p class="newlist">
+		<ul>
+			<li>I read the first 3 chapters of the book `Number Theoryin the Spirit of Ramanujan' by Bruce C Berndt and learned about \(q\)-series</li>
+		<li>Also read the paper 
+		Matching coefficients in the series expansions of certain \(q\)-products and their reciprocals' by Nayandeep Deka Baruah, Hirakjyoti Das</li>
+		</ul>
+		</p>
 	</li>
 </ol>
 </body>
