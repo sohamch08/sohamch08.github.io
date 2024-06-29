@@ -81,9 +81,6 @@ strong {
   </li>
 </ol>
 </body> -->
-<script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
 <style>
@@ -164,13 +161,6 @@ h3.newlist::before {
   h3.newlist::before {
     margin-right: 1.5rem;
   }
-}
-.right{
-    float:right;
-}
-
-.left{
-    float:left;
 }
 </style>
 
