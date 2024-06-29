@@ -102,7 +102,7 @@ li.newlist {
   --stop: calc(100% / var(--length) * var(--i));
   --l: 62%;
   --l2: 88%;
-  --h: calc((var(--i) - 10) * (180 / var(--length)));
+  --h: calc((var(--i) - 9) * (180 / var(--length)));
   --c1: hsl(var(--h), 71%, var(--l));
   --c2: hsl(var(--h), 71%, var(--l2));
 
@@ -176,16 +176,45 @@ h3.newlist::before {
 
 
 <body>
-
-<ol class="newlist" style="--length: 10" role="list">
+<h2 style="font-size:2.5em;">Talks</h2>
+<ol class="newlist" style="--length: 3" role="list">
+<li class="newlist" style="--i: 1">
+<h3 class="newlist">Hensel and Newton Methods in Valuation Rings by J von zur Gathen</h3>
+<p class="newlist">
+Course-work presentation (Algebra and Computation), CMI
+</p>
+</li>
+<li class="newlist" style="--i: 2">
+<h3 class="newlist">Algebraic Geometric Codes</h3>
+<p class="newlist">
+Course-work presentation (Algorithmic Coding Theory II), CMI
+</p>
+<p class="newlist">
+<a href="/assets/act-report.pdf">Report</a>
+</p>
+</li>
+<li class="newlist" style="--i: 3">
+<h3 class="newlist">Iterated Mod Problem</h3>
+<p class="newlist">
+Course-work presentation (Parallel Algorithms and Complexity), CMI
+</p>
+<p class="newlist">
+<a href="/assets/parallel-presentation-iterated-mod.pdf">Slides</a>
+</p>
+</li>
+</ol>
+<h2 style="font-size:2.5em;">Research Internships</h2>
+<ol class="newlist" style="--length: 5" role="list">
 	<li class="newlist" style="--i: 1">
 		<h3 class="newlist">Polyhedral Combinatorics and Derandomization of Isolation Lemma</h3>
-		<h3>
-		<span class="right">May - Jul, 2024</span><span class="left">Supervisor: <a href="https://www.cse.iitb.ac.in/~rgurjar/">Rohit Gurjar</a>, IIT Mumbai</span><br/><br/>
-		</h3>
+		<h4 style="margin-bottom: -30px;">Supervisor: <a href="https://www.cse.iitb.ac.in/~rgurjar/">Rohit Gurjar</a>, IIT Mumbai</h4>
+		<h5>Duration: May - Jul, 2024</h5>
 		<p class="newlist">
 		<ul>
-			<li>I read the paper 'Bipartite Perfect Matching is in \(Quasi-NC\)' by Fenner Gurjar Thierauf</li>
+			<li>I read the papers<ul> <li>'Bipartite Perfect Matching is in \(Quasi-NC\)' by Fenner, Gurjar and  Thierauf</li>
+			<li>'Linear Matroid Intersection Is in \(Quasi-NC\)' by Gurjar and Thierauf</li>
+			<li>Fractional Linear Matroid Matching is in \(Quasi-NC\) by Gurjar, Oki, Raj</li>
+			</ul></li>
 		<li>In addition I learned about Matroid Polytopes and Their Properties from the paper 'Linear Matroid Intersection Is in \(Quasi-NC\)' by Gurjar and Thierauf and the generalization of the idea of using cycles with nonzero circulations in case of polytopes</li>
 		<li>I also read the paper 'Fractional Linear Matroid Matching is in \(Quasi-NC\)' which generalizes this idea further more by allowing half-integral vertices in the matroid matching polytope.</li>
 		<li>Additionally I read about isolating a path connecting the source vertex and sink vertex in a black-box layered graph from the paper 'Derandomizing Isolation in Space-Bounded Settings' by Melkebeek and Prakriya.</li>
@@ -194,9 +223,8 @@ h3.newlist::before {
 	</li>
 	<li class="newlist" style="--i: 2">
 		<h3 class="newlist">Quantum Property Testing of Junta Functions and Partially Symmetric Functions</h3>
-		<h3>
-		<span class="right">Dec, 2023</span><span class="left">Supervisor: <a href="https://sites.google.com/site/homepagearijitghosh/">Arijit Ghosh</a>, Indian Statistical Institute, Kolkata</span><br/><br/>
-		</h3>
+		<h4 style="margin-bottom: -30px;">Supervisor: <a href="https://sites.google.com/site/homepagearijitghosh/">Arijit Ghosh</a>, Indian Statistical Institute, Kolkata</h4>
+		<h5>Duration: Dec, 2023</h5>
 		<p class="newlist">
 		<ul>
 			<li>I read the survey `Quantum boolean functions' by Ashley Montanaro, Tobias J. Osborne and learned  about Fourier analysis of boolean functions in Quantum setting and Testing and Learning algorithms for Stabilizer states</li>
@@ -207,9 +235,12 @@ h3.newlist::before {
 	</li>
 	<li class="newlist" style="--i: 3">
 		<h3 class="newlist">Factorization of Arithmetic Circuits in Algebraic Complexity Theory</h3>
-		<h3>
-		<span class="right">May - Jul, 2023</span><span class="left">Supervisor: <a href="https://www.cse.iitk.ac.in/users/nitin/">Nitin Saxena</a>, IIT Kanpur</span><br/><br/>
-		</h3>
+		<h4 style="margin-bottom: -30px;">
+		Supervisor: <a href="https://www.cse.iitk.ac.in/users/nitin/">Nitin Saxena</a>, IIT Kanpur
+		</h4>
+		<h5>
+		May - Jul, 2023
+		</h5>
 		<p class="newlist">
 		<ul>
 			<li>I read `Discovering the roots: Uniform closure results for algebraic classes under factoring' by Pranjal Dutta, Nitin Saxena and Amit Sinhababu  where I learned how to factorize arithmetic circuits and why \(VP\) is closed under factorization. Also leanred how Polynomial Identity Testing and Multivariate Factorizations are equivalent from `Equivalence of Polynomial Identity Testing and Deterministic Multivariate Polynomial Factorization' by Swastik Kopparty, Shubhangi Saraf, Amir Shpilka</li>
@@ -222,9 +253,11 @@ h3.newlist::before {
 	</li>
 	<li class="newlist" style="--i: 4">
 		<h3 class="newlist">Computational Number Theroy and Algebra for Algebraic Comlexity Theory</h3>
-		<h3>
-		<span class="right">May - Jul, 2023</span><span class="left">Supervisor: <a href="https://www.cse.iitk.ac.in/users/nitin/">Nitin Saxena</a>, IIT Kanpur</span><br/><br/>
-		</h3>
+		<h4 style="margin-bottom: -30px;">
+		Supervisor: <a href="https://www.cse.iitk.ac.in/users/nitin/">Nitin Saxena</a>, IIT Kanpur</h4>
+		<h5>
+		Dec, 2023
+		</h5>
 		<p class="newlist">
 		<ul>
 		<li>I learned about Computational Number Theory and Algebra from Nitin Saxena's Course and read the book `Modern Computer Algebra' by Von Zur Gathen and Jurgen Gerhard</li>
@@ -235,9 +268,11 @@ h3.newlist::before {
 	</li>
 	<li class="newlist" style="--i: 5">
 		<h3 class="newlist">Ramanujan’s work on theta functions and $q$-series and their connections with number theory</h3>
-		<h3>
-		<span class="right">May - Jul, 2022</span><span class="left">Supervisor: <a href="https://www.iitg.ac.in/rupam/">Rupam Barman</a>, IIT Guahati</span><br/><br/>
-		</h3>
+		<h4 style="margin-bottom: -30px;">
+		Supervisor: <a href="https://www.iitg.ac.in/rupam/">Rupam Barman</a>, IIT Guahati</h4>
+		<h5>
+		May - Jul, 2022
+		</h5>
 		<p class="newlist">
 		<ul>
 			<li>I read the first 3 chapters of the book `Number Theoryin the Spirit of Ramanujan' by Bruce C Berndt and learned about \(q\)-series</li>
