@@ -81,19 +81,6 @@ strong {
   </li>
 </ol>
 </body> -->
- <script type="text/javascript" async
-          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
- </script>
- <script type="text/javascript">
-      window.MathJax = {
-          tex: {
-              inlineMath: [['$', '$']],
-              displayMath: [['$$', '$$']],
-              processEscapes: true,
-          }
-      };
-</script>
-
 <style>
 p.newlist {
   margin: 1rem;
@@ -214,7 +201,7 @@ Course-work presentation (Parallel Algorithms and Complexity), CMI
 		<p class="newlist">
 		<ul>
 			<li>I read the papers:<ul> <li>Bipartite Perfect Matching is in  Quasi-NC  by Fenner, Gurjar and  Thierauf</li>
-			<li>Linear Matroid Intersection Is in $Quasi-NC$ by Gurjar and Thierauf</li>
+			<li>Linear Matroid Intersection Is in Quasi-NC by Gurjar and Thierauf</li>
 			<li>Fractional Linear Matroid Matching is in Quasi-NC by Gurjar, Oki, Raj</li>
 			</ul>
 		and learned how the idea of giving every cycle a nonzero circulations is generalized from bipartite graphs to matroid intersection polytopes to allowing half intergral vertices in matroid matching polytopes</li>
