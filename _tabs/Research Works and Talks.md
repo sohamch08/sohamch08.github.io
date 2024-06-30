@@ -81,7 +81,18 @@ strong {
   </li>
 </ol>
 </body> -->
-
+ <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
+ </script>
+ <script type="text/javascript">
+      window.MathJax = {
+          tex: {
+              inlineMath: [['$', '$']],
+              displayMath: [['$$', '$$']],
+              processEscapes: true,
+          }
+      };
+</script>
 
 <style>
 p.newlist {
