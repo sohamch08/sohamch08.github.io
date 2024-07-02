@@ -254,20 +254,5 @@ Course-work presentation (Parallel Algorithms and Complexity), CMI
 		</ul>
 		</p>
 	</li>
-	<li class="newlist" style="--i: 5">
-		<h3 class="newlist">Ramanujan’s work on theta functions and $q$-series and their connections with number theory</h3>
-		<h4 style="margin-bottom: -30px;">
-		Supervisor: <a href="https://www.iitg.ac.in/rupam/">Rupam Barman</a>, IIT Guahati</h4>
-		<h5>
-		May - Jul, 2022
-		</h5>
-		<p class="newlist">
-		<ul>
-			<li>I read the first 3 chapters of the book 'Number Theoryin the Spirit of Ramanujan' by Bruce C Berndt and learned about  q -series</li>
-		<li>Also read the paper 
-		Matching coefficients in the series expansions of certain  q -products and their reciprocals' by Nayandeep Deka Baruah, Hirakjyoti Das</li>
-		</ul>
-		</p>
-	</li>
 </ol>
 </body>
