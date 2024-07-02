@@ -193,7 +193,7 @@ Course-work presentation (Parallel Algorithms and Complexity), CMI
 </li>
 </ol>
 <h2 style="font-size:2.5em;">Research Internships</h2>
-<ol class="newlist" style="--length: 5" role="list">
+<ol class="newlist" style="--length: 4" role="list">
 	<li class="newlist" style="--i: 1">
 		<h3 class="newlist">Polyhedral Combinatorics and Derandomization of Isolation Lemma</h3>
 		<h4 style="margin-bottom: -30px;">Supervisor: <a href="https://www.cse.iitb.ac.in/~rgurjar/">Rohit Gurjar</a>, IIT Mumbai</h4>
@@ -227,7 +227,7 @@ Course-work presentation (Parallel Algorithms and Complexity), CMI
 		Supervisor: <a href="https://www.cse.iitk.ac.in/users/nitin/">Nitin Saxena</a>, IIT Kanpur
 		</h4>
 		<h5>
-		May - Jul, 2023
+    Duration:	May - Jul, 2023
 		</h5>
 		<p class="newlist">
 		<ul>
@@ -244,7 +244,7 @@ Course-work presentation (Parallel Algorithms and Complexity), CMI
 		<h4 style="margin-bottom: -30px;">
 		Supervisor: <a href="https://www.cse.iitk.ac.in/users/nitin/">Nitin Saxena</a>, IIT Kanpur</h4>
 		<h5>
-		Dec, 2023
+	Duration:	Dec, 2023
 		</h5>
 		<p class="newlist">
 		<ul>
