@@ -70,12 +70,12 @@ title: Research Works and Talks
         </div>
         <div class="talk-item">
             <div class="talk-title">Algebraic Geometric Codes</div>
-            <div class="talk-description">Course-work presentation (PAlgorithmic Coding Theory II), CMI.  Jointly given by Me and  Shree Ganesh S J</div>
+            <div class="talk-description">Course-work presentation (Algorithmic Coding Theory II), CMI.  Jointly given by Me and  Shree Ganesh S J</div>
             <div class="talk-slides"><a href="https://sohamch08.github.io/assets/act-report.pdf">Report</a></div>
         </div>
         <div class="talk-item">
             <div class="talk-title">"Iterated Mod Problem" by Karloff and Ruzzo</div>
-            <div class="talk-description">Course-work presentation (CParallel Algorithms and Complexity), CMI</div>
+            <div class="talk-description">Course-work presentation (Parallel Algorithms and Complexity), CMI</div>
             <div class="talk-slides"><a href="https://sohamch08.github.io/assets/parallel-presentation-iterated-mod.pdf">Slides</a></div>
         </div>
         <!-- Add more talk items as needed -->
