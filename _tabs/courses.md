@@ -10,7 +10,19 @@ title: Course Work
 Coursework at CMI
 -----------------
 
-These are the course which i took in my bachelors in CMI. I have also added the course resource links along with the topic names.
+These are the course which I took in TIFR while doing my PhD and in CMI during my bachelors. I have also added the course resource links along with the topic names.
+
+### TIFR Courses
+
+Aug-Dec (Sem 1)
+1. Mathematical Foundations of Computer Science
+2. Algorithms
+3. Probability
+
+Jan-May (Sem 2)
+1. Computational Complexity Theory
+2. Algebra, Number Theory and Computation
+3. Combinatorial Optimization
 
 ### CMI Courses
 
@@ -60,14 +72,3 @@ Jan-Apr 2024 (Sem 6)
 3.  Quantum Information Theory
 4.  Economics
 
-### TIFR Courses
-
-Aug-Dec (Sem 1)
-1. Mathematical Foundations of Computer Science
-2. Algorithms
-3. Probability
-
-Jan-May (Sem 2)
-1. Computational Complexity Theory
-2. Algebra, Number Theory and Computation
-3. Combinatorial Optimization
