@@ -12,7 +12,7 @@ Coursework at CMI
 
 These are the course which i took in my bachelors in CMI. I have also added the course resource links along with the topic names.
 
-### Bachelor Courses
+### CMI Courses
 
 Aug-Nov 2021 (Sem 1)
 
@@ -60,3 +60,14 @@ Jan-Apr 2024 (Sem 6)
 3.  Quantum Information Theory
 4.  Economics
 
+### TIFR Courses
+
+Aug-Dec (Sem 1)
+1. Mathematical Foundations of Computer Science
+2. Algorithms
+3. Probability
+
+Jan-May (Sem 2)
+1. Computational Complexity Theory
+2. Algebra, Number Theory and Computation
+3. Combinatorial Optimization
