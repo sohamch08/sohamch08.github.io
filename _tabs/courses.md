@@ -23,6 +23,7 @@ Jan-May (Sem 2)
 1. Computational Complexity Theory
 2. Algebra, Number Theory and Computation
 3. Combinatorial Optimization
+4. Algorithmic Game Theory
 
 ### CMI Courses
 

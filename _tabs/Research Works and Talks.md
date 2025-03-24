@@ -62,7 +62,12 @@ title: Research Works and Talks
 }
 </style>
 <h2 class="internship-header">Talks</h2>
- <div class="talks-container">        
+ <div class="talks-container">     
+        <div class="talk-item">
+            <div class="talk-title">"Bipartite Matching is in Quasi-NC</div>
+            <div class="talk-description">TIFR Student Seminar, 2025</div>
+            <!-- <div class="talk-slides"><a href="https://somnathbtcjee.github.io/presentation/Timed_Aut.pdf">Slides</a></div> -->
+        </div>   
         <div class="talk-item">
             <div class="talk-title">"Hensel and Newton Methods in Valuation Rings" by J von zur Gathen</div>
             <div class="talk-description">Course-work presentation (Algebra and Computation), CMI</div>
