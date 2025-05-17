@@ -62,29 +62,33 @@ title: Research Works and Talks
 }
 </style>
 <h2 class="internship-header">Talks</h2>
- <div class="talks-container">   
+ <div class="talks-container">
         <div class="talk-item">
-            <div class="talk-title">"Bounds on Price of Anarchy using Linear and Quadratic Programming"</div>
-            <div class="talk-description">Course-work presentation (Algorithmic Game Theory, TIFR</div>
+            <div class="talk-title">Super Polynomial Lower Bound on Traveling Salesman Polytope</div>
+            <div class="talk-description">Course-work presentation (TIFR):  Combinatorial Optimization. Paper by Fiorini, Massar, Pokutta, Tiwary and Wolf, 2012</div>
+            <div class="talk-slides"><a href="https://sohamch08.github.io/assets/copt-presentation.pdf">Slides</a></div>
+        </div>    
+        <div class="talk-item">
+            <div class="talk-title">Bounds on Price of Anarchy using Linear and Quadratic Programming</div>
+            <div class="talk-description">Course-work presentation (TIFR): Algorithmic Game Theory. Paper by Kulkarni and Mirrokni, 2015</div>
             <div class="talk-slides"><a href="https://sohamch08.github.io/assets/agt-presentation.pdf">Slides</a></div>
         </div> 
         <div class="talk-item">
-            <div class="talk-title">"Bipartite Matching is in Quasi-NC"</div>
-            <div class="talk-description">TIFR Student Seminar, 2025</div>
+            <div class="talk-title">Bipartite Matching is in Quasi-NC</div>
+            <div class="talk-description">TIFR Student Seminar, 2025. Paper by Stephen A. Fenner, Rohit Gurjar and Thomas Thierauf, 2016.</div>
         </div>   
         <div class="talk-item">
-            <div class="talk-title">"Hensel and Newton Methods in Valuation Rings" by J von zur Gathen</div>
-            <div class="talk-description">Course-work presentation (Algebra and Computation), CMI</div>
-            <!-- <div class="talk-slides"><a href="https://somnathbtcjee.github.io/presentation/Timed_Aut.pdf">Slides</a></div> -->
+            <div class="talk-title">Hensel and Newton Methods in Valuation Rings</div>
+            <div class="talk-description">Course-work presentation (CMI): Algebra and Computation. Paper by J von zur Gathen, 1984.</div>
         </div>
         <div class="talk-item">
             <div class="talk-title">Algebraic Geometric Codes</div>
-            <div class="talk-description">Course-work presentation (Algorithmic Coding Theory II), CMI.  Jointly given by Me and  Shree Ganesh S J</div>
+            <div class="talk-description">Course-work presentation (CMI): Algorithmic Coding Theory II.  Jointly given by Me and  Shree Ganesh S J</div>
             <div class="talk-slides"><a href="https://sohamch08.github.io/assets/act-report.pdf">Report</a></div>
         </div>
         <div class="talk-item">
             <div class="talk-title">"Iterated Mod Problem" by Karloff and Ruzzo</div>
-            <div class="talk-description">Course-work presentation (Parallel Algorithms and Complexity), CMI</div>
+            <div class="talk-description">Course-work presentation (CMI): Parallel Algorithms and Complexity</div>
             <div class="talk-slides"><a href="https://sohamch08.github.io/assets/parallel-presentation-iterated-mod.pdf">Slides</a></div>
         </div>
         <!-- Add more talk items as needed -->
