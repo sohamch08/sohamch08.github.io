@@ -70,8 +70,7 @@ title: Research Works and Talks
         </div> 
         <div class="talk-item">
             <div class="talk-title">n^1.62 Upper Bound on Hurwitz Problem</div>
-            <div class="talk-description">TIFR Student Seminar. Paper by Hrubesh, 2024
-\entry*[2025]%</div>
+            <div class="talk-description">TIFR Student Seminar. Paper by Hrubesh, 2024</div>
         </div>   
         <div class="talk-item">
             <div class="talk-title">Super Polynomial Lower Bound on Traveling Salesman Polytope</div>
