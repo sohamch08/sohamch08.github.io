@@ -66,7 +66,7 @@ title: Research Works and Talks
         <div class="talk-item">
             <div class="talk-title">Universal Optimality of Dijkstra using Fibonacci Priority Queue with Working Set Property</div>
             <div class="talk-description">Oral Qualfier Presentation. Paper by Haeupler, Hladík, Rozhoň, Tarjan, Tětek, 2024. FOCS Best Paper.</div>
-            <div class="talk-slides"><a href="https://sohamch08.github.io/assets/dijkstr-optimal.pdf">Slides</a></div>
+            <div class="talk-slides"><a href="https://sohamch08.github.io/assets/dijkstra-optimal.pdf">Slides</a></div>
         </div>  
         <div class="talk-item">
             <div class="talk-title">Super Polynomial Lower Bound on Traveling Salesman Polytope</div>
