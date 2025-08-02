@@ -64,6 +64,11 @@ title: Research Works and Talks
 <h2 class="internship-header">Talks</h2>
  <div class="talks-container">
         <div class="talk-item">
+            <div class="talk-title">Universal Optimality of Dijkstra using Fibonacci Priority Queue with Working Set Property</div>
+            <div class="talk-description">Oral Qualfier. Paper by Haeupler, Hladík, Rozhoň, Tarjan, Tětek, 2024. FOCS Best Paper.</div>
+            <div class="talk-slides"><a href="https://sohamch08.github.io/assets/dijkstr-optimal.pdf">Slides</a></div>
+        </div>  
+        <div class="talk-item">
             <div class="talk-title">Super Polynomial Lower Bound on Traveling Salesman Polytope</div>
             <div class="talk-description">Course-work presentation (TIFR):  Combinatorial Optimization. Paper by Fiorini, Massar, Pokutta, Tiwary and Wolf, 2012</div>
             <div class="talk-slides"><a href="https://sohamch08.github.io/assets/copt-presentation.pdf">Slides</a></div>
