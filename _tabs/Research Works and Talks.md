@@ -67,7 +67,12 @@ title: Research Works and Talks
             <div class="talk-title">Universal Optimality of Dijkstra using Fibonacci Priority Queue with Working Set Property</div>
             <div class="talk-description">Oral Qualfier Presentation. Paper by Haeupler, Hladík, Rozhoň, Tarjan, Tětek, 2024. FOCS Best Paper.</div>
             <div class="talk-slides"><a href="https://sohamch08.github.io/assets/dijkstra-optimal.pdf">Slides</a></div>
-        </div>  
+        </div> 
+        <div class="talk-item">
+            <div class="talk-title">n^1.62 Upper Bound on Hurwitz Problem</div>
+            <div class="talk-description">TIFR Student Seminar. Paper by Hrubesh, 2024
+\entry*[2025]%</div>
+        </div>   
         <div class="talk-item">
             <div class="talk-title">Super Polynomial Lower Bound on Traveling Salesman Polytope</div>
             <div class="talk-description">Course-work presentation (TIFR):  Combinatorial Optimization. Paper by Fiorini, Massar, Pokutta, Tiwary and Wolf, 2012</div>
