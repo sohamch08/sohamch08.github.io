@@ -14,28 +14,7 @@ table {
   table-layout: fixed;
 }
 
-#heading {
-  font-family: "Comic Sans MS";
-  font-size: 70px;
-}
 
-
-
-#intro {
-  display: grid;
-  align-items: center; 
-  grid-template-columns: 1fr 2fr 1fr;
-  column-gap: 5px;
-  place-items: center;
-}
-
-#intro img {
-  width:300px;
-  border-radius: 50%;
-}
-#intro div {
-  font-size: large;
-}
 
 a {
   color: #3238d4;
