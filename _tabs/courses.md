@@ -16,7 +16,7 @@ These are the course which I took in TIFR while doing my PhD and in CMI during m
 
 Aug-Dec (Sem 1)
 1. Mathematical Foundations of Computer Science
-2. Algorithms
+2. Algorithms: [Scribe](https://sohamch08.github.io/assets/algorithms.pdf)
 3. Probability
 
 Jan-May (Sem 2)
