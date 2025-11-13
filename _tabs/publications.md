@@ -26,25 +26,11 @@ title: Publications
   h3,h4 {
     color: #5fe0c8;
   }
-
-  /* Paragraphs */
-  p {
-    margin-bottom: 1rem;
-  }
-
   /* Links */
   a {
-    color: #4fe8c1;
-    /* base link cyan */
-    text-decoration: none;
     transition: color 0.2s ease, text-shadow 0.2s ease;
   }
 
-  a:hover {
-    color: #9affd8;
-    /* neon hover */
-    text-shadow: 0 0 5px #9affd855;
-  }
 /* --- Publication Items --- */
   .publication-item {
     margin-bottom: 1.8rem;

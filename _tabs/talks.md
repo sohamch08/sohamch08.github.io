@@ -31,24 +31,8 @@ title: Talks and Internships
         color: #5fe0c8;
         /* slightly darker cyan */
     }
-
-    /* Paragraphs */
-    p {
-        margin-bottom: 1rem;
-    }
-
-    /* Links */
     a {
-        color: #4fe8c1;
-        /* base link cyan */
-        text-decoration: none;
         transition: color 0.2s ease, text-shadow 0.2s ease;
-    }
-
-    a:hover {
-        color: #9affd8;
-        /* neon hover */
-        text-shadow: 0 0 5px #9affd855;
     }
     .internship-container, .talks-container {
         max-width: 800px;
@@ -60,7 +44,8 @@ title: Talks and Internships
     .internship-header, .talks-header {
         font-size: 36px;
         font-weight: bold;
-        color: #ccc;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         margin-bottom: 10px;
     }
 
@@ -73,7 +58,7 @@ title: Talks and Internships
 
     .internship-time, .talk-title {
         font-size: 18px;
-        color: #ccc;
+        /* color: #4fe8c1; */
         font-weight: bold;
     }
 
