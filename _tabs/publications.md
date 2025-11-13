@@ -1,5 +1,4 @@
 ---
-layout: page
 icon: fa-solid fa-book
 order: 1
 permalink: /publications/
@@ -45,12 +44,6 @@ title: Publications
     color: #9affd8;
     /* neon hover */
     text-shadow: 0 0 5px #9affd855;
-  }
-
-  /* Lists */
-  ul,ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
   }
 /* --- Publication Items --- */
   .publication-item {

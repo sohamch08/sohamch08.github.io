@@ -1,5 +1,4 @@
 ---
-layout: default
 icon: fa-solid fa-book
 order: 3
 permalink: /projects-talks/
@@ -50,13 +49,6 @@ title: Talks and Internships
         color: #9affd8;
         /* neon hover */
         text-shadow: 0 0 5px #9affd855;
-    }
-
-    /* Lists */
-    ul,
-    ol {
-        margin-left: 1.5rem;
-        margin-bottom: 1rem;
     }
     .internship-container, .talks-container {
         max-width: 800px;

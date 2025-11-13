@@ -1,6 +1,4 @@
 ---
-# the default layout is 'page'
-layout: page
 title: Contact
 icon: fas fa-info-circle
 permalink: /contact/
@@ -50,13 +48,6 @@ body {
             color: #9affd8;
             /* neon hover */
             text-shadow: 0 0 5px #9affd855;
-        }
-
-        /* Lists */
-        ul,
-        ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
         }
 </style>
 
