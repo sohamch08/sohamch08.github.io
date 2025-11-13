@@ -3,7 +3,7 @@ layout: page
 icon: fa-solid fa-book
 order: 3
 permalink: /projects-talks/
-title: Talks
+title: Talks and Internships
 ---
 
 <style>
