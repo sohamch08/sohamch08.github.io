@@ -3,25 +3,28 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
-
+- type: facebook
+  icon: "fa-brands fa-facebook"
+  url: 'https://www.facebook.com/soham.chatterjee.123829'
+# - type: GPG Key
+#   icon: "fa-solid fa-key"
+#   url: 'https://www.facebook.com/soham.chatterjee.123829'
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
+- type: orcid
+  icon: "fab fa-orcid"
+  url: 'https://orcid.org/0009-0003-0479-3212'
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
 #   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
 #   url:  ''                  # Fill with your Mastodon account page, rel="me" will be applied for verification
 #
-# - type: linkedin
-#   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-#   url:  ''                  # Fill with your Linkedin homepage
+- type: linkedin
+  icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
+  url:  'https://www.linkedin.com/in/soham-chatterjee-513b77202'                  # Fill with your Linkedin homepage
 #
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
