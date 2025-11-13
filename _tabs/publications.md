@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 icon: fa-solid fa-book
 order: 1
 permalink: /publications/
@@ -254,6 +254,7 @@ title: Publications
       };
   }
 </script>
+
 <div class="publication-item">
     <div class="publication-title">
         Deterministic list decoding of Reed-Solomon codes

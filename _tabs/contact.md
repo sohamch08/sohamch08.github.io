@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-layout: default
+layout: page
 title: Contact
 icon: fas fa-info-circle
 permalink: /contact/
@@ -60,8 +60,6 @@ body {
         }
 </style>
 
-
-# Contact
 I am free to discuss any academics or research or career paths. Feel free to reach out to me through mail. I check my mails regularly so you will get reply soon.
 
 >**Email:** soham.chatterjee@tifr.res.in / sohamchatterjee999@gmail.com<br>

@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: page
 icon: fa-solid fa-book
 order: 3
 permalink: /projects-talks/
-title: Research Works and Talks
+title: Talks
 ---
 
 <style>
@@ -112,7 +112,6 @@ title: Research Works and Talks
         color: #ccc;
     }
 </style>
-<h2 class="internship-header">Talks</h2>
  <div class="talks-container">
         <div class="talk-item">
             <div class="talk-title">Universal Optimality of Dijkstra using Fibonacci Priority Queue with Working Set Property</div>

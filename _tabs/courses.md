@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 icon: fas fa-tags
 order: 2
 permalink: /courses/
@@ -58,9 +58,6 @@ body {
             margin-bottom: 1rem;
         }
 </style>
-
-Coursework at CMI
------------------
 
 These are the course which I took in TIFR while doing my PhD and in CMI during my bachelors. I have also added the course resource links along with the topic names.
 
