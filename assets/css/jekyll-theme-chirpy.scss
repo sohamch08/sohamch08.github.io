@@ -8,4 +8,49 @@
 {%- endif -%}
 ';
 
-/* append your custom style below */
+// $primary-color: #7fffd4;          // main neon color
+// $text-color: #f8f8f2;             // whitish text
+// $background-color: #1a1c1e;       // dark background
+// $link-color: $primary-color;      // links
+
+// $sidebar-bg: $background-color;
+// $topbar-bg: $background-color;
+// $footer-bg: $background-color;
+
+// body {
+//   background-color: $background-color;
+//   color: $text-color;
+// }
+
+// a {
+//   color: $link-color;
+//   &:hover {
+//     color: lighten($link-color, 10%);
+//   }
+// }
+
+// header, aside, footer, main, nav {
+//   background-color: inherit;
+//   color: inherit;
+// }
+// .sidebar-wrapper {
+//   background-color: $sidebar-bg;
+//   color: $text-color;
+// }
+
+// .profile-wrapper, .header-wrapper {
+//   background-color: $topbar-bg;
+//   color: $text-color;
+// }
+
+// .site-footer, .footer {
+//   background-color: $footer-bg;
+//   color: $text-color;
+// }
+// :root {
+//   --topbar-bg: #1a1c1e;      // dark background
+//   --sidebar-bg: #1a1c1e;     // same as topbar
+//   --footer-bg: #1a1c1e;      // same as topbar
+//   --primary-color: #7fffd4;  // main neon/terminal color
+//   --text-color: #f8f8f2;     // whitish text
+// }

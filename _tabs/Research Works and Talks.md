@@ -7,59 +7,110 @@ title: Research Works and Talks
 ---
 
 <style>
-.internship-container, .talks-container {
-    max-width: 800px;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
+    body {
+        background-color: #1a1c1e;
+        /* dark terminal background */
+        color: #f5f5f5;
+        /* base whitish text */
+        /* font-family: monospace;      terminal font */
+        line-height: 1.5;
+        font-size: 1rem;
+        margin: 0;
+        padding: 2rem;
+    }
 
-.internship-header, .talks-header {
-    font-size: 36px;
-    font-weight: bold;
-    color: #ccc;
-    margin-bottom: 10px;
-}
+    /* Headings */
+    h1,h2,h3,h4,h5,h6 {
+        color: #7fffd4;
+        /* cyan terminal heading */
+        margin-bottom: 1rem;
+    }
 
-.internship-item, .talk-item {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+    /* Secondary headings (optional) */
+    h3,
+    h4 {
+        color: #5fe0c8;
+        /* slightly darker cyan */
+    }
 
-.internship-time, .talk-title {
-    font-size: 18px;
-    color: #ccc;
-    font-weight: bold;
-}
+    /* Paragraphs */
+    p {
+        margin-bottom: 1rem;
+    }
 
-.internship-description, .talk-description {
-    font-size: 18px;
-    color: #fff;
-    margin-top: 10px;
-    margin-left: 15px;
-}
+    /* Links */
+    a {
+        color: #4fe8c1;
+        /* base link cyan */
+        text-decoration: none;
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
 
-.internship-abstract {
-    font-size: 18px;
-    color: #fff;
-    margin-top: 6px;
-    margin-left: 25px;
-    font-style: italic;
-}
+    a:hover {
+        color: #9affd8;
+        /* neon hover */
+        text-shadow: 0 0 5px #9affd855;
+    }
 
-.internship-item:not(:last-child), .talk-item:not(:last-child) {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 15px;
-}
+    /* Lists */
+    ul,
+    ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .internship-container, .talks-container {
+        max-width: 800px;
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
 
-.talk-slides {
-    margin-top: 10px;
-    margin-left: 15px;
-    font-size: 18px;
-    color: #ccc;
-}
+    .internship-header, .talks-header {
+        font-size: 36px;
+        font-weight: bold;
+        color: #ccc;
+        margin-bottom: 10px;
+    }
+
+    .internship-item, .talk-item {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .internship-time, .talk-title {
+        font-size: 18px;
+        color: #ccc;
+        font-weight: bold;
+    }
+
+    .internship-description, .talk-description {
+        font-size: 18px;
+        color: #fff;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+
+    .internship-abstract {
+        font-size: 18px;
+        color: #fff;
+        margin-top: 6px;
+        margin-left: 25px;
+        font-style: italic;
+    }
+
+    .internship-item:not(:last-child), .talk-item:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+    }
+
+    .talk-slides {
+        margin-top: 10px;
+        margin-left: 15px;
+        font-size: 18px;
+        color: #ccc;
+    }
 </style>
 <h2 class="internship-header">Talks</h2>
  <div class="talks-container">
