@@ -1,7 +1,7 @@
 ---
 layout: default
 icon: fas fa-tags
-order: 1
+order: 2
 permalink: /courses/
 title: Course Work
 ---

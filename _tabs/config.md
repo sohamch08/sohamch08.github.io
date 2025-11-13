@@ -1,7 +1,7 @@
 ---
 layout: default
 icon: fa-solid fa-sliders
-order: 3
+order: 4
 permalink: /configs/
 title: My Configs
 ---

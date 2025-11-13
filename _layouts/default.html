@@ -15,7 +15,35 @@ layout: compress
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
+<style>
+/* === Global MathJax rendering stability === */
+mjx-container {
+  overflow: visible !important;
+  max-width: 100% !important;
+}
+mjx-container[jax="CHTML"][display="false"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1.2em 0;
+}
+</style>
 
+<script>
+/* optional: ensure dynamic content (like modals) remains stable */
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.MathJax) {
+    MathJax.startup.promise.then(() => {
+      document.querySelectorAll('mjx-container').forEach(el => {
+        el.style.overflow = 'visible';
+      });
+    });
+  }
+});
+</script>
   <body>
     {% include sidebar.html lang=lang %}
 

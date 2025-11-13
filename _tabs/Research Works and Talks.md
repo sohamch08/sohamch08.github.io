@@ -1,7 +1,7 @@
 ---
 layout: default
 icon: fa-solid fa-book
-order: 2
+order: 3
 permalink: /projects-talks/
 title: Research Works and Talks
 ---

@@ -56,6 +56,10 @@ webmaster_verifications:
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
   markdown: kmarkdown
+  kramdown:
+    math_engine: mathjax
+    math_engine_opts:
+      preview: false
 # Web Analytics Settings
 analytics:
   google:

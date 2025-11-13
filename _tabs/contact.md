@@ -4,7 +4,7 @@ layout: default
 title: Contact
 icon: fas fa-info-circle
 permalink: /contact/
-order: 4
+order: 5
 ---
 
 
