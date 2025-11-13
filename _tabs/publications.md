@@ -217,7 +217,7 @@ title: Publications
             <div class="publication-title">
                 Deterministic list decoding of Reed-Solomon codes
                 <div class="abstract-box" onclick="openModal(this)">Abstract</div>
-                <div class="pdf-box" onclick="window.open('https://eccc.weizmann.ac.il/report/2025/085/', '_blank')">ECCC</div>
+                <div class="pdf-box" onclick="window.open('https://eccc.weizmann.ac.il/report/2025/170/', '_blank')">ECCC</div>
                 <div class="pdf-box" onclick="window.open('https://arxiv.org/abs/2511.05176', '_blank')">Arxiv</div>
             </div>
             <div class="publication-authors"><span class="separator">▸</span>Joint work with <a href="https://www.tifr.res.in/~prahladh/">Prahladh Harsha</a> (TIFR) and <a href="https://mrinalkr.bitbucket.io">Mrinal Kumar</a> (TIFR)</div>
