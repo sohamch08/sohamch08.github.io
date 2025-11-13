@@ -255,33 +255,12 @@ title: Publications
   }
 </script>
 <div class="publication-item">
-<<<<<<< HEAD
-            <div class="publication-title">
-                Deterministic list decoding of Reed-Solomon codes
-                <div class="abstract-box" onclick="openModal(this)">Abstract</div>
-                <div class="pdf-box" onclick="window.open('https://eccc.weizmann.ac.il/report/2025/170/', '_blank')">ECCC</div>
-                <div class="pdf-box" onclick="window.open('https://arxiv.org/abs/2511.05176', '_blank')">Arxiv</div>
-            </div>
-            <div class="publication-authors"><span class="separator">▸</span>Joint work with <a href="https://www.tifr.res.in/~prahladh/">Prahladh Harsha</a> (TIFR) and <a href="https://mrinalkr.bitbucket.io">Mrinal Kumar</a> (TIFR)</div>
-            <div class="publication-details"><span class="separator">▸</span>Submitted</div>
-            <div class="abstract" style="display:none;"> <p>
-            We show that Reed-Solomon codes of dimension $k$ and block length $n$  over any finite field $\mathbb{F}$ can be <i>deterministically</i> list decoded from agreement $\sqrt{(k-1)n}$ in time $\text{poly}(n, \log |\mathbb{F}|)$.
-            </p> 
-            <p>
-            Prior to this work, the list decoding algorithms for Reed-Solomon codes, from the celebrated results of Sudan and Guruswami-Sudan, were either randomized with time complexity $\text{poly}(n, \log |\mathbb{F}|)$ or were deterministic with time complexity depending polynomially on the characteristic of the underlying field. In particular, over a prime field $\mathbb{F}$, no deterministic algorithms running in time $\text{poly}(n, \log |\mathbb{F}|)$ were known for this problem.
-            </p>
-            <p>
-            Our main technical ingredient is a deterministic algorithm for solving the bivariate polynomial factorization instances that appear in the algorithm of Sudan and  Guruswami-Sudan with only a $\text{poly}(\log |\mathbb{F}|)$ dependence on the field size in its time complexity for every finite field $\mathbb{F}$. While the question of obtaining efficient deterministic algorithms for polynomial factorization over finite fields is a fundamental open problem even for <i>univariate</i> polynomials of degree $2$, we show that additional information from the received word can be used to obtain such an algorithm for instances that appear in the course of list decoding Reed-Solomon codes.
-            </p>
-</div>
-=======
     <div class="publication-title">
         Deterministic list decoding of Reed-Solomon codes
         <div class="publication-buttons">
           <div class="abstract-box" onclick="openModal(this)">Abstract</div>
           <div class="pdf-box" onclick="window.open('https://eccc.weizmann.ac.il/report/2025/170/', '_blank')">ECCC</div>
           <div class="pdf-box" onclick="window.open('https://arxiv.org/abs/2511.05176', '_blank')">Arxiv</div>
->>>>>>> 3105939 (updated color scheme)
         </div>
     </div>
     <div class="publication-authors"><span class="separator">▶</span>Joint work with <a href="https://www.tifr.res.in/~prahladh/">Prahladh Harsha</a> (TIFR) and <a href="https://mrinalkr.bitbucket.io">Mrinal Kumar</a> (TIFR)</div>
