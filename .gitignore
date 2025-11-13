@@ -21,7 +21,7 @@ package-lock.json
 !.vscode/settings.json
 !.vscode/extensions.json
 
-# .DS_Store
+.DS_Store
 # Misc
 # _sass/dist
 # assets/js/dist
