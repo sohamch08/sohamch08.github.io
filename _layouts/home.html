@@ -26,8 +26,9 @@ title: Home
             width: 90%;
             margin: 5%;
             position: relative;
-            background-color: #0f1113;
-            margin-top: 0px;
+            background-color: #1a1c1e;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #1c1f23;
         }
 
         .card-background {
@@ -39,10 +40,43 @@ title: Home
 
         .card-content {
             position: relative;
-            color: white;
+            color: #d0d0d0;
+            /* soft gray body text */
             margin-left: 20px;
             margin-right: 20px;
             margin-top: -20px;
+        }
+
+        .card-content h2 {
+            color: #9bdcff;
+            /* accent blue for heading */
+            margin-bottom: 1rem;
+        }
+
+        .card-content a {
+            color: #88c0d0;
+            /* soft cyan links */
+            text-decoration: none;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
+        }
+
+        .card-content a:hover {
+            color: #a3e7ff;
+            text-shadow: 0 0 5px #a3e7ff55;
+        }
+
+        .terminal-body {
+            font-family: monospace;
+            background-color: #1a1c1e;
+            color: #7fffd4;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 3rem auto;
+            box-shadow: 0 0 15px #7fffd440;
+            border: 0px solid #2a2c2f;
+            line-height: 1.5;
+            font-size: 1rem;
         }
     </style>
     <script type="text/javascript" id="MathJax-script" async=""
@@ -74,54 +108,48 @@ title: Home
 
 
     <p>
-        I am doing my Integrated PhD at <a href="https://www.tcs.tifr.res.in/web/">Tata Institute of Fundamental
-            Research, Mumbai</a> in Computer Science. I completed my B.Sc. in Mathematics and Computer Science at <a
-            href="https://www.cmi.ac.in/" target="_blank">Chennai Mathematical Institute</a> (2021-2024). I am also an
-        alumnus of <a href="https://www.rkmabaranagore.org/" target="_blank">Ramakrishna Mission, Baranagar</a> and
-        Narendranath Vidyamandir where i completed my Secondary (10th Standard) and Higher secondary (12th Standard)
-        education.
+        I am pursuing an Integrated Ph.D. in Computer Science at
+        <a href="https://www.tcs.tifr.res.in/web/">Tata Institute of Fundamental Research, Mumbai</a>.
+        I completed my B.Sc. in Mathematics and Computer Science at
+        <a href="https://www.cmi.ac.in/" target="_blank">Chennai Mathematical Institute</a> (2021–2024).
     </p>
-
-    <p>Theoretical Computer Science is where my interests lie mostly. I am broadly interested in:
+    <p>
+        My primary research interests lie in Theoretical Computer Science. Broadly, I am interested in:
+    </p>
     <ul>
-        <li>Algorithms and Complexity Theory with a pinch of algebraic flavor</li>
-        <li>Error Correcting Codes</li>
+        <li>Algorithms and Complexity Theory (with an algebraic flavor)</li>
+        <li>Error-Correcting Codes</li>
         <li>Pseudorandomness</li>
         <li>Polyhedral Combinatorics</li>
     </ul>
     </p>
-    <!-- <p>During my Bachelors I have done research internships on topics like Algebraic Complexity Theory, Property Testing
-        of Boolean Functions and their Quantum Algorithms, Polyhedral Combinatorics. You can check my page on <a
-            href="/projects-talks/">Research Internships and Talks</a> for more details and their reports and slides of
-        my presentations. You can also visit my page on <a href="/courses/">Course Work</a> to get all lecture notes of
-        the courses I have taken or been taking.
-    <p> -->
-        Besides course work I love to typeset my notes LaTeX. It is a great hobby of mine to make my documents
-        beautiful in LaTeX. I've been using it for
-        more
-        than 5 years. I have created a <a href="https://github.com/sohamch08/Eye-Candy-Lecture-Notes-Theme">theme</a>
-        With which I typeset my lecture notes and reports.
+    <p>
+        Beyond coursework, I enjoy typesetting my notes in LaTeX — it has become a favorite hobby of mine over the
+        years.
+        I have been using it for more than five years and have created a
+        <a href="https://github.com/sohamch08/Eye-Candy-Lecture-Notes-Theme">custom theme</a>
+        with which I typeset my lecture notes and reports.
     </p>
+    <div class="terminal-body">
+        &gt; system: NixOS<br>
+        &gt; editor: Emacs<br>
+        &gt; status: reproducible by design, comprehensible by few, 😏
+    </div>
     <div class="card">
         <div class="card-background"></div>
         <div class="card-content">
             <h2 id="looking-for-something">Looking for something?</h2>
             <ul>
-                <!-- <li>📝 Read my blog on Complexity Theory at <a href="https://sohamalephnull.blogspot.com/" -->
-                <!--         target="_blank" rel="noopener">Aleph Null Blog</a>.</li> -->
-                <li>📄 Looking for my CV: <a href="/assets/cv.pdf" target="_blank">here</a></li>
-                <li>💻 Find my dotfiles and scripts on <a href="https://github.com/lambdasolver/dotfiles"
-                        target="_blank" rel="noopener">GitHub</a>.</li>
-                <!-- <li>📜 Want to know about some pro LaTeX tips see this <a href="./pages/latex.html">page</a>.</li> -->
-                <li>💻 Want to know about the softwares I use for Note Taking and other stuff visit <a
-                        href="/configs/">Configs Page</a>
-                    <!-- <a    href="./pages/pc-setup.html#softwares">here</a></li> -->
-
-                <li>📧 Want to get in touch? Feel free to <a href="/contact/">drop me a message</a>.</li>
+                <li>📄 My <a href="/assets/cv.pdf" target="_blank">CV</a></li>
+                <li>💻 My dotfiles and scripts live on <a href="https://github.com/lambdasolver/dotfiles"
+                        target="_blank" rel="noopener">GitHub</a></li>
+                <li>🧠 Curious about my setup? Check out the <a href="/configs/">Configs Page</a></li>
+                <li>📧 Want to reach out? <a href="/contact/">Drop me a message</a></li>
             </ul>
 
         </div>
     </div>
+
 
 
 </body>
