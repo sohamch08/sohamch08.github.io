@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 icon: fa-solid fa-book
 order: 3
 permalink: /projects-talks/
