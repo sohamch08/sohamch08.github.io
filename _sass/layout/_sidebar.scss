@@ -55,8 +55,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
   #avatar {
     display: block;
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 10rem;
+    height: 10rem;
     overflow: hidden;
     box-shadow: var(--avatar-border-color) 0 0 0 2px;
     transform: translateZ(0); /* fixed the zoom in Safari */
