@@ -1,5 +1,5 @@
 ---
-icon: fa-solid fa-book
+icon: fa-solid fa-graduation-cap
 order: 1
 permalink: /publications/
 title: Publications
@@ -126,7 +126,7 @@ title: Publications
     line-height: 1;
     vertical-align: middle;
     opacity: 0.85;
-    transform: translateY(0px);
+    transform: translateY(-1px);
     transition: color 0.2s ease, opacity 0.2s ease;
   }
 

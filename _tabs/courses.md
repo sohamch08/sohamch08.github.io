@@ -1,5 +1,5 @@
 ---
-icon: fas fa-tags
+icon: fa-solid fa-chalkboard
 order: 2
 permalink: /courses/
 title: Course Work
