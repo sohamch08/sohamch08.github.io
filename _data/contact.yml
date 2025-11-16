@@ -3,9 +3,9 @@
 - type: github
   icon: "fab fa-github"
 
-- type: facebook
-  icon: "fa-brands fa-facebook"
-  url: 'https://www.facebook.com/soham.chatterjee.123829'
+- type: google scholar
+  icon: "fa-brands fa-google-scholar"
+  url: 'https://scholar.google.com/citations?hl=en&user=XQk-BdAAAAAJ'
 # - type: GPG Key
 #   icon: "fa-solid fa-key"
 #   url: 'https://www.facebook.com/soham.chatterjee.123829'

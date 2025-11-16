@@ -1,5 +1,5 @@
 ---
-icon: fa-solid fa-chalkboard
+icon: fa-solid fa-chalkboard-user
 order: 2
 permalink: /courses/
 title: Course Work
