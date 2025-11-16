@@ -12,19 +12,33 @@ mkShell {
     gcc
     gnumake
   ];
-  # GEM_HOME = ".gems";
-  # GEM_PATH = ".gems";
-  # PATH = "$GEM_HOME/bin:${pkgs.ruby_3_4}/bin:${pkgs.nodejs_24}/bin:${pkgs.yarn}/bin:$PATH";
   shellHook = ''
     export GEM_HOME="$PWD/.gems"
     export GEM_PATH="$PWD/.gems"
     export PATH="$GEM_HOME/bin:$PATH"
 
-    echo "Ensureing latest bundler is installed..."
+    mkdir -p "$GEM_HOME"
 
-    # Install/update to latest bundler
-    gem install bundler --no-document
+    # extract installed bundler version (if any)
+    INSTALLED_VERSION=$(bundler -v 2>/dev/null | awk '{print $3}')
 
-    echo "Bundler version: $(bundler -v)"
+    # fetch latest version number from rubygems.org
+    LATEST_VERSION=$(gem list "^bundler$" --remote \
+        | head -n1 \
+        | sed -E 's/.*\(([^)]*)\).*/\1/' \
+        | tr ',' '\n' \
+        | head -n1 \
+        | tr -d ' ')
+    if [ -z "$INSTALLED_VERSION" ]; then
+      echo "!!! Bundler not installed. Installing Bundler $LATEST_VERSION..."
+      gem install bundler -v "$LATEST_VERSION" --no-document
+    elif [ "$INSTALLED_VERSION" != "$LATEST_VERSION" ]; then
+      echo "Updating Bundler: $INSTALLED_VERSION → $LATEST_VERSION"
+      gem install bundler -v "$LATEST_VERSION" --no-document
+    else
+      echo "Bundler is up to date ($INSTALLED_VERSION)"
+    fi
+
+    echo "Using Bundler: $(bundler -v)"
   '';
 }
