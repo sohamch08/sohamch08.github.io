@@ -4,7 +4,6 @@ with pkgs;
 
 mkShell {
   buildInputs = [
-    starship
     eza
     ruby_3_4
     pkg-config
