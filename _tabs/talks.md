@@ -77,6 +77,11 @@ title: Talks
     }
 </style>
 <div class="talk-item">
+    <div class="talk-title">Subspace Polynomials and List Decoding of Reed Solomon Codes</div>
+    <div class="talk-description">Course-Work presentation (TIFR): Topics in Coding Theory. Paper by Eli Ben-Sasson, Swastik Kopparty & Jaikumar Radhakrishnan, 2006.
+    </div>
+</div> 
+<div class="talk-item">
     <div class="talk-title">Universal Optimality of Dijkstra using Fibonacci Priority Queue with Working Set Property</div>
     <div class="talk-description">Oral Qualfier Presentation. Paper by Haeupler, Hladík, Rozhoň, Tarjan, Tětek, 2024. FOCS Best Paper.</div>
     <div class="talk-slides">
@@ -84,7 +89,7 @@ title: Talks
     </div>
 </div> 
 <div class="talk-item">
-    <div class="talk-title">n^1.62 Upper Bound on Hurwitz Problem</div>
+    <div class="talk-title">$n^{1.62}$ Upper Bound on Hurwitz Problem</div>
     <div class="talk-description">TIFR Student Seminar. Paper by Hrubesh, 2024</div>
 </div>   
 <div class="talk-item">
