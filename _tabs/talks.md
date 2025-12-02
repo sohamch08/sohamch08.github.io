@@ -77,6 +77,13 @@ title: Talks
     }
 </style>
 <div class="talk-item">
+    <div class="talk-title">$\mathsf{BPL}\subseteq\mathsf{SC}$: Nisan's Pseudorandom Generator for $\mathsf{BPL}$ </div>
+    <div class="talk-description">Course-Work presentation (TIFR): Pseudorandomness. Paper by Noam Nisan, 1992</div>
+    <div class="talk-slides">
+    <div class="pdf-box" onclick="window.open('https://sohamch08.github.io/assets/nisan-rl-prg.pdf', '_blank')">Slides</div>
+    </div>
+</div> 
+<div class="talk-item">
     <div class="talk-title">Subspace Polynomials and List Decoding of Reed Solomon Codes</div>
     <div class="talk-description">Course-Work presentation (TIFR): Topics in Coding Theory. Paper by Eli Ben-Sasson, Swastik Kopparty & Jaikumar Radhakrishnan, 2006.
     </div>
