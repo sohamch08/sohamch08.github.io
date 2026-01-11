@@ -75,7 +75,7 @@ title: Miscellaneous
     }
 </style>
 ## Reviewer
-Sub reviewer for STACKS 2026
+Sub reviewer for STACS 2026
 ## Teaching Assistantship
 Algorithms (TIFR) by T. Kavitha 
 ## Research Internshipts

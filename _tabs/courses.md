@@ -39,16 +39,20 @@ These are the course which I took in TIFR while doing my PhD and in CMI during m
 
 ### TIFR Courses
 
-Aug-Dec (Sem 1)
-1. Mathematical Foundations of Computer Science
-2. Algorithms: [Scribe](https://sohamch08.github.io/assets/algorithms.pdf)
-3. Probability
+Aug-Dec, 2025 (Sem 3)
+1. Advanced Coding Theory
+2. Pseudorandomness 
 
-Jan-May (Sem 2)
+Jan-May, 2025 (Sem 2)
 1. Computational Complexity Theory
 2. Algebra, Number Theory and Computation
 3. Combinatorial Optimization
 4. Algorithmic Game Theory
+
+Aug-Dec, 2024 (Sem 1)
+1. Mathematical Foundations of Computer Science
+2. Algorithms: [Scribe](https://sohamch08.github.io/assets/algorithms.pdf)
+3. Probability
 
 ### CMI Courses
 
