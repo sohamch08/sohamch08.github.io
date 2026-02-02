@@ -77,6 +77,13 @@ title: Talks
     }
 </style>
 <div class="talk-item">
+    <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
+    <div class="talk-description">ACMU Seminar, ISI</div>
+    <div class="talk-slides">
+    <div class="pdf-box" onclick="window.open('https://sohamch08.github.io/assets/detGS_ISI.pdf', '_blank')">Slides</div>
+    </div>
+</div> 
+<div class="talk-item">
     <div class="talk-title">$\mathsf{BPL}\subseteq\mathsf{SC}$: Nisan's Pseudorandom Generator for $\mathsf{BPL}$ </div>
     <div class="talk-description">Course-Work presentation (TIFR): Pseudorandomness. Paper by Noam Nisan, 1992</div>
     <div class="talk-slides">
