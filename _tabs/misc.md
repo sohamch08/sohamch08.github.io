@@ -77,7 +77,8 @@ title: Miscellaneous
 ## Reviewer
 Sub reviewer for STACS 2026
 ## Teaching Assistantship
-Algorithms (TIFR) by T. Kavitha 
+- Algebra, Number Theory & Computation (TIFR) by Mrinal Kumar, 2026
+- Algorithms (TIFR) by T. Kavitha, 2025
 ## Research Internshipts
 <div class="internship-item">
     <div class="internship-time">Summer 2024</div>
