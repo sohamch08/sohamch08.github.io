@@ -24,6 +24,7 @@ description: >- # used by seo meta and the atom feed
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://sohamch08.github.io"
+baseurl: "" # the subpath of your site, e.g. '/blog', keep empty if it is not applicable
 
 github:
   username: sohamch08 # change to your github username

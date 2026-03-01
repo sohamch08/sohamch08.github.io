@@ -51,7 +51,7 @@ Jan-May, 2025 (Sem 2)
 
 Aug-Dec, 2024 (Sem 1)
 1. Mathematical Foundations of Computer Science
-2. Algorithms: [Scribe](https://sohamch08.github.io/assets/algorithms.pdf)
+2. Algorithms: [Scribe]({{ "/assets/algorithms.pdf" | relative_url }})
 3. Probability
 
 ### CMI Courses
