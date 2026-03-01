@@ -80,66 +80,96 @@ title: Talks
     <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
     <div class="talk-description">ACMU Seminar, ISI</div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('https://sohamch08.github.io/assets/detGS_ISI.pdf', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "/assets/detGS_ISI.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div> 
+
 <div class="talk-item">
-    <div class="talk-title">$\mathsf{BPL}\subseteq\mathsf{SC}$: Nisan's Pseudorandom Generator for $\mathsf{BPL}$ </div>
+    <div class="talk-title">$\mathsf{BPL}\subseteq\mathsf{SC}$: Nisan's Pseudorandom Generator for $\mathsf{BPL}$</div>
     <div class="talk-description">Course-Work presentation (TIFR): Pseudorandomness. Paper by Noam Nisan, 1992</div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('https://sohamch08.github.io/assets/nisan-rl-prg.pdf', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "/assets/nisan-rl-prg.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div> 
+
 <div class="talk-item">
     <div class="talk-title">Subspace Polynomials and List Decoding of Reed Solomon Codes</div>
-    <div class="talk-description">Course-Work presentation (TIFR): Topics in Coding Theory. Paper by Eli Ben-Sasson, Swastik Kopparty & Jaikumar Radhakrishnan, 2006.
+    <div class="talk-description">
+        Course-Work presentation (TIFR): Topics in Coding Theory. 
+        Paper by Eli Ben-Sasson, Swastik Kopparty & Jaikumar Radhakrishnan, 2006.
     </div>
 </div> 
+
 <div class="talk-item">
     <div class="talk-title">Universal Optimality of Dijkstra using Fibonacci Priority Queue with Working Set Property</div>
-    <div class="talk-description">Oral Qualfier Presentation. Paper by Haeupler, Hladík, Rozhoň, Tarjan, Tětek, 2024. FOCS Best Paper.</div>
+    <div class="talk-description">
+        Oral Qualfier Presentation. Paper by Haeupler, Hladík, Rozhoň, Tarjan, Tětek, 2024. FOCS Best Paper.
+    </div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('https://sohamch08.github.io/assets/dijkstra-optimal.pdf', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "/assets/dijkstra-optimal.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div> 
+
 <div class="talk-item">
     <div class="talk-title">$n^{1.62}$ Upper Bound on Hurwitz Problem</div>
     <div class="talk-description">TIFR Student Seminar. Paper by Hrubesh, 2024</div>
 </div>   
+
 <div class="talk-item">
     <div class="talk-title">Super Polynomial Lower Bound on Traveling Salesman Polytope</div>
-    <div class="talk-description">Course-work presentation (TIFR):  Combinatorial Optimization. Paper by Fiorini, Massar, Pokutta, Tiwary and Wolf, 2012</div>
-    <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('https://sohamch08.github.io/assets/copt-presentation.pdf', '_blank')">Slides</div>
+    <div class="talk-description">
+        Course-work presentation (TIFR): Combinatorial Optimization.
+        Paper by Fiorini, Massar, Pokutta, Tiwary and Wolf, 2012
     </div>
-    
+    <div class="talk-slides">
+    <div class="pdf-box" onclick="window.open('{{ "/assets/copt-presentation.pdf" | relative_url }}', '_blank')">Slides</div>
+    </div>
 </div>    
+
 <div class="talk-item">
     <div class="talk-title">Bounds on Price of Anarchy using Linear and Quadratic Programming</div>
-    <div class="talk-description">Course-work presentation (TIFR): Algorithmic Game Theory. Paper by Kulkarni and Mirrokni, 2015</div>
+    <div class="talk-description">
+        Course-work presentation (TIFR): Algorithmic Game Theory.
+        Paper by Kulkarni and Mirrokni, 2015
+    </div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('https://sohamch08.github.io/assets/agt-presentation.pdf', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "/assets/agt-presentation.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div> 
+
 <div class="talk-item">
     <div class="talk-title">Bipartite Matching is in Quasi-NC</div>
-    <div class="talk-description">TIFR Student Seminar, 2025. Paper by Stephen A. Fenner, Rohit Gurjar and Thomas Thierauf, 2016.</div>
+    <div class="talk-description">
+        TIFR Student Seminar, 2025. Paper by Stephen A. Fenner,
+        Rohit Gurjar and Thomas Thierauf, 2016.
+    </div>
 </div>   
+
 <div class="talk-item">
     <div class="talk-title">Hensel and Newton Methods in Valuation Rings</div>
-    <div class="talk-description">Course-work presentation (CMI): Algebra and Computation. Paper by J von zur Gathen, 1984.</div>
-</div>
-<div class="talk-item">
-    <div class="talk-title">Algebraic Geometric Codes</div>
-    <div class="talk-description">Course-work presentation (CMI): Algorithmic Coding Theory II.  Jointly given by Me and  Shree Ganesh S J</div>
-    <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('https://sohamch08.github.io/assets/act-report.pdf', '_blank')">Report</div>
+    <div class="talk-description">
+        Course-work presentation (CMI): Algebra and Computation.
+        Paper by J von zur Gathen, 1984.
     </div>
 </div>
+
+<div class="talk-item">
+    <div class="talk-title">Algebraic Geometric Codes</div>
+    <div class="talk-description">
+        Course-work presentation (CMI): Algorithmic Coding Theory II.
+        Jointly given by Me and Shree Ganesh S J
+    </div>
+    <div class="talk-slides">
+    <div class="pdf-box" onclick="window.open('{{ "/assets/act-report.pdf" | relative_url }}', '_blank')">Report</div>
+    </div>
+</div>
+
 <div class="talk-item">
     <div class="talk-title">"Iterated Mod Problem" by Karloff and Ruzzo</div>
-    <div class="talk-description">Course-work presentation (CMI): Parallel Algorithms and Complexity</div>
+    <div class="talk-description">
+        Course-work presentation (CMI): Parallel Algorithms and Complexity
+    </div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('https://sohamch08.github.io/assets/parallel-presentation-iterated-mod.pdf', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "/assets/parallel-presentation-iterated-mod.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div>
