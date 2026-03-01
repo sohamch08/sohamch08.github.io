@@ -49,5 +49,5 @@ order: 6
 
 Feel free to reach out to me through mail.
 
->**Email:** soham.chatterjee@tifr.res.in / sohamchatterjee999@gmail.com<br>
->**Phone No:** +91 869 752-4909
+>**Email:** soham [dot] chatterjee [at] tifr.res.in / sohamchatterjee999 [at] gmail [dot] com<br>
+>**Phone No:** +91 86975 24909
