@@ -77,6 +77,10 @@ title: Talks
     }
 </style>
 <div class="talk-item">
+    <div class="talk-title">GM-MDS Conjecture: MDS matrices over small fields</div>
+    <div class="talk-description">TIFR Student Seminar</div>
+</div> 
+<div class="talk-item">
     <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
     <div class="talk-description">ACMU Seminar, ISI</div>
     <div class="talk-slides">
