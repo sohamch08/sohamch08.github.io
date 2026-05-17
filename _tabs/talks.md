@@ -77,6 +77,13 @@ title: Talks
     }
 </style>
 <div class="talk-item">
+    <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
+    <div class="pdf-box" onclick="window.open('https://www.tcs.tifr.res.in/~student_seminar/talks/2026-05-15/', '_blank')">TIFR, Student Seminar</div>
+    <div class="talk-slides">
+    <div class="pdf-box" onclick="window.open('{{ "/assets/detGS_STCS.pdf" | relative_url }}', '_blank')">Slides</div>
+    </div>
+</div>
+<div class="talk-item">
     <div class="talk-title">GM-MDS Conjecture: MDS matrices over small fields</div>
     <div class="talk-description">TIFR Student Seminar</div>
 </div> 
@@ -86,7 +93,7 @@ title: Talks
     <div class="talk-slides">
     <div class="pdf-box" onclick="window.open('{{ "/assets/detGS_ISI.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
-</div> 
+</div>
 
 <div class="talk-item">
     <div class="talk-title">$\mathsf{BPL}\subseteq\mathsf{SC}$: Nisan's Pseudorandom Generator for $\mathsf{BPL}$</div>
@@ -94,7 +101,7 @@ title: Talks
     <div class="talk-slides">
     <div class="pdf-box" onclick="window.open('{{ "/assets/nisan-rl-prg.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
-</div> 
+</div>
 
 <div class="talk-item">
     <div class="talk-title">Subspace Polynomials and List Decoding of Reed Solomon Codes</div>
@@ -102,7 +109,7 @@ title: Talks
         Course-Work presentation (TIFR): Topics in Coding Theory. 
         Paper by Eli Ben-Sasson, Swastik Kopparty & Jaikumar Radhakrishnan, 2006.
     </div>
-</div> 
+</div>
 
 <div class="talk-item">
     <div class="talk-title">Universal Optimality of Dijkstra using Fibonacci Priority Queue with Working Set Property</div>
@@ -112,12 +119,12 @@ title: Talks
     <div class="talk-slides">
     <div class="pdf-box" onclick="window.open('{{ "/assets/dijkstra-optimal.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
-</div> 
+</div>
 
 <div class="talk-item">
     <div class="talk-title">$n^{1.62}$ Upper Bound on Hurwitz Problem</div>
     <div class="talk-description">TIFR Student Seminar. Paper by Hrubesh, 2024</div>
-</div>   
+</div>
 
 <div class="talk-item">
     <div class="talk-title">Super Polynomial Lower Bound on Traveling Salesman Polytope</div>
@@ -128,7 +135,7 @@ title: Talks
     <div class="talk-slides">
     <div class="pdf-box" onclick="window.open('{{ "/assets/copt-presentation.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
-</div>    
+</div>
 
 <div class="talk-item">
     <div class="talk-title">Bounds on Price of Anarchy using Linear and Quadratic Programming</div>
@@ -139,7 +146,7 @@ title: Talks
     <div class="talk-slides">
     <div class="pdf-box" onclick="window.open('{{ "/assets/agt-presentation.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
-</div> 
+</div>
 
 <div class="talk-item">
     <div class="talk-title">Bipartite Matching is in Quasi-NC</div>
@@ -147,7 +154,7 @@ title: Talks
         TIFR Student Seminar, 2025. Paper by Stephen A. Fenner,
         Rohit Gurjar and Thomas Thierauf, 2016.
     </div>
-</div>   
+</div>
 
 <div class="talk-item">
     <div class="talk-title">Hensel and Newton Methods in Valuation Rings</div>
