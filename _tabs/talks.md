@@ -78,8 +78,9 @@ title: Talks
 </style>
 <div class="talk-item">
     <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
-    <div class="pdf-box" onclick="window.open('https://www.tcs.tifr.res.in/~student_seminar/talks/2026-05-15/', '_blank')">TIFR, Student Seminar</div>
+    <div class="talk-description">TIFR, Student Seminar: <a href="https://www.tcs.tifr.res.in/~student_seminar/talks/2026-05-15/" target="_blank">Link</a></div>
     <div class="talk-slides">
+    
     <div class="pdf-box" onclick="window.open('{{ "/assets/detGS_STCS.pdf" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div>
