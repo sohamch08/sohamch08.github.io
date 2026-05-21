@@ -58,9 +58,15 @@ title: Talks
         margin-left: 15px;
         font-size: 18px;
         color: #ccc;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
     }
+
     .pdf-box {
         cursor: pointer;
+        display: inline-block;   /* add this */
         background-color: transparent;
         border: 1px solid #7fffd4;
         color: #7fffd4;
@@ -76,6 +82,13 @@ title: Talks
         box-shadow: 0 0 8px #9affd8;
     }
 </style>
+<div class="talk-item">
+    <div class="talk-title">Weil Bounds: A Survey of Decoding Applications</div>
+    <div class="talk-description">TIFR, MSc. Project Seminar: </div>
+    <div class="talk-slides">
+    Slides: <div class="pdf-box" onclick="window.open('{{ "/assets/msc-presentation.pdf" | relative_url }}', '_blank')">PDF</div><div class="pdf-box" onclick="window.open('{{ "/assets/msc-presentation.pdf" | relative_url }}', '_blank')">Keynote</div>
+    </div>
+</div>
 <div class="talk-item">
     <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
     <div class="talk-description">TIFR, Student Seminar: <a href="https://www.tcs.tifr.res.in/~student_seminar/talks/2026-05-15/" target="_blank">Link</a></div>
