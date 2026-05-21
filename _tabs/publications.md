@@ -263,12 +263,13 @@ title: Publications
   </div>
 </div>
 
-<h1>Dissertations</h1>
+<h1>Dissertation</h1>
 <div class="publication-item">
     <div class="publication-title">
         <div>Exponential Sums and Weil Bounds<div class="publication-subtitle">A Survey of Elementary Methods and Decoding Applications</div></div>
         <div class="publication-buttons">
           <div class="abstract-box" onclick="openModal(this)">Abstract</div>
+          <div class="pdf-box" onclick="window.open('https://github.com/sohamch08/msc-project-tifr', '_blank')">Repo</div>
           <div class="pdf-box" onclick="window.open('/assets/msc-project.pdf', '_blank')">PDF</div>
         </div>
     </div>
