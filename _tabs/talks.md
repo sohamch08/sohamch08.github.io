@@ -84,9 +84,9 @@ title: Talks
 </style>
 <div class="talk-item">
     <div class="talk-title">Weil Bounds: A Survey of Decoding Applications</div>
-    <div class="talk-description">TIFR, MSc. Project Seminar: </div>
+    <div class="talk-description">TIFR, MSc. Project Seminar</div>
     <div class="talk-slides">
-    Slides: <div class="pdf-box" onclick="window.open('{{ "/assets/msc-presentation.pdf" | relative_url }}', '_blank')">PDF</div><div class="pdf-box" onclick="window.open('{{ "/assets/msc-presentation.pdf" | relative_url }}', '_blank')">Keynote</div>
+    Slides: <div class="pdf-box" onclick="window.open('{{ "/assets/msc-presentation.pdf" | relative_url }}', '_blank')">PDF</div><div class="pdf-box" onclick="window.open('{{ "/assets/msc-presentation.key" | relative_url }}', '_blank')">Keynote</div>
     </div>
 </div>
 <div class="talk-item">
