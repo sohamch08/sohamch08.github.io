@@ -86,7 +86,7 @@ title: Talks
     <div class="talk-title">Weil Bounds: A Survey of Decoding Applications</div>
     <div class="talk-description">TIFR, MSc. Project Seminar</div>
     <div class="talk-slides">
-    Slides: <div class="pdf-box" onclick="window.open('{{ "/assets/msc-presentation.pdf" | relative_url }}', '_blank')">PDF</div><div class="pdf-box" onclick="window.open('{{ "/assets/msc-presentation.key" | relative_url }}', '_blank')">Keynote</div>
+    Slides: <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1qfq7NNjN_Tx4WbGXYtOWmVikCGTMKtyC/view?usp=drive_link" | relative_url }}', '_blank')">PDF</div><div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/19pcUHhJ-0VSrSxqYeLO-P4L8aD38_S1l/view?usp=drive_link" | relative_url }}', '_blank')">Keynote</div>
     </div>
 </div>
 <div class="talk-item">
@@ -94,7 +94,7 @@ title: Talks
     <div class="talk-description">TIFR, Student Seminar: <a href="https://www.tcs.tifr.res.in/~student_seminar/talks/2026-05-15/" target="_blank">Link</a></div>
     <div class="talk-slides">
     
-    <div class="pdf-box" onclick="window.open('{{ "/assets/detGS_STCS.pdf" | relative_url }}', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1xEjxUbyhwAv7Qr16BCDx-O-cW_8lZBh5/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div>
 <div class="talk-item">
@@ -105,7 +105,7 @@ title: Talks
     <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
     <div class="talk-description">ACMU Seminar, ISI</div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('{{ "/assets/detGS_ISI.pdf" | relative_url }}', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/11qDmIEy4jzwuBVWwSGqV8DTthF_Vdi_O/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div>
 
@@ -113,7 +113,7 @@ title: Talks
     <div class="talk-title">$\mathsf{BPL}\subseteq\mathsf{SC}$: Nisan's Pseudorandom Generator for $\mathsf{BPL}$</div>
     <div class="talk-description">Course-Work presentation (TIFR): Pseudorandomness. Paper by Noam Nisan, 1992</div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('{{ "/assets/nisan-rl-prg.pdf" | relative_url }}', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1C88HBSjewJBBWkOqqQqAABne5jkZvWLq/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div>
 
@@ -131,7 +131,7 @@ title: Talks
         Oral Qualfier Presentation. Paper by Haeupler, Hladík, Rozhoň, Tarjan, Tětek, 2024. FOCS Best Paper.
     </div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('{{ "/assets/dijkstra-optimal.pdf" | relative_url }}', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/13-yOlT-mHOMDWSDsZlPY92Fz2SzCV4zJ/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div>
 
@@ -147,7 +147,7 @@ title: Talks
         Paper by Fiorini, Massar, Pokutta, Tiwary and Wolf, 2012
     </div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('{{ "/assets/copt-presentation.pdf" | relative_url }}', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1q8L-SuT5rTfjURVE0PDDEjKm2Cpv7PF8/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div>
 
@@ -158,7 +158,7 @@ title: Talks
         Paper by Kulkarni and Mirrokni, 2015
     </div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('{{ "/assets/agt-presentation.pdf" | relative_url }}', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1ZZXaHdMWj2_RrwkxBavZBTCPWGKX2kjS/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div>
 
@@ -185,7 +185,7 @@ title: Talks
         Jointly given by Me and Shree Ganesh S J
     </div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('{{ "/assets/act-report.pdf" | relative_url }}', '_blank')">Report</div>
+    <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1hDhXFZpRLU8DVMv84d_N-5K6_Z6jMDTK/view?usp=drive_link" | relative_url }}', '_blank')">Report</div>
     </div>
 </div>
 
@@ -195,6 +195,6 @@ title: Talks
         Course-work presentation (CMI): Parallel Algorithms and Complexity
     </div>
     <div class="talk-slides">
-    <div class="pdf-box" onclick="window.open('{{ "/assets/parallel-presentation-iterated-mod.pdf" | relative_url }}', '_blank')">Slides</div>
+    <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/16zACu-KVsTJubbypDU-vdkHjyBgEWKhC/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
     </div>
 </div>
