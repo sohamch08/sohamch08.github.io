@@ -15,6 +15,19 @@ title: Course Work
   .col:first-child { padding-left: 0; border-right: 1px solid #2e3035; }
   .col:last-child  { padding-right: 0; }
 
+  @media (max-width: 768px) {
+    .two-col {
+      grid-template-columns: 1fr;
+    }
+    .col { padding: 0; }
+    .col:first-child {
+      border-right: none;
+      border-bottom: 1px solid #2e3035;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
   .col-heading {
     font-size: 1.1rem;
     font-weight: 700;
@@ -27,7 +40,7 @@ title: Course Work
   .sem-row {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 0;
     padding: 11px 0;
     border-bottom: 1px solid #252729;
   }
@@ -36,16 +49,17 @@ title: Course Work
     flex-shrink: 0;
     text-align: right;
     padding-top: 1px;
+    margin-right: 14px;
   }
   .sem-label .sem-num {
     display: block;
-    font-size: 13.5px;
+    font-size: 14.5px;
     font-weight: 700;
     color: #ccc;
   }
   .sem-label .sem-date {
     display: block;
-    font-size: 11.5px;
+    font-size: 12px;
     color: #555;
     line-height: 1.4;
   }
@@ -59,12 +73,23 @@ title: Course Work
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-size: 15px;
+    font-size: 16px;
     padding-top: 1px;
+    padding-left: 16px;
   }
   .course-item {
     line-height: 1.45;
     color: #ddd;
+    position: relative;
+  }
+  .course-item::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 0.65em;
+    width: 10px;
+    height: 1px;
+    background: #3a3d42;
   }
   .course-item a {
     color: #e8e8e8;
@@ -72,11 +97,11 @@ title: Course Work
   }
   .course-item a:hover { color: #7fffd4; }
   .course-item .sub {
-    font-size: 12.5px;
+    font-size: 13.5px;
     color: #555;
   }
   .scribe-link {
-    font-size: 12.5px;
+    font-size: 13.5px;
     color: #7fffd4;
     text-decoration: none;
   }
