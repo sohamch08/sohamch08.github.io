@@ -5,100 +5,222 @@ permalink: /courses/
 title: Course Work
 ---
 <style>
-body {
-            background-color: #1a1c1e;
-            /* dark terminal background */
-            color: #f5f5f5;
-            /* base whitish text */
-            /* font-family: monospace;      terminal font */
-            line-height: 1.5;
-            font-size: 1rem;
-            margin: 0;
-            padding: 2rem;
-        }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    max-width: 100%;
+  }
+  .col { padding: 0 2.5rem; }
+  .col:first-child { padding-left: 0; border-right: 1px solid #2e3035; }
+  .col:last-child  { padding-right: 0; }
 
-        /* Headings */
-        h1,h2,h3,h4,h5,h6 {
-            color: #7fffd4;
-            /* cyan terminal heading */
-            margin-bottom: 1rem;
-        }
-
-        /* Secondary headings (optional) */
-        h3,
-        h4 {
-            color: #5fe0c8;
-            /* slightly darker cyan */
-        }
-        a {
-            transition: color 0.2s ease, text-shadow 0.2s ease;
-        }
+  .col-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #7fffd4;
+    letter-spacing: 0.04em;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #7fffd4;
+    margin-bottom: 0.4rem;
+  }
+  .sem-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 11px 0;
+    border-bottom: 1px solid #252729;
+  }
+  .sem-label {
+    width: 90px;
+    flex-shrink: 0;
+    text-align: right;
+    padding-top: 1px;
+  }
+  .sem-label .sem-num {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #ccc;
+  }
+  .sem-label .sem-date {
+    display: block;
+    font-size: 11.5px;
+    color: #555;
+    line-height: 1.4;
+  }
+  .sem-divider {
+    width: 1px;
+    background: #2e3035;
+    flex-shrink: 0;
+    margin: 2px 0;
+  }
+  .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 15px;
+    padding-top: 1px;
+  }
+  .course-item {
+    line-height: 1.45;
+    color: #ddd;
+  }
+  .course-item a {
+    color: #e8e8e8;
+    text-decoration: none;
+  }
+  .course-item a:hover { color: #7fffd4; }
+  .course-item .sub {
+    font-size: 12.5px;
+    color: #555;
+  }
+  .scribe-link {
+    font-size: 12.5px;
+    color: #7fffd4;
+    text-decoration: none;
+  }
+  .scribe-link:hover { text-decoration: underline; }
 </style>
 
-These are the course which I took in TIFR while doing my PhD and in CMI during my bachelors. I have also added the course resource links along with the topic names.
+These are the courses I took at TIFR during my PhD and at CMI during my bachelors, along with resource links where available.
 
-### TIFR Courses
+<div class="two-col">
 
-Aug-Dec, 2025 (Sem 3)
-1. Advanced Coding Theory
-2. Pseudorandomness 
+  <div class="col">
+    <div class="col-heading">TIFR</div>
 
-Jan-May, 2025 (Sem 2)
-1. Computational Complexity Theory
-2. Algebra, Number Theory and Computation
-3. Combinatorial Optimization
-4. Algorithmic Game Theory
+    <div class="sem-row">
+      <div class="sem-label">
+        <span class="sem-num">Sem 3</span>
+        <span class="sem-date">Aug–Dec<br>2025</span>
+      </div>
+      <div class="sem-divider"></div>
+      <div class="course-list">
+        <div class="course-item">Advanced Coding Theory</div>
+        <div class="course-item">Pseudorandomness</div>
+      </div>
+    </div>
 
-Aug-Dec, 2024 (Sem 1)
-1. Mathematical Foundations of Computer Science
-2. Algorithms: [Scribe]({{ "/assets/algorithms.pdf" | relative_url }})
-3. Probability
+    <div class="sem-row">
+      <div class="sem-label">
+        <span class="sem-num">Sem 2</span>
+        <span class="sem-date">Jan–May<br>2025</span>
+      </div>
+      <div class="sem-divider"></div>
+      <div class="course-list">
+        <div class="course-item">Computational Complexity Theory</div>
+        <div class="course-item">Algebra, Number Theory and Computation</div>
+        <div class="course-item">Combinatorial Optimization</div>
+        <div class="course-item">Algorithmic Game Theory</div>
+      </div>
+    </div>
 
-### CMI Courses
+    <div class="sem-row">
+      <div class="sem-label">
+        <span class="sem-num">Sem 1</span>
+        <span class="sem-date">Aug–Dec<br>2024</span>
+      </div>
+      <div class="sem-divider"></div>
+      <div class="course-list">
+        <div class="course-item">Mathematical Foundations of Computer Science</div>
+        <div class="course-item">Algorithms &nbsp;<a class="scribe-link" href="{{ "/assets/algorithms.pdf" | relative_url }}">[scribe]</a></div>
+        <div class="course-item">Probability</div>
+      </div>
+    </div>
 
-Aug-Nov 2021 (Sem 1)
+  </div>
 
-1.  [Algebra I](https://drive.google.com/drive/folders/1z2ThsxDQlpLiEPyq_GZV0aKAPP5G8AW1?usp=drive_link) (Linear Algebra)
-2.  [Analysis I](https://drive.google.com/drive/folders/1tJNraW56zFCggG7y9n1Kdr8ORPtrXKrn?usp=drive_link) (Real Analysis)
-3.  [Classical Mechanics I](https://drive.google.com/drive/folders/1nQ_BHGAReWaEXR5jW2tIbGfDm7Furqwp?usp=drive_link)
-4.  [Functional Programming in Haskell](https://drive.google.com/drive/folders/1O_rmaLvIrdK311Ny79te2foYhVD8CKis?usp=drive_link)
-5.  English
+  <div class="col">
+    <div class="col-heading">CMI</div>
 
-Jan-Apr 2022 (Sem 2)
+    <div class="sem-row">
+      <div class="sem-label">
+        <span class="sem-num">Sem 1</span>
+        <span class="sem-date">Aug–Nov<br>2021</span>
+      </div>
+      <div class="sem-divider"></div>
+      <div class="course-list">
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1z2ThsxDQlpLiEPyq_GZV0aKAPP5G8AW1?usp=drive_link" target="_blank">Algebra I</a> <span class="sub">Linear Algebra</span></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1tJNraW56zFCggG7y9n1Kdr8ORPtrXKrn?usp=drive_link" target="_blank">Analysis I</a> <span class="sub">Real Analysis</span></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1nQ_BHGAReWaEXR5jW2tIbGfDm7Furqwp?usp=drive_link" target="_blank">Classical Mechanics I</a></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1O_rmaLvIrdK311Ny79te2foYhVD8CKis?usp=drive_link" target="_blank">Functional Programming in Haskell</a></div>
+        <div class="course-item">English</div>
+      </div>
+    </div>
 
-1.  [Algebra II](https://drive.google.com/drive/folders/1C-hOtdrr9jMeoXJ6NL3ogP2dukvWG9VR?usp=drive_link) (Group Theory)
-2.  [Analysis II](https://drive.google.com/drive/folders/1dODMladIJ1f4BfMXVxoU5_YkfmWU8v4q?usp=drive_link) (Euclidean Space)
-3.  [Discrete Mathematics](https://drive.google.com/drive/folders/1MWwBM1bUclIf9dtZ9cTutEl657c2hIS5?usp=drive_link)
-4.  [Probability Theory](https://drive.google.com/drive/folders/1OJs5BGZRPtjWyB4KNm3_NlzS-2OTIagp?usp=drive_link)
-5.  [Advanced Programming in Python](https://drive.google.com/drive/folders/17Swz2Zl3V7zGasH18UQxJhHjqSE_NPZb?usp=drive_link)
+    <div class="sem-row">
+      <div class="sem-label">
+        <span class="sem-num">Sem 2</span>
+        <span class="sem-date">Jan–Apr<br>2022</span>
+      </div>
+      <div class="sem-divider"></div>
+      <div class="course-list">
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1C-hOtdrr9jMeoXJ6NL3ogP2dukvWG9VR?usp=drive_link" target="_blank">Algebra II</a> <span class="sub">Group Theory</span></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1dODMladIJ1f4BfMXVxoU5_YkfmWU8v4q?usp=drive_link" target="_blank">Analysis II</a> <span class="sub">Euclidean Space</span></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1MWwBM1bUclIf9dtZ9cTutEl657c2hIS5?usp=drive_link" target="_blank">Discrete Mathematics</a></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1OJs5BGZRPtjWyB4KNm3_NlzS-2OTIagp?usp=drive_link" target="_blank">Probability Theory</a></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/17Swz2Zl3V7zGasH18UQxJhHjqSE_NPZb?usp=drive_link" target="_blank">Advanced Programming in Python</a></div>
+      </div>
+    </div>
 
-Aug-Nov 2022 (Sem 3)
+    <div class="sem-row">
+      <div class="sem-label">
+        <span class="sem-num">Sem 3</span>
+        <span class="sem-date">Aug–Nov<br>2022</span>
+      </div>
+      <div class="sem-divider"></div>
+      <div class="course-list">
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1Pa7Uxvd7jcHvLpegcRHoH4_XXHo8vMMc?usp=drive_link" target="_blank">Algebra III</a> <span class="sub">Ring &amp; Field Theory</span></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/10d-QgKfJ-5NyNWeoUlk7eFGMW_Tr49xM?usp=drive_link" target="_blank">Analysis III</a> <span class="sub">Metric Space</span></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1YnAYnI7veRD4H2BcvdNThAVOWS2fqIpN?usp=drive_link" target="_blank">Theory of Computation</a></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1xHmhPs_LhRBk4IaR1vFSwjkWNU4S__77?usp=drive_link" target="_blank">Design and Analysis of Algorithms</a></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/19lNN4h7qs3WUkKVU-J-Bd1Jan1DZ3pgg?usp=drive_link" target="_blank">Calculus</a></div>
+      </div>
+    </div>
 
-1.  [Algebra III](https://drive.google.com/drive/folders/1Pa7Uxvd7jcHvLpegcRHoH4_XXHo8vMMc?usp=drive_link) (Ring Theory, Field Theory)
-2.  [Analysis III](https://drive.google.com/drive/folders/10d-QgKfJ-5NyNWeoUlk7eFGMW_Tr49xM?usp=drive_link) (Metric Space)
-3.  [Theory of Computation](https://drive.google.com/drive/folders/1YnAYnI7veRD4H2BcvdNThAVOWS2fqIpN?usp=drive_link)
-4.  [Design and Analysis of Algorithms](https://drive.google.com/drive/folders/1xHmhPs_LhRBk4IaR1vFSwjkWNU4S__77?usp=drive_link)
-5.  [Calculus](https://drive.google.com/drive/folders/19lNN4h7qs3WUkKVU-J-Bd1Jan1DZ3pgg?usp=drive_link)
+    <div class="sem-row">
+      <div class="sem-label">
+        <span class="sem-num">Sem 4</span>
+        <span class="sem-date">Jan–Apr<br>2023</span>
+      </div>
+      <div class="sem-divider"></div>
+      <div class="course-list">
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1yIfJC2QpxQHdgio8jqWM85XRBRi6rcWU?usp=drive_link" target="_blank">Complexity Theory</a></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1-1iLyZFI3BZjaz52Nk4404Y1-jdp8xme?usp=drive_link" target="_blank">Topology</a></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1qB07tV3xbYcgRPD0Ws8e4adljpOO_Y9b?usp=drive_link" target="_blank">Complex Analysis</a></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1pwBApUIIv52oLcr36d5UKUYmtnvxSZUX?usp=drive_link" target="_blank">Programming Language Concepts</a> <span class="sub">Java, Concurrent, λ-Calculus</span></div>
+        <div class="course-item"><a href="https://drive.google.com/drive/folders/1m-sqJ8CbgHngDBBi_nZoDsjj6jcnYeJf?usp=drive_link" target="_blank">Differential Equations</a></div>
+      </div>
+    </div>
 
-Jan-Apr 2023 (Sem 4)
+    <div class="sem-row">
+      <div class="sem-label">
+        <span class="sem-num">Sem 5</span>
+        <span class="sem-date">Aug–Nov<br>2023</span>
+      </div>
+      <div class="sem-divider"></div>
+      <div class="course-list">
+        <div class="course-item">Algorithmic Coding Theory</div>
+        <div class="course-item">Parallel Algorithm and Complexity</div>
+        <div class="course-item">Quantum Algorithmic Thinking</div>
+        <div class="course-item">Commutative Algebra</div>
+      </div>
+    </div>
 
-1.  [Complexity Theory](https://drive.google.com/drive/folders/1yIfJC2QpxQHdgio8jqWM85XRBRi6rcWU?usp=drive_link)
-2.  [Topology](https://drive.google.com/drive/folders/1-1iLyZFI3BZjaz52Nk4404Y1-jdp8xme?usp=drive_link)
-3.  [Complex Analysis](https://drive.google.com/drive/folders/1qB07tV3xbYcgRPD0Ws8e4adljpOO_Y9b?usp=drive_link)
-4.  [Programming Language Concepts](https://drive.google.com/drive/folders/1pwBApUIIv52oLcr36d5UKUYmtnvxSZUX?usp=drive_link) (Java Programming, Concurrent Programming, Lambda Calculus)
-5.  [Differential Equations](https://drive.google.com/drive/folders/1m-sqJ8CbgHngDBBi_nZoDsjj6jcnYeJf?usp=drive_link)
+    <div class="sem-row">
+      <div class="sem-label">
+        <span class="sem-num">Sem 6</span>
+        <span class="sem-date">Jan–Apr<br>2024</span>
+      </div>
+      <div class="sem-divider"></div>
+      <div class="course-list">
+        <div class="course-item">Expander Graphs and Applications</div>
+        <div class="course-item">Algebra and Computation</div>
+        <div class="course-item">Quantum Information Theory</div>
+        <div class="course-item">Economics</div>
+      </div>
+    </div>
 
-Aug-Nov 2023 (Sem 5)
-
-1.  Algorithmic Coding Theory
-2.  Parallel Algorithm and Complexity
-3.  Quantum Algorithmic Thinking
-4.  Commutative Algebra
-
-Jan-Apr 2024 (Sem 6)
-
-1.  Expander Graphs and Applications
-2.  Algebra and Computation
-3.  Quantum Information Theory
-4.  Economics
-
+  </div>
+</div>
