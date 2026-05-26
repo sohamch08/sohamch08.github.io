@@ -245,6 +245,7 @@ title: Publications
         Deterministic list decoding of Reed-Solomon codes
         <div class="publication-buttons">
           <div class="abstract-box" onclick="openModal(this)">Abstract</div>
+          <div class="pdf-box" onclick="window.open('/assets/deterministicGS.pdf', '_blank')">PDF</div>
           <div class="pdf-box" onclick="window.open('https://eccc.weizmann.ac.il/report/2025/170/', '_blank')">ECCC</div>
           <div class="pdf-box" onclick="window.open('https://arxiv.org/abs/2511.05176', '_blank')">Arxiv</div>
         </div>
@@ -269,8 +270,8 @@ title: Publications
         <div>Exponential Sums and Weil Bounds<div class="publication-subtitle">A Survey of Elementary Methods and Decoding Applications</div></div>
         <div class="publication-buttons">
           <div class="abstract-box" onclick="openModal(this)">Abstract</div>
-          <div class="pdf-box" onclick="window.open('https://github.com/sohamch08/msc-project-tifr', '_blank')">Repo</div>
           <div class="pdf-box" onclick="window.open('/assets/msc-project.pdf', '_blank')">PDF</div>
+          <div class="pdf-box" onclick="window.open('https://github.com/sohamch08/msc-project-tifr', '_blank')">Repo</div>
         </div>
     </div>
     <div class="publication-authors"><span class="separator">▶</span>MSc Project Report under <a href="https://mrinalkr.bitbucket.io">Mrinal Kumar</a> (TIFR)</div>

@@ -123,7 +123,6 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
 
   <div class="col">
     <div class="col-heading">TIFR</div>
-
     <div class="sem-row">
       <div class="sem-label">
         <span class="sem-num">Sem 3</span>
@@ -135,7 +134,6 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         <div class="course-item">Pseudorandomness</div>
       </div>
     </div>
-
     <div class="sem-row">
       <div class="sem-label">
         <span class="sem-num">Sem 2</span>
@@ -149,7 +147,6 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         <div class="course-item">Algorithmic Game Theory</div>
       </div>
     </div>
-
     <div class="sem-row">
       <div class="sem-label">
         <span class="sem-num">Sem 1</span>
@@ -167,12 +164,9 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         <div class="course-item">Probability</div>
       </div>
     </div>
-
   </div>
-
   <div class="col">
     <div class="col-heading">CMI</div>
-
     <div class="sem-row">
       <div class="sem-label">
         <span class="sem-num">Sem 1</span>
@@ -209,7 +203,6 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         <div class="course-item">English</div>
       </div>
     </div>
-
     <div class="sem-row">
       <div class="sem-label">
         <span class="sem-num">Sem 2</span>
@@ -251,7 +244,6 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         </div>
       </div>
     </div>
-
     <div class="sem-row">
       <div class="sem-label">
         <span class="sem-num">Sem 3</span>
@@ -293,7 +285,6 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         </div>
       </div>
     </div>
-
     <div class="sem-row">
       <div class="sem-label">
         <span class="sem-num">Sem 4</span>
@@ -334,7 +325,6 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         </div>
       </div>
     </div>
-
     <div class="sem-row">
       <div class="sem-label">
         <span class="sem-num">Sem 5</span>
@@ -348,7 +338,6 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         <div class="course-item">Commutative Algebra</div>
       </div>
     </div>
-
     <div class="sem-row">
       <div class="sem-label">
         <span class="sem-num">Sem 6</span>
@@ -362,6 +351,5 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         <div class="course-item">Economics</div>
       </div>
     </div>
-
   </div>
 </div>
