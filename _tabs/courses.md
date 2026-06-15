@@ -345,7 +345,12 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
       </div>
       <div class="sem-divider"></div>
       <div class="course-list">
-        <div class="course-item">Expander Graphs and Applications</div>
+        <div class="course-item">
+          <div class="course-header">
+            <span class="course-name">Expander Graphs and Applications</span>
+            <a class="scribe-link" href="{{ "/assets/logconcave_Polynomials_expander_report.pdf" | relative_url }}" target="_blank">[notes]</a>
+          </div>
+        </div>
         <div class="course-item">Algebra and Computation</div>
         <div class="course-item">Quantum Information Theory</div>
         <div class="course-item">Economics</div>

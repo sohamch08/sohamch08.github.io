@@ -61,26 +61,17 @@ title: Talks
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 5px;
+        gap: 8px;
         flex-shrink: 0;
     }
-    .pdf-box {
-        cursor: pointer;
-        display: inline-block;
-        background-color: transparent;
-        border: 1px solid #7fffd4;
+    .talk-link {
+        font-size: 13.5px;
         color: #7fffd4;
-        padding: 1px 8px;
-        border-radius: 6px;
-        font-size: 0.75rem;
-        font-weight: 500;
-        transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
-    .pdf-box:hover {
-        background-color: #7fffd4;
-        color: #1a1c1e;
-        box-shadow: 0 0 8px #9affd8;
-    }
+    .talk-link:hover { text-decoration: underline; }
     .year-header {
         font-size: 22px;
         font-weight: 700;
@@ -110,27 +101,27 @@ title: Talks
     <div class="talk-venue-row">
         <div class="talk-description">STOC 2026 Presentation</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1EkBCHeP-DFx-sC5gC-MUXfVywSXKPvG-/view?usp=drive_link" | relative_url }}', '_blank')">Poster</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1EkBCHeP-DFx-sC5gC-MUXfVywSXKPvG-/view?usp=drive_link" | relative_url }}" target="_blank">[Poster]</a>
         </div>
     </div>
     <div class="talk-venue-row">
         <div class="talk-description">Poster Presentation, WACT 2026</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1bP2GB9GkezbLkNIz7OtbH-sCfnBatKtB/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1KLQdePnyux_2rHgHXIfJq6rSpv-XWgP4/view?usp=drive_link" | relative_url }}', '_blank')">Poster</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1bP2GB9GkezbLkNIz7OtbH-sCfnBatKtB/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1KLQdePnyux_2rHgHXIfJq6rSpv-XWgP4/view?usp=drive_link" | relative_url }}" target="_blank">[Poster]</a>
         </div>
     </div>
     <div class="talk-venue-row">
         <div class="talk-description">TIFR, Student Seminar</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1xEjxUbyhwAv7Qr16BCDx-O-cW_8lZBh5/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
-            <div class="pdf-box" onclick="window.open('https://www.tcs.tifr.res.in/~student_seminar/talks/2026-05-15/', '_blank')">Link</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1xEjxUbyhwAv7Qr16BCDx-O-cW_8lZBh5/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
+            <a class="talk-link" href="https://www.tcs.tifr.res.in/~student_seminar/talks/2026-05-15/" target="_blank">[Link]</a>
         </div>
     </div>
     <div class="talk-venue-row">
         <div class="talk-description">ACMU Seminar, ISI</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/11qDmIEy4jzwuBVWwSGqV8DTthF_Vdi_O/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/11qDmIEy4jzwuBVWwSGqV8DTthF_Vdi_O/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
         </div>
     </div>
 </div>
@@ -139,8 +130,8 @@ title: Talks
     <div class="talk-header">
         <div class="talk-title">Weil Bounds: A Survey of Decoding Applications</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1qfq7NNjN_Tx4WbGXYtOWmVikCGTMKtyC/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
-            <div class="pdf-box" onclick="window.open('https://github.com/sohamch08/msc-project-tifr', '_blank')">Thesis</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1qfq7NNjN_Tx4WbGXYtOWmVikCGTMKtyC/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
+            <a class="talk-link" href="https://github.com/sohamch08/msc-project-tifr" target="_blank">[Thesis]</a>
         </div>
     </div>
     <div class="talk-description">TIFR, MSc. Project Seminar</div>
@@ -159,7 +150,7 @@ title: Talks
     <div class="talk-header">
         <div class="talk-title">$\mathsf{BPL}\subseteq\mathsf{SC}$: Nisan's Pseudorandom Generator for $\mathsf{BPL}$</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1C88HBSjewJBBWkOqqQqAABne5jkZvWLq/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1C88HBSjewJBBWkOqqQqAABne5jkZvWLq/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
         </div>
     </div>
     <div class="talk-description">Course-Work presentation (TIFR): Pseudorandomness. Paper by Noam Nisan, 1992</div>
@@ -179,7 +170,7 @@ title: Talks
     <div class="talk-header">
         <div class="talk-title">Universal Optimality of Dijkstra using Fibonacci Priority Queue with Working Set Property</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/13-yOlT-mHOMDWSDsZlPY92Fz2SzCV4zJ/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/13-yOlT-mHOMDWSDsZlPY92Fz2SzCV4zJ/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
         </div>
     </div>
     <div class="talk-description">Oral Qualifier Presentation. Paper by Haeupler, Hladík, Rozhoň, Tarjan, Tětek, 2024. FOCS Best Paper.</div>
@@ -196,7 +187,7 @@ title: Talks
     <div class="talk-header">
         <div class="talk-title">Super Polynomial Lower Bound on Traveling Salesman Polytope</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1q8L-SuT5rTfjURVE0PDDEjKm2Cpv7PF8/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1q8L-SuT5rTfjURVE0PDDEjKm2Cpv7PF8/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
         </div>
     </div>
     <div class="talk-description">
@@ -209,7 +200,7 @@ title: Talks
     <div class="talk-header">
         <div class="talk-title">Bounds on Price of Anarchy using Linear and Quadratic Programming</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1ZZXaHdMWj2_RrwkxBavZBTCPWGKX2kjS/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1ZZXaHdMWj2_RrwkxBavZBTCPWGKX2kjS/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
         </div>
     </div>
     <div class="talk-description">
@@ -246,7 +237,7 @@ title: Talks
     <div class="talk-header">
         <div class="talk-title">Algebraic Geometric Codes</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1hDhXFZpRLU8DVMv84d_N-5K6_Z6jMDTK/view?usp=drive_link" | relative_url }}', '_blank')">Report</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1hDhXFZpRLU8DVMv84d_N-5K6_Z6jMDTK/view?usp=drive_link" | relative_url }}" target="_blank">[Report]</a>
         </div>
     </div>
     <div class="talk-description">
@@ -259,7 +250,7 @@ title: Talks
     <div class="talk-header">
         <div class="talk-title">"Iterated Mod Problem" by Karloff and Ruzzo</div>
         <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/16zACu-KVsTJubbypDU-vdkHjyBgEWKhC/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/16zACu-KVsTJubbypDU-vdkHjyBgEWKhC/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
         </div>
     </div>
     <div class="talk-description">
