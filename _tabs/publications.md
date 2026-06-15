@@ -251,7 +251,7 @@ title: Publications
         </div>
     </div>
     <div class="publication-authors"><span class="separator">▶</span>Joint work with <a href="https://www.tifr.res.in/~prahladh/">Prahladh Harsha</a> (TIFR) and <a href="https://mrinalkr.bitbucket.io">Mrinal Kumar</a> (TIFR)</div>
-    <div class="publication-details"><span class="separator">▶</span>STOC 2026</div>
+    <div class="publication-details"><span class="separator">▶</span><a href="https://dl.acm.org/doi/10.1145/3798129.3800908" target="_blank">STOC 2026</a></div>
     <div class="abstract" style="display:none;"> <p>
     We show that Reed-Solomon codes of dimension $k$ and block length $n$  over any finite field $\mathbb{F}$ can be <i>deterministically</i> list decoded from agreement $\sqrt{(k-1)n}$ in time $\text{poly}(n, \log |\mathbb{F}|)$.
     </p> 
