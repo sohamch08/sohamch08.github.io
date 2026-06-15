@@ -70,9 +70,9 @@ title: Talks
         background-color: transparent;
         border: 1px solid #7fffd4;
         color: #7fffd4;
-        padding: 2px 10px;
+        padding: 1px 8px;
         border-radius: 6px;
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         font-weight: 500;
         transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     }
@@ -81,7 +81,59 @@ title: Talks
         color: #1a1c1e;
         box-shadow: 0 0 8px #9affd8;
     }
+    .year-header {
+        font-size: 22px;
+        font-weight: 700;
+        color: #7fffd4;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid #2e3035;
+        padding-bottom: 4px;
+    }
+    .talk-venue-row {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 4px 0;
+    }
+    .talk-venue-row:not(:last-child) {
+        border-bottom: 1px solid #252729;
+    }
 </style>
+
+<div class="year-header">2026</div>
+
+<div class="talk-item">
+    <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
+    <div class="talk-venue-row">
+        <div class="talk-description">STOC 2026 Presentation</div>
+        <div class="talk-slides">
+            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1EkBCHeP-DFx-sC5gC-MUXfVywSXKPvG-/view?usp=drive_link" | relative_url }}', '_blank')">Poster</div>
+        </div>
+    </div>
+    <div class="talk-venue-row">
+        <div class="talk-description">Poster Presentation, WACT 2026</div>
+        <div class="talk-slides">
+            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1bP2GB9GkezbLkNIz7OtbH-sCfnBatKtB/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
+            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1KLQdePnyux_2rHgHXIfJq6rSpv-XWgP4/view?usp=drive_link" | relative_url }}', '_blank')">Poster</div>
+        </div>
+    </div>
+    <div class="talk-venue-row">
+        <div class="talk-description">TIFR, Student Seminar</div>
+        <div class="talk-slides">
+            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1xEjxUbyhwAv7Qr16BCDx-O-cW_8lZBh5/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
+            <div class="pdf-box" onclick="window.open('https://www.tcs.tifr.res.in/~student_seminar/talks/2026-05-15/', '_blank')">Link</div>
+        </div>
+    </div>
+    <div class="talk-venue-row">
+        <div class="talk-description">ACMU Seminar, ISI</div>
+        <div class="talk-slides">
+            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/11qDmIEy4jzwuBVWwSGqV8DTthF_Vdi_O/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
+        </div>
+    </div>
+</div>
 
 <div class="talk-item">
     <div class="talk-header">
@@ -96,31 +148,12 @@ title: Talks
 
 <div class="talk-item">
     <div class="talk-header">
-        <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
-        <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/1xEjxUbyhwAv7Qr16BCDx-O-cW_8lZBh5/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
-            <div class="pdf-box" onclick="window.open('https://www.tcs.tifr.res.in/~student_seminar/talks/2026-05-15/', '_blank')">Link</div>
-        </div>
-    </div>
-    <div class="talk-description">TIFR, Student Seminar</div>
-</div>
-
-<div class="talk-item">
-    <div class="talk-header">
         <div class="talk-title">GM-MDS Conjecture: MDS matrices over small fields</div>
     </div>
     <div class="talk-description">TIFR Student Seminar</div>
 </div>
 
-<div class="talk-item">
-    <div class="talk-header">
-        <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
-        <div class="talk-slides">
-            <div class="pdf-box" onclick="window.open('{{ "https://drive.google.com/file/d/11qDmIEy4jzwuBVWwSGqV8DTthF_Vdi_O/view?usp=drive_link" | relative_url }}', '_blank')">Slides</div>
-        </div>
-    </div>
-    <div class="talk-description">ACMU Seminar, ISI</div>
-</div>
+<div class="year-header">2025</div>
 
 <div class="talk-item">
     <div class="talk-header">
@@ -195,6 +228,8 @@ title: Talks
     </div>
 </div>
 
+<div class="year-header">2024</div>
+
 <div class="talk-item">
     <div class="talk-header">
         <div class="talk-title">Hensel and Newton Methods in Valuation Rings</div>
@@ -204,6 +239,8 @@ title: Talks
         Paper by J von zur Gathen, 1984.
     </div>
 </div>
+
+<div class="year-header">2023</div>
 
 <div class="talk-item">
     <div class="talk-header">
