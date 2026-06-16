@@ -249,7 +249,7 @@ title: Talks
 
 <div class="talk-item">
     <div class="talk-header">
-        <div class="talk-title">"Iterated Mod Problem" by Karloff and Ruzzo</div>
+        <div class="talk-title">Iterated Mod Problem by Karloff and Ruzzo</div>
         <div class="talk-slides">
             <a class="talk-link" href="{{ "https://drive.google.com/file/d/16zACu-KVsTJubbypDU-vdkHjyBgEWKhC/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
         </div>
