@@ -101,6 +101,7 @@ title: Talks
     <div class="talk-venue-row">
         <div class="talk-description">STOC 2026 Presentation</div>
         <div class="talk-slides">
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1Vrr_smgKOE_FfCrb4hO-3cPe8tcbXrq3/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
             <a class="talk-link" href="{{ "https://drive.google.com/file/d/1EkBCHeP-DFx-sC5gC-MUXfVywSXKPvG-/view?usp=drive_link" | relative_url }}" target="_blank">[Poster]</a>
         </div>
     </div>
