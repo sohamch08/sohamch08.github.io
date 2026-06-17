@@ -154,11 +154,16 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
       </div>
       <div class="sem-divider"></div>
       <div class="course-list">
-        <div class="course-item">Mathematical Foundations of Computer Science</div>
+        <div class="course-item">
+          <div class="course-header">
+            <span class="course-name">Mathematical Foundations of Computer Science</span>
+            <a class="scribe-link" href="{{ "https://drive.google.com/file/d/1d67lWG_lEvkaqGXw61HlYh9vW1leJLwO/view?usp=drive_link" | relative_url }}">[scribe]</a>
+          </div>
+        </div>
         <div class="course-item">
           <div class="course-header">
             <span class="course-name">Algorithms</span>
-            <a class="scribe-link" href="{{ "/assets/algorithms.pdf" | relative_url }}">[scribe]</a>
+            <a class="scribe-link" href="{{ "https://drive.google.com/file/d/1qyNNff7YReN7AmwnjuSa-URlqaM8dU9l/view?usp=drive_link" | relative_url }}">[scribe]</a>
           </div>
         </div>
         <div class="course-item">Probability</div>
