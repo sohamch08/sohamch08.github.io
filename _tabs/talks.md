@@ -99,6 +99,18 @@ title: Talks
 <div class="talk-item">
     <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
     <div class="talk-venue-row">
+        <div class="talk-description">IIT, Hyderabad</div>
+        <div class="talk-slides">
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/11Km4B_UosUSODKqTzNbmWKyx9Tvb-RcW/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
+        </div>
+    </div>
+    <div class="talk-venue-row">
+        <div class="talk-description">Recent Advances in Applied Mathematics 2026, IIT Hyderabad</div>
+        <div class="talk-slides">
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1MyXoOkrWMLvdkdVXyu9M9NfUZaqKAnkz/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
+        </div>
+    </div>
+    <div class="talk-venue-row">
         <div class="talk-description">STOC 2026, Salt Lake City</div>
         <div class="talk-slides">
             <a class="talk-link" href="{{ "https://drive.google.com/file/d/1qfItaOqAzyp30D33gVwXx5sOuCu2Sw3m/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
