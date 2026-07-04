@@ -99,14 +99,14 @@ title: Talks
 <div class="talk-item">
     <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
     <div class="talk-venue-row">
-        <div class="talk-description">STOC 2026 Conference, Salt Lake City</div>
+        <div class="talk-description">STOC 2026, Salt Lake City</div>
         <div class="talk-slides">
             <a class="talk-link" href="{{ "https://drive.google.com/file/d/1qfItaOqAzyp30D33gVwXx5sOuCu2Sw3m/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
             <a class="talk-link" href="{{ "https://drive.google.com/file/d/1EkBCHeP-DFx-sC5gC-MUXfVywSXKPvG-/view?usp=drive_link" | relative_url }}" target="_blank">[Poster]</a>
         </div>
     </div>
     <div class="talk-venue-row">
-        <div class="talk-description">Poster Presentation, WACT 2026, University of Copenhagen</div>
+        <div class="talk-description">WACT 2026, University of Copenhagen</div>
         <div class="talk-slides">
             <a class="talk-link" href="{{ "https://drive.google.com/file/d/1bP2GB9GkezbLkNIz7OtbH-sCfnBatKtB/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
             <a class="talk-link" href="{{ "https://drive.google.com/file/d/1KLQdePnyux_2rHgHXIfJq6rSpv-XWgP4/view?usp=drive_link" | relative_url }}" target="_blank">[Poster]</a>
