@@ -102,8 +102,6 @@ title: Talks
         <div class="talk-description">IIT, Hyderabad</div>
         <div class="talk-slides">
             <a class="talk-link" href="{{ "https://drive.google.com/file/d/1AHRRn7pHXaUKNeTtqI_m8Urzpw2eSAJw/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
-        </div>
-        <div class="talk-slides">
             <a class="talk-link" href="{{ "https://cse.iith.ac.in/talks/2026-07-09-Talk-Soham-Chatterjee.html" | relative_url }}" target="_blank">[Link]</a>
         </div>
     </div>
