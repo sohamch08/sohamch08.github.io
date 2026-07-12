@@ -101,13 +101,16 @@ title: Talks
     <div class="talk-venue-row">
         <div class="talk-description">IIT, Hyderabad</div>
         <div class="talk-slides">
-            <a class="talk-link" href="{{ "https://drive.google.com/file/d/11Km4B_UosUSODKqTzNbmWKyx9Tvb-RcW/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1AHRRn7pHXaUKNeTtqI_m8Urzpw2eSAJw/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
+        </div>
+        <div class="talk-slides">
+            <a class="talk-link" href="{{ "https://cse.iith.ac.in/talks/2026-07-09-Talk-Soham-Chatterjee.html" | relative_url }}" target="_blank">[Link]</a>
         </div>
     </div>
     <div class="talk-venue-row">
         <div class="talk-description">Recent Advances in Applied Mathematics 2026, IIT Hyderabad</div>
         <div class="talk-slides">
-            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1MyXoOkrWMLvdkdVXyu9M9NfUZaqKAnkz/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
+            <a class="talk-link" href="{{ "https://drive.google.com/file/d/1F-fE44OjxNvm5vgb-4xW4g0T5jvIL08G/view?usp=drive_link" | relative_url }}" target="_blank">[Slides]</a>
         </div>
     </div>
     <div class="talk-venue-row">
