@@ -76,7 +76,7 @@ title: Miscellaneous
 </style>
 ## Reviewer
 - Reviewer for FSTTCS 2026
-- Reviewer for ISSAC 2026
+- Reviewer for ISAAC 2026
 - Sub reviewer for STACS 2026
 ## Teaching Assistantship
 - Algebra, Number Theory & Computation (TIFR) by Mrinal Kumar, 2026
