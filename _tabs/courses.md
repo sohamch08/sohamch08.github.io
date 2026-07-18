@@ -163,7 +163,7 @@ These are the courses I took at TIFR during my PhD and at CMI during my bachelor
         <div class="course-item">
           <div class="course-header">
             <span class="course-name">Algorithms</span>
-            <a class="scribe-link" href="{{ "https://drive.google.com/file/d/1qyNNff7YReN7AmwnjuSa-URlqaM8dU9l/view?usp=drive_link" | relative_url }}">[scribe]</a>
+            <a class="scribe-link" href="{{ "https://drive.google.com/file/d/1Qkb6DPRZ8utbTuDJKig5YCOSxidjrtIZ/view?usp=drive_link" | relative_url }}">[scribe]</a>
           </div>
         </div>
         <div class="course-item">Probability</div>
