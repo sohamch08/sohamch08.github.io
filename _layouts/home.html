@@ -75,6 +75,92 @@ title: Home
             /* brighter cyan for emphasis */
         }
 
+        /* Fellowship highlight banner */
+        .highlight-banner {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            margin: 2rem 0;
+            padding: 1rem 1.3rem;
+            background-color: #1a1c1e;
+            border: 1px solid #7fffd455;
+            border-left: 4px solid #33fff0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #7fffd440;
+            line-height: 1.45;
+        }
+
+        .highlight-banner .banner-icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+
+        .highlight-banner .banner-title {
+            display: block;
+            color: #33fff0;
+            /* brighter cyan for emphasis */
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .highlight-banner .banner-sub {
+            display: block;
+            color: #dcdcdc;
+            font-size: 0.9rem;
+            margin-top: 0.15rem;
+        }
+
+        /* "Looking for something?" box — same shell as the highlight banner */
+        .lookup-box {
+            margin: 2rem 0 3rem;
+            padding: 1.6rem 2rem;
+            background-color: #1a1c1e;
+            border: 1px solid #7fffd455;
+            border-left: 4px solid #33fff0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #7fffd440;
+            color: #f5f5f5;
+            line-height: 1.45;
+        }
+
+        .lookup-box .lookup-title {
+            display: block;
+            color: #33fff0;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .lookup-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .lookup-box li {
+            display: flex;
+            align-items: baseline;
+            gap: 0.7rem;
+            padding: 0.3rem 0;
+            font-size: 0.95rem;
+        }
+
+        .lookup-box li .lookup-icon {
+            flex: 0 0 1.4rem;
+            font-size: 1.05rem;
+        }
+
+        .lookup-box a {
+            color: #4fe8c1;
+            text-decoration: none;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
+        }
+
+        .lookup-box a:hover {
+            color: #9affd8;
+            text-shadow: 0 0 5px #9affd855;
+        }
+
         /* Terminal body specifics */
         .terminal-body {
             color: #7fffd4;
@@ -131,12 +217,6 @@ title: Home
         <a href="https://www.cmi.ac.in/" target="_blank">Chennai Mathematical Institute</a> (2021–2024).
     </p>
     <p>
-        My Ph.D. is supported by a four-year
-        <a href="https://www.tcs.com/what-we-do/research/tcs-research-scholar-program" target="_blank"
-            rel="noopener">TCS Research Scholar Program</a>
-        Fellowship (Cycle 20).
-    </p>
-    <p>
         My primary research interests lie in Theoretical Computer Science. Broadly, I am interested in:
     </p>
     <ul>
@@ -146,6 +226,13 @@ title: Home
         <li>Polyhedral Combinatorics</li>
     </ul>
     </p>
+    <div class="highlight-banner">
+        <span class="banner-icon">🏆</span>
+        <span>
+            <span class="banner-title">TCS Research Scholar Program Fellowship (Cycle 20)</span>
+            <span class="banner-sub">Awarded a four-year fellowship supporting my Ph.D. research.</span>
+        </span>
+    </div>
     <p>
         Beyond coursework, I enjoy typesetting my notes in LaTeX — it has become a favorite hobby of mine over the
         years.
@@ -158,19 +245,18 @@ title: Home
         &gt; editor: <span class="terminal-value">Emacs</span><br>
         &gt; status: <span class="terminal-value">reproducible by design, comprehensible by few, 😏</span>
     </div> -->
-    <div class="card">
-        <div class="card-background"></div>
-        <div class="card-content">
-            <h2 id="looking-for-something">Looking for something?</h2>
-            <ul>
-                <li>📄 My <a href="/assets/cv.pdf" target="_blank">CV</a></li>
-                <li>💻 My dotfiles and scripts live on <a href="https://github.com/lambdasolver/dotfiles"
-                        target="_blank" rel="noopener">GitHub</a></li>
-                <li>🧠 Curious about my setup? Check out the <a href="/configs/">Configs Page</a></li>
-                <li>📧 Want to reach out? <a href="/contact/">Drop me a message</a></li>
-            </ul>
-
-        </div>
+    <div class="lookup-box">
+        <span class="lookup-title" id="looking-for-something">Looking for something?</span>
+        <ul>
+            <li><span class="lookup-icon">📄</span><span>My <a href="/assets/cv.pdf" target="_blank">CV</a></span></li>
+            <li><span class="lookup-icon">💻</span><span>My dotfiles and scripts live on <a
+                        href="https://github.com/lambdasolver/dotfiles" target="_blank"
+                        rel="noopener">GitHub</a></span></li>
+            <li><span class="lookup-icon">🧠</span><span>Curious about my setup? Check out the <a
+                        href="/configs/">Configs Page</a></span></li>
+            <li><span class="lookup-icon">📧</span><span>Want to reach out? <a href="/contact/">Drop me a
+                        message</a></span></li>
+        </ul>
     </div>
 
 
