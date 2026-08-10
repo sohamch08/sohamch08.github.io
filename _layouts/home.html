@@ -81,13 +81,18 @@ title: Home
             align-items: center;
             gap: 0.9rem;
             margin: 2rem 0;
-            padding: 1rem 1.3rem;
+            padding: 1.2rem 1.5rem;
             background-color: #1a1c1e;
-            border: 1px solid #7fffd455;
-            border-left: 4px solid #33fff0;
+            border-left: 3px solid #7fffd4;
             border-radius: 10px;
-            box-shadow: 0 0 15px #7fffd440;
+            box-shadow: 0 4px 16px rgba(127, 255, 212, 0.25);
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
             line-height: 1.45;
+        }
+
+        .highlight-banner:hover {
+            box-shadow: 0 6px 22px rgba(127, 255, 212, 0.35);
+            transform: translateY(-2px);
         }
 
         .highlight-banner .banner-icon {
@@ -97,8 +102,8 @@ title: Home
 
         .highlight-banner .banner-title {
             display: block;
-            color: #33fff0;
-            /* brighter cyan for emphasis */
+            color: #7fffd4;
+            /* cyan accent, matching publication headings */
             font-weight: 600;
             font-size: 1.05rem;
         }
@@ -113,19 +118,24 @@ title: Home
         /* "Looking for something?" box — same shell as the highlight banner */
         .lookup-box {
             margin: 2rem 0 3rem;
-            padding: 1.6rem 2rem;
+            padding: 1.2rem 1.5rem;
             background-color: #1a1c1e;
-            border: 1px solid #7fffd455;
-            border-left: 4px solid #33fff0;
+            border-left: 3px solid #7fffd4;
             border-radius: 10px;
-            box-shadow: 0 0 15px #7fffd440;
+            box-shadow: 0 4px 16px rgba(127, 255, 212, 0.25);
+            transition: box-shadow 0.25s ease, transform 0.25s ease;
             color: #f5f5f5;
             line-height: 1.45;
         }
 
+        .lookup-box:hover {
+            box-shadow: 0 6px 22px rgba(127, 255, 212, 0.35);
+            transform: translateY(-2px);
+        }
+
         .lookup-box .lookup-title {
             display: block;
-            color: #33fff0;
+            color: #7fffd4;
             font-weight: 600;
             font-size: 1.5rem;
             margin-bottom: 0.9rem;
@@ -226,13 +236,13 @@ title: Home
         <li>Polyhedral Combinatorics</li>
     </ul>
     </p>
-    <!-- <div class="highlight-banner">
+    <div class="highlight-banner">
         <span class="banner-icon">🏆</span>
         <span>
-            <span class="banner-title">TCS Research Scholar Program (Cycle 20)</span>
+            <span class="banner-title">TCS Research Scholar Program (2026)</span>
             <span class="banner-sub">Awarded a four-year fellowship supporting my Ph.D. research.</span>
         </span>
-    </div> -->
+    </div>
     <p>
         Beyond coursework, I enjoy typesetting my notes in LaTeX — it has become a favorite hobby of mine over the
         years.
