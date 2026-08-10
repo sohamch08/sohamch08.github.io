@@ -389,12 +389,6 @@ main {
   text-align: center;
 }
 
-/* MathJax */
-mjx-container {
-  overflow-y: hidden;
-  min-width: auto !important;
-}
-
 @media (hover: hover) {
   #sidebar ul > li:last-child::after {
     transition: top 0.5s ease;
