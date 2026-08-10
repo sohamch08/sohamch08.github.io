@@ -97,6 +97,16 @@ title: Talks
 <div class="year-header">2026</div>
 
 <div class="talk-item">
+    <div class="talk-header">
+        <div class="talk-title">Even a Bad Matrix Multiplier is Good Enough, if you Correct It</div>
+        <div class="talk-slides">
+            <a class="talk-link" href="https://www.tcs.tifr.res.in/~student_seminar/talks/2026-08-14/" target="_blank">[Link]</a>
+        </div>
+    </div>
+    <div class="talk-description">TIFR, Student Seminar</div>
+</div>
+
+<div class="talk-item">
     <div class="talk-title">Deterministic List Decoding of Reed-Solomon Codes</div>
     <div class="talk-venue-row">
         <div class="talk-description">IIT, Hyderabad</div>
