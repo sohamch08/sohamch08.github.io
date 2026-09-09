@@ -7,6 +7,13 @@ title: Talks
 
 <link rel="stylesheet" href="{{ '/assets/css/talks.css' | relative_url }}">
 
+<nav class="talks-navigation" aria-label="On this page">
+    <a href="#talks-presentations">Talks &amp; presentations</a>
+    <a href="#workshops-conferences">Workshops &amp; conferences attended</a>
+</nav>
+
+<h2 id="talks-presentations" class="talks-section-title">Talks &amp; Presentations</h2>
+
 <div class="year-header">2026</div>
 
 <div class="talk-item">
@@ -194,3 +201,60 @@ title: Talks
         Course-work presentation (CMI): Parallel Algorithms and Complexity
     </div>
 </div>
+
+<section class="attendance-section" aria-labelledby="workshops-conferences">
+    <h2 id="workshops-conferences" class="talks-section-title">Workshops &amp; Conferences Attended</h2>
+    <p class="attendance-intro">Conferences, workshops, and academic programs I have attended.</p>
+
+    <h3 class="attendance-year">2026</h3>
+    <ul class="attendance-list">
+        <li>
+            <div class="talk-title"><a href="https://simons.berkeley.edu/programs/pseudorandomness-high-dimensional-expansion" target="_blank" rel="noopener noreferrer">Pseudorandomness &amp; High-Dimensional Expansion</a></div>
+            <div class="talk-description">Simons Institute for the Theory of Computing, UC Berkeley, USA</div>
+        </li>
+        <li>
+            <div class="talk-title"><a href="https://www.iith.ac.in/events/2026/07/06/raam2026/" target="_blank" rel="noopener noreferrer">Recent Advances in Applied Mathematics (RAAM) 2026</a></div>
+            <div class="talk-description">IIT Hyderabad</div>
+        </li>
+        <li>
+            <div class="talk-title"><a href="https://acm-stoc.org/stoc2026/" target="_blank" rel="noopener noreferrer">Symposium on Theory of Computing (STOC) 2026</a></div>
+            <div class="talk-description">Salt Lake City, Utah, USA</div>
+        </li>
+        <li>
+            <div class="talk-title"><a href="https://sites.google.com/view/wact2026/home" target="_blank" rel="noopener noreferrer">Workshop on Algebraic Complexity Theory (WACT) 2026</a></div>
+            <div class="talk-description">University of Copenhagen, Denmark</div>
+        </li>
+        <li>
+            <div class="talk-title"><a href="https://www.imsc.res.in/~meena/CT-update-meeting-Jan2026.html" target="_blank" rel="noopener noreferrer">Complexity Update Meeting</a></div>
+            <div class="talk-description">Institute of Mathematical Sciences, Chennai</div>
+        </li>
+    </ul>
+
+    <h3 class="attendance-year">2025</h3>
+    <ul class="attendance-list">
+        <li>
+            <div class="talk-title"><a href="https://lmsi.org/programmes/educational-workshop-high-dimensional-expanders" target="_blank" rel="noopener noreferrer">Workshop on High Dimensional Expanders</a></div>
+            <div class="talk-description">LMSI</div>
+        </li>
+        <li>
+            <div class="talk-title"><a href="https://www.fsttcs.org.in/archives/2025/" target="_blank" rel="noopener noreferrer">FSTTCS 2025 Conference</a></div>
+            <div class="talk-description">BITS Goa</div>
+        </li>
+        <li>
+            <div class="talk-title"><a href="https://www.icts.res.in/program/hdxandcodes" target="_blank" rel="noopener noreferrer">HDX and Codes Workshop</a></div>
+            <div class="talk-description">ICTS Bangalore</div>
+        </li>
+    </ul>
+
+    <h3 class="attendance-year">2024</h3>
+    <ul class="attendance-list">
+        <li>
+            <div class="talk-title"><a href="https://www.fsttcs.org.in/archives/2024/" target="_blank" rel="noopener noreferrer">FSTTCS 2024 Conference</a></div>
+            <div class="talk-description">IIT Gandhinagar</div>
+        </li>
+        <li>
+            <div class="talk-title"><a href="https://www.cmi.ac.in/activities/kohli-centre/quantum-semester-2024/index.php" target="_blank" rel="noopener noreferrer">Quantum Computing Semester</a></div>
+            <div class="talk-description">Chennai Mathematical Institute</div>
+        </li>
+    </ul>
+</section>
