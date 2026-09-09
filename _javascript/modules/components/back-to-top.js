@@ -5,15 +5,22 @@
 export function back2top() {
   const btn = document.getElementById('back-to-top');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      btn.classList.add('show');
-    } else {
-      btn.classList.remove('show');
-    }
-  });
+  if (!btn) {
+    return;
+  }
+
+  const updateVisibility = () => {
+    btn.classList.toggle('show', window.scrollY > 0);
+  };
+
+  updateVisibility();
+  window.addEventListener('scroll', updateVisibility, { passive: true });
 
   btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0 });
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? 'auto'
+      : 'smooth';
+
+    window.scrollTo({ top: 0, behavior });
   });
 }

@@ -74,6 +74,20 @@ function isMobileView() {
 }
 
 export function displaySearch() {
+  const requiredElements = [
+    btnSearchTrigger,
+    btnCancel,
+    search,
+    resultWrapper,
+    results,
+    input,
+    hints
+  ];
+
+  if (requiredElements.some((element) => element === null)) {
+    return;
+  }
+
   btnSearchTrigger.addEventListener('click', () => {
     MobileSearchBar.on();
     ResultSwitch.on();

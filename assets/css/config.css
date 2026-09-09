@@ -26,3 +26,41 @@ body {
         a {
             transition: color 0.2s ease, text-shadow 0.2s ease;
         }
+
+        .config-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.25rem 2rem;
+            margin: 0.5rem 0 2rem;
+            border-bottom: 1px solid #34383b;
+        }
+
+        .config-navigation a {
+            display: inline-block;
+            padding: 0.65rem 0 0.8rem;
+            margin-bottom: -1px;
+            border-bottom: 2px solid transparent;
+            color: #7fffd4;
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 1.5;
+            text-decoration: none;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .config-navigation a:hover,
+        .config-navigation a:focus-visible {
+            color: #b6ffe7;
+            border-bottom-color: #7fffd4;
+            text-decoration: none;
+        }
+
+        .config-navigation a:focus-visible {
+            outline: 2px solid #7fffd4;
+            outline-offset: 3px;
+        }
+
+        .config-section-title {
+            scroll-margin-top: 5rem;
+        }
