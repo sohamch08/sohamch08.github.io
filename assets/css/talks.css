@@ -35,9 +35,11 @@ a {
 }
 
 .talk-item {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 8px 0;
+  padding: 0.65rem 0 0.65rem 1rem;
+  border-left: 2px solid #5fe0c8;
   gap: 3px;
 }
 
@@ -60,24 +62,39 @@ a {
   color: #aaa;
 }
 
-.talk-item:not(:last-child) {
-  border-bottom: 1px solid #2e3035;
+.talk-item + .talk-item::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 0;
+  top: 0;
+  border-top: 1px solid #2e3035;
 }
 
 .talk-slides {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 3.75rem);
+  direction: rtl;
+  align-items: baseline;
+  justify-items: left;
   gap: 8px;
   flex-shrink: 0;
+  text-align: left;
 }
 
 .talk-link {
+  direction: ltr;
   font-size: 13.5px;
   color: #7fffd4;
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+/* The first link in each row occupies the rightmost column. */
+.talk-slides > .talk-link:nth-child(3n + 1) {
+  justify-self: right;
+  text-align: right;
 }
 
 .talk-link:hover {
@@ -90,8 +107,6 @@ a {
   color: #7fffd4;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  border-bottom: 1px solid #2e3035;
-  padding-bottom: 4px;
 }
 
 .talk-venue-row {
@@ -105,6 +120,19 @@ a {
 
 .talk-venue-row:not(:last-child) {
   border-bottom: 1px solid #252729;
+}
+
+@media (max-width: 575px) {
+  .talk-header,
+  .talk-venue-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .talk-slides {
+    align-self: flex-end;
+  }
 }
 
 .talks-navigation {
