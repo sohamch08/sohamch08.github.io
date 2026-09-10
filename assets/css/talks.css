@@ -34,12 +34,11 @@ a {
   margin-bottom: 10px;
 }
 
-.talk-item {
-  position: relative;
+.talk-item,
+.attendance-list > li {
   display: flex;
   flex-direction: column;
-  padding: 0.65rem 0 0.65rem 1rem;
-  border-left: 2px solid #5fe0c8;
+  padding: 8px 0;
   gap: 3px;
 }
 
@@ -62,28 +61,20 @@ a {
   color: #aaa;
 }
 
-.talk-item + .talk-item::before {
-  content: "";
-  position: absolute;
-  left: 1rem;
-  right: 0;
-  top: 0;
+.talk-item + .talk-item,
+.attendance-list > li + li {
   border-top: 1px solid #2e3035;
 }
 
 .talk-slides {
-  display: grid;
-  grid-template-columns: repeat(3, 3.75rem);
-  direction: rtl;
-  align-items: baseline;
-  justify-items: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 8px;
   flex-shrink: 0;
-  text-align: left;
 }
 
 .talk-link {
-  direction: ltr;
   font-size: 13.5px;
   color: #7fffd4;
   text-decoration: none;
@@ -91,22 +82,19 @@ a {
   flex-shrink: 0;
 }
 
-/* The first link in each row occupies the rightmost column. */
-.talk-slides > .talk-link:nth-child(3n + 1) {
-  justify-self: right;
-  text-align: right;
-}
-
 .talk-link:hover {
   text-decoration: underline;
 }
 
-.year-header {
+.year-header,
+.attendance-year {
   font-size: 22px;
   font-weight: 700;
   color: #7fffd4;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  border-bottom: 1px solid #2e3035;
+  padding-bottom: 4px;
 }
 
 .talk-venue-row {
@@ -184,22 +172,8 @@ a {
   font-size: 0.875rem;
 }
 
-.attendance-year {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-}
-
 .attendance-list {
   list-style: none;
-  padding-left: 1rem;
-  border-left: 2px solid #5fe0c8;
-}
-
-.attendance-list li {
-  padding: 0.65rem 0;
-}
-
-.attendance-list li + li {
-  border-top: 1px solid #2e3035;
+  margin: 0;
+  padding: 0;
 }
