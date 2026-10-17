@@ -1,0 +1,5 @@
+[tools]
+ruby = "3.3"
+
+[env]
+GEM_HOME = false
