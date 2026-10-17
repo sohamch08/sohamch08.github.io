@@ -17,6 +17,16 @@ title: Talks & Events
 <div class="year-header">2026</div>
 
 <div class="talk-item">
+    <div class="talk-title">Introduction to High Dimensional Expanders</div>
+    <div class="talk-venue-row">
+        <div class="talk-description">TIFR, Student Seminar</div>
+        <div class="talk-slides">
+            <a class="talk-link" href="{{ "https://www.tcs.tifr.res.in/~student_seminar/talks/2026-10-16/" | relative_url }}" target="_blank">[Link]</a>
+        </div>
+    </div>
+</div>
+
+<div class="talk-item">
     <div class="talk-header">
         <div class="talk-title">Even a Bad Matrix Multiplier is Good Enough, if you Correct It</div>
         <div class="talk-slides">
