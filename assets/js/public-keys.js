@@ -11,19 +11,23 @@
   }
 
   function legacyCopy(field, button) {
-    const details = field.closest('details');
-    const wasOpen = details.open;
+    const copyField = document.createElement('textarea');
+    copyField.value = field.value;
+    copyField.readOnly = true;
+    copyField.setAttribute('aria-hidden', 'true');
+    copyField.style.cssText = 'position: fixed; top: 0; left: -9999px; font-size: 16px;';
+    document.body.appendChild(copyField);
     let copied = false;
 
     try {
-      selectKey(field);
+      copyField.focus({ preventScroll: true });
+      copyField.select();
+      copyField.setSelectionRange(0, copyField.value.length);
       copied = document.execCommand('copy');
     } catch {
       copied = false;
-    }
-
-    if (copied) {
-      details.open = wasOpen;
+    } finally {
+      copyField.remove();
       button.focus({ preventScroll: true });
     }
 
