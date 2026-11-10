@@ -39,6 +39,7 @@ a:hover {
     text-shadow: 0 0 5px #9affd855;
 }
 
+.contact-email-card,
 .public-key {
     box-sizing: border-box;
     position: relative;
@@ -58,15 +59,11 @@ a:hover {
 }
 
 .contact-email-heading {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
-.contact-email-heading > i {
-    color: #7fffd4;
-    font-size: 1.3rem;
+.contact-email-card {
+    padding: 1rem 1.2rem;
 }
 
 .contact-email h2,
@@ -319,6 +316,10 @@ a:hover {
         grid-template-columns: minmax(0, 1fr);
     }
 
+    .contact-email-card {
+        padding: 0.95rem 1.3rem;
+    }
+
     .public-key-identity {
         padding: 0.95rem 1.3rem 0.25rem;
     }
@@ -330,6 +331,7 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .contact-email-card,
     .public-key {
         transition: none;
     }

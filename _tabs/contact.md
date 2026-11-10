@@ -8,20 +8,21 @@ order: 6
 
 Feel free to reach out to me through mail.
 
-<div class="contact-email">
+<section class="contact-email" aria-labelledby="email-title">
   <div class="contact-email-heading">
-    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-    <h2>Email</h2>
+    <h2 id="email-title">Email</h2>
   </div>
-  <div class="contact-email-address">
-    <span class="contact-label">TIFR</span>
-    <p>soham [dot] chatterjee [at] tifr [dot] res [dot] in</p>
+  <div class="contact-email-card">
+    <div class="contact-email-address">
+      <span class="contact-label">TIFR</span>
+      <p>soham [dot] chatterjee [at] tifr [dot] res [dot] in</p>
+    </div>
+    <div class="contact-email-address">
+      <span class="contact-label">Personal</span>
+      <p>sohamchatterjee999 [at] gmail [dot] com</p>
+    </div>
   </div>
-  <div class="contact-email-address">
-    <span class="contact-label">Personal</span>
-    <p>sohamchatterjee999 [at] gmail [dot] com</p>
-  </div>
-</div>
+</section>
 
 {% include public-keys.html %}
 
