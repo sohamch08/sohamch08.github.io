@@ -13,8 +13,8 @@ Feel free to reach out to me through mail.
   <div class="contact-email-heading">
     <h2 id="email-title">Email</h2>
   </div>
-  <p class="contact-email-addresses">soham [dot] chatterjee [at] tifr [dot] res [dot] in<br>
-  sohamchatterjee999 [at] gmail [dot] com</p>
+  <p class="contact-email-addresses">TIFR: soham [dot] chatterjee [at] tifr [dot] res [dot] in<br>
+  Personal: sohamchatterjee999 [at] gmail [dot] com</p>
 </section>
 
 {% include public-keys.html %}
