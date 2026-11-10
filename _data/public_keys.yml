@@ -1,0 +1,67 @@
+gpg:
+  title: GPG public key
+  algorithm: RSA 4096
+  description: Encrypted mail & signature verification
+  fingerprint: 6574 C81E 0CF7 558C BB75 FADF C051 4853 A97E 3984
+  filename: gpg.asc
+  public_key: |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    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
+    amfb
+    =2prv
+    -----END PGP PUBLIC KEY BLOCK-----
+ssh:
+  title: SSH public key
+  algorithm: Ed25519
+  description: SSH authentication & signature verification
+  fingerprint: SHA256:svp/+jW1/7dUyNZ4o85h3kuAAWql+lH3rlFrH8Ws9/c
+  filename: ssh.pub
+  public_key: |
+    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOxFQp5S+bvlZFImymZUc9a7DMIUraawMX3H0yDMshkf soham@Soham-Chatterjee.local

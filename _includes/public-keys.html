@@ -1,0 +1,36 @@
+<section class="public-keys" aria-labelledby="public-keys-title">
+  <div class="public-keys-heading">
+    <h2 id="public-keys-title">Public keys</h2>
+  </div>
+
+  <div class="public-keys-list">
+    {% for entry in site.data.public_keys %}
+      {% assign key_id = entry[0] %}
+      {% assign key = entry[1] %}
+      {% assign fingerprint_parts = key.fingerprint | split: ':' %}
+      {% assign display_fingerprint = fingerprint_parts | last | remove: ' ' %}
+      <article class="public-key" data-public-key>
+        <div class="public-key-identity">
+          <div class="public-key-heading">
+            <span class="public-key-symbol" aria-hidden="true">{% if key_id == 'gpg' %}<i class="fa-solid fa-fingerprint"></i>{% else %}<i class="fa-solid fa-terminal"></i>{% endif %}</span>
+            <h3 id="{{ key_id }}-title">{{ key.title }}</h3>
+            <span class="public-key-algorithm">{{ key.algorithm }}</span>
+          </div>
+          <span class="contact-label">Fingerprint{% if fingerprint_parts.size > 1 %} · {{ fingerprint_parts | first }}{% endif %}</span>
+          <code class="public-key-fingerprint" style="--fingerprint-width: {{ display_fingerprint | size | times: 0.62 }}" aria-label="{{ key.title }} fingerprint: {{ key.fingerprint }}">{{ display_fingerprint }}</code>
+          <button type="button" class="public-key-copy" aria-label="Copy {{ key.title }}" aria-describedby="{{ key_id }}-status" hidden><span data-copy-label>Copy</span><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+        </div>
+        <div class="public-key-tools">
+          <details class="public-key-details">
+            <summary>View key</summary>
+            <!-- Encode newlines so the production HTML compressor preserves the armored key. -->
+            <textarea id="{{ key_id }}-key" class="public-key-text" aria-label="{{ key.title }} text" readonly spellcheck="false" autocapitalize="off" rows="7">{{ key.public_key | escape | newline_to_br | strip_newlines | replace: '<br />', '&#10;' }}</textarea>
+          </details>
+          <a class="public-key-download" href="{{ '/assets/keys/' | append: key.filename | relative_url }}" download="soham-{{ key.filename }}">Download <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+        </div>
+        <p class="public-key-status" id="{{ key_id }}-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </article>
+    {% endfor %}
+  </div>
+  <noscript><p>Open “View key” to select and copy a key, or download the file.</p></noscript>
+</section>
