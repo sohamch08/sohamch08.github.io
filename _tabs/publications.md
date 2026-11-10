@@ -6,8 +6,10 @@ title: Publications
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/modal.css' | relative_url }}">
 
-<script src="{{ '/assets/js/publications.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/modal.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/publications.js' | relative_url }}"></script>
 
 <div class="publication-item">
     <div class="publication-title">

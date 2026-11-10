@@ -1,0 +1,114 @@
+.site-modal {
+    box-sizing: border-box;
+    width: 70%;
+    max-width: 1000px;
+    max-height: 80vh;
+    margin: auto;
+    padding: 0;
+    border: 1px solid rgba(127, 255, 212, 0.2);
+    border-radius: 10px;
+    background-color: #1a1c1e;
+    box-shadow: 0 8px 28px rgba(127, 255, 212, 0.3);
+    color: #f5f5f5;
+    line-height: 1.7;
+    font-size: 1rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    animation: siteModalPopUp 0.25s ease-out;
+}
+
+.site-modal::backdrop {
+    background-color: rgba(20, 20, 20, 0.45);
+    backdrop-filter: blur(6px);
+    animation: siteModalFadeIn 0.25s ease-in-out;
+}
+
+.site-modal::-webkit-scrollbar {
+    display: none;
+}
+
+.site-modal .modal-content {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding: 2rem 2.2rem;
+    border: 0;
+    border-radius: inherit;
+    background: transparent;
+    color: inherit;
+}
+
+.site-modal h3 {
+    margin: 0 2rem 0.6rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    color: #7fffd4;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.3px;
+}
+
+.site-modal .close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #bfbfbf;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-modal .close:hover {
+    color: #7fffd4;
+    transform: scale(1.15);
+}
+
+.site-modal .close:focus-visible {
+    outline: 2px solid #7fffd4;
+    outline-offset: -4px;
+}
+
+body:has(.site-modal[open]) {
+    overflow: hidden;
+}
+
+@keyframes siteModalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes siteModalPopUp {
+    from { transform: scale(0.96); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 767px) {
+    .site-modal {
+        width: calc(100% - 2rem);
+        max-height: calc(100dvh - 2rem);
+    }
+
+    .site-modal .modal-content {
+        padding: 1.4rem 1.2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-modal,
+    .site-modal::backdrop {
+        animation: none;
+    }
+
+    .site-modal .close {
+        transition: none;
+    }
+}
