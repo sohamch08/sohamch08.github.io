@@ -115,28 +115,21 @@ body {
     border: 0;
     border-radius: 0;
     background: transparent;
+    color: #4fe8c1;
     font: inherit;
     font-size: 0.78rem;
     line-height: 1.5;
     text-decoration: none;
     cursor: pointer;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-.public-key-copy {
-    color: #7fffd4;
-}
-
-.public-key-view,
-.content a.public-key-download {
-    color: #aab6b1;
-}
-
-.public-key-copy:hover,
-.public-key-view:hover,
-.content a.public-key-download:hover {
-    color: #b7ffe5;
-    text-decoration: underline;
-    text-underline-offset: 0.25rem;
+.public-key-copy:is(:hover, :focus-visible, :active),
+.public-key-view:is(:hover, :focus-visible, :active),
+.content a.public-key-download:is(:hover, :focus-visible, :active) {
+    color: #9affd8;
+    text-decoration: none;
+    text-shadow: 0 0 5px #9affd855;
 }
 
 .public-key-copy:focus-visible,
