@@ -32,10 +32,22 @@
 
   document.querySelectorAll('[data-public-key]').forEach((card) => {
     const button = card.querySelector('.public-key-copy');
-    const field = card.querySelector('.public-key-text');
+    const viewButton = card.querySelector('.public-key-view');
+    const viewer = document.getElementById(viewButton.getAttribute('aria-controls'));
+    const field = viewer.querySelector('.public-key-text');
     const label = card.querySelector('[data-copy-label]');
     const status = card.querySelector('.public-key-status');
     button.hidden = false;
+    viewButton.hidden = false;
+
+    viewButton.addEventListener('click', () => {
+      viewer.open = !viewer.open;
+    });
+
+    viewer.addEventListener('toggle', () => {
+      viewButton.setAttribute('aria-expanded', String(viewer.open));
+      viewButton.querySelector('[data-view-label]').textContent = viewer.open ? 'Hide key' : 'View key';
+    });
 
     // Clicking the card or its Copy button copies the complete public key.
     card.querySelector('.public-key-identity').addEventListener('click', (event) => {
@@ -77,5 +89,9 @@
         status.textContent = 'Automatic copying is blocked. The key is selected below. Use your device’s Copy command, or download the file.';
       }
     });
+  });
+
+  document.querySelectorAll('.public-keys').forEach((section) => {
+    section.classList.add('has-key-viewers');
   });
 })();

@@ -109,10 +109,6 @@ a:hover {
     gap: 1rem;
 }
 
-.public-keys-list:has(.public-key-details[open]) {
-    align-items: start;
-}
-
 .public-key {
     display: flex;
     flex-direction: column;
@@ -235,34 +231,61 @@ a:hover {
     font-size: 0.72rem;
 }
 
-.public-key-details {
+.public-key-view {
+    display: inline-flex;
+    align-items: center;
     flex: 1 1 auto;
-    min-width: 0;
-}
-
-.public-key-details summary {
-    width: fit-content;
+    gap: 0.35rem;
     min-height: 44px;
-    align-content: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
     color: #c0d6c9;
+    font: inherit;
+    text-align: left;
     cursor: pointer;
 }
 
-.public-key-details[open] {
-    flex-basis: 100%;
+.public-key-view[aria-expanded="true"] > i {
+    transform: rotate(90deg);
+}
+
+.public-key-viewer {
+    min-width: 0;
+    margin-top: 1rem;
+    padding: 0.4rem 1rem 1rem;
+    border: 1px solid #456056;
+    border-radius: 12px;
+    background: #18231e;
+}
+
+.public-key-viewer > summary {
+    width: fit-content;
+    min-height: 44px;
+    align-content: center;
+    color: #b1ffe2;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.has-key-viewers .public-key-viewer:not([open]) {
+    display: none;
 }
 
 .public-key-text {
+    box-sizing: border-box;
     display: block;
     width: 100%;
-    margin: 0.25rem 0;
+    margin: 0.5rem 0 0;
     padding: 0.7rem;
     border: 1px solid #456056;
     border-radius: 6px;
     background: #141b19;
     color: #d9f6e9;
-    font: 16px/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
-    overflow-wrap: anywhere;
+    font: 0.875rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
+    white-space: pre;
+    overflow-wrap: normal;
+    word-break: normal;
     resize: vertical;
 }
 
@@ -276,7 +299,8 @@ a:hover {
     white-space: nowrap;
 }
 
-.public-key-details summary:focus-visible,
+.public-key-view:focus-visible,
+.public-key-viewer > summary:focus-visible,
 .public-key-download:focus-visible,
 .public-key-text:focus-visible {
     outline: 2px solid #7fffd4;
