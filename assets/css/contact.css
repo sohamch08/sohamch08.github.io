@@ -25,28 +25,7 @@ body {
     font-weight: 500;
 }
 
-.contact-email-address {
-    position: relative;
-    display: grid;
-    grid-template-columns: 6rem minmax(0, 1fr) 4.5rem;
-    align-items: baseline;
-    gap: 0.5rem 0.75rem;
-    padding: 0.65rem 0;
-}
-
-.contact-email-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #aab6b1;
-    font-size: 0.8rem;
-}
-
-.contact-email-label i {
-    color: #75cdb0;
-}
-
-.contact-email-address p {
+.contact-email-addresses {
     margin: 0;
     color: #e3e9e6;
     font-size: 0.9rem;
@@ -57,12 +36,11 @@ body {
 .public-key {
     position: relative;
     min-width: 0;
-    padding: 1.1rem 0;
-    border-top: 1px solid #3a4440;
+    padding: 0;
 }
 
-.public-key:last-child {
-    border-bottom: 1px solid #3a4440;
+.public-key + .public-key {
+    margin-top: 1.75rem;
 }
 
 .public-key-identity {
@@ -127,7 +105,6 @@ body {
 
 .public-key-copy,
 .public-key-view,
-.contact-email-copy,
 .content a.public-key-download {
     display: inline-flex;
     align-items: center;
@@ -145,15 +122,8 @@ body {
     cursor: pointer;
 }
 
-.public-key-copy,
-.contact-email-copy {
+.public-key-copy {
     color: #7fffd4;
-}
-
-.contact-email-copy {
-    justify-self: end;
-    min-width: 4.5rem;
-    justify-content: flex-end;
 }
 
 .public-key-view,
@@ -163,7 +133,6 @@ body {
 
 .public-key-copy:hover,
 .public-key-view:hover,
-.contact-email-copy:hover,
 .content a.public-key-download:hover {
     color: #b7ffe5;
     text-decoration: underline;
@@ -173,7 +142,6 @@ body {
 .public-key-copy:focus-visible,
 .public-key-view:focus-visible,
 .public-key-download:focus-visible,
-.contact-email-copy:focus-visible,
 .public-key-modal-text:focus-visible {
     outline: 2px solid #7fffd4;
     outline-offset: 4px;
@@ -191,7 +159,6 @@ body {
     word-break: normal;
 }
 
-.copy-status,
 .public-key-status {
     position: absolute;
     width: 1px;
@@ -214,29 +181,6 @@ body {
     white-space: normal;
 }
 
-.public-keys [hidden],
-.contact-email [hidden] {
+.public-keys [hidden] {
     display: none !important;
-}
-
-@media (max-width: 575px) {
-    .contact-email-address {
-        grid-template-columns: minmax(0, 1fr) 4.5rem;
-        padding: 0.75rem 0;
-        row-gap: 0.15rem;
-    }
-
-    .contact-email-label {
-        grid-column: 1;
-    }
-
-    .contact-email-address p {
-        grid-column: 1;
-    }
-
-    .contact-email-copy {
-        grid-column: 2;
-        grid-row: 1 / 3;
-        align-self: center;
-    }
 }

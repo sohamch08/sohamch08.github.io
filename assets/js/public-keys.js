@@ -48,32 +48,6 @@
     return legacyCopy({ value: text }, button);
   }
 
-  document.querySelectorAll('[data-copy-email]').forEach((button) => {
-    const label = button.querySelector('[data-copy-label]');
-    const status = button.closest('[data-email-row]').querySelector('.copy-status');
-    button.hidden = false;
-    button.addEventListener('click', async () => {
-      clearTimeout(resetTimers.get(button));
-      const email = button.dataset.copyEmail;
-      if (await copyText(email, button)) {
-        label.textContent = 'Copied!';
-        status.textContent = 'Email address copied to clipboard.';
-        resetTimers.set(button, setTimeout(() => {
-          label.textContent = 'Copy';
-          status.textContent = '';
-        }, 3000));
-      } else {
-        const text = document.createElement('pre');
-        text.className = 'public-key-modal-text';
-        text.textContent = email;
-        text.tabIndex = 0;
-        window.SiteModal.open({ title: 'Email address', content: text, trigger: button, fitContent: true });
-        selectKey(text);
-        status.textContent = 'The address is selected in the popup. Use your device’s Copy command.';
-      }
-    });
-  });
-
   document.querySelectorAll('[data-public-key]').forEach((card) => {
     const button = card.querySelector('.public-key-copy');
     const viewButton = card.querySelector('.public-key-view');
