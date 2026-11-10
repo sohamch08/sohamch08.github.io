@@ -104,7 +104,7 @@
         {% assign key_id = entry[0] %}
         {% assign key = entry[1] %}
         <button type="button" class="sidebar-key-copy" data-key-copy-target="sidebar-{{ key_id }}-key" data-key-title="{{ key.title }}" aria-label="Copy {{ key.title }}" title="Copy {{ key.title }}" aria-describedby="sidebar-key-status" hidden>
-          <i class="{% if key_id == 'gpg' %}fa-solid fa-fingerprint{% else %}fa-solid fa-terminal{% endif %}" aria-hidden="true"></i>
+          <i class="{% if key_id == 'gpg' %}fa-solid fa-fingerprint{% else %}fa-solid fa-key{% endif %}" aria-hidden="true"></i>
         </button>
         <textarea id="sidebar-{{ key_id }}-key" hidden readonly>{{ key.public_key | escape | newline_to_br | strip_newlines | replace: '<br />', '&#10;' }}</textarea>
       {% endfor %}

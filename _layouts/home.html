@@ -90,7 +90,7 @@ title: Home
               {% assign key_id = entry[0] %}
               {% assign key = entry[1] %}
               <li class="lookup-key-row">
-                <span class="lookup-icon"><i class="{% if key_id == 'gpg' %}fa-solid fa-fingerprint{% else %}fa-solid fa-terminal{% endif %}" aria-hidden="true"></i></span>
+                <span class="lookup-icon"><i class="{% if key_id == 'gpg' %}fa-solid fa-fingerprint{% else %}fa-solid fa-key{% endif %}" aria-hidden="true"></i></span>
                 <button type="button" class="lookup-key-copy" data-key-copy-target="sidebar-{{ key_id }}-key" data-key-title="{{ key.title }}" aria-label="Copy {{ key.title }}" title="Copy {{ key.title }}" aria-describedby="sidebar-key-status" hidden>Copy {{ key.title }} <i class="fa-regular fa-copy" aria-hidden="true"></i></button>
               </li>
             {% endfor %}
