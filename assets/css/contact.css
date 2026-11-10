@@ -124,7 +124,7 @@ a:hover {
     container-type: inline-size;
     flex: 1;
     position: relative;
-    padding: 1.2rem 1.2rem 0.6rem;
+    padding: 0.9rem 1.2rem 0.25rem;
 }
 
 .public-key-identity:has(.public-key-copy:not([hidden])) {
@@ -136,7 +136,7 @@ a:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 0.4rem 0.5rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.65rem;
 }
 
 .public-key-symbol {
@@ -170,7 +170,7 @@ a:hover {
 .public-key-fingerprint {
     display: block;
     min-height: 1.2rem;
-    margin: 0.4rem 0 0.8rem;
+    margin: 0.25rem 0 0.35rem;
     padding: 0;
     color: #d4eddf;
     background: transparent;
@@ -187,7 +187,7 @@ a:hover {
     justify-content: space-between;
     gap: 0.75rem;
     width: 100%;
-    min-height: 44px;
+    min-height: 36px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -230,7 +230,7 @@ a:hover {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 0.25rem 1rem;
-    padding: 0.35rem 1.2rem;
+    padding: 0.15rem 1.2rem;
     border-top: 1px solid #49645288;
     background: #0e1a1666;
     font-size: 0.72rem;
@@ -322,7 +322,7 @@ a:hover {
     }
 
     .public-key-identity {
-        padding: 1.3rem 1.3rem 0.6rem;
+        padding: 0.95rem 1.3rem 0.25rem;
     }
 
     .public-key-tools {
