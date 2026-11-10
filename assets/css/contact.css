@@ -112,6 +112,10 @@ a:hover {
     gap: 1rem;
 }
 
+.public-keys-list:has(.public-key-details[open]) {
+    align-items: start;
+}
+
 .public-key {
     display: flex;
     flex-direction: column;
