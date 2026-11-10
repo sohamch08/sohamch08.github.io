@@ -150,6 +150,10 @@ body {
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     word-break: normal;
+    max-height: min(40vh, 20rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #527361 transparent;
 }
 
 .public-key-status {
