@@ -15,6 +15,7 @@
     overflow-y: auto;
     scrollbar-width: none;
     animation: siteModalPopUp 0.25s ease-out;
+    outline: none;
 }
 
 .site-modal::backdrop {

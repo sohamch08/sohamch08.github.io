@@ -10,6 +10,7 @@
 
     const dialog = document.createElement('dialog');
     dialog.className = 'site-modal';
+    dialog.tabIndex = -1;
     if (fitContent) {
       dialog.classList.add('site-modal-fit-content');
     }
@@ -53,7 +54,10 @@
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
 
-      if (event.shiftKey && document.activeElement === first) {
+      if (document.activeElement === dialog) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      } else if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
         last.focus();
       } else if (!event.shiftKey && document.activeElement === last) {
@@ -72,6 +76,7 @@
 
     activeDialog = dialog;
     dialog.showModal();
+    dialog.focus({ preventScroll: true });
     return dialog;
   }
 
