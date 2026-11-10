@@ -1,7 +1,7 @@
 (() => {
   let activeDialog = null;
 
-  function open({ title, content, trigger = document.activeElement }) {
+  function open({ title, content, trigger = document.activeElement, fitContent = false }) {
     if (activeDialog) {
       activeDialog.close();
       activeDialog.remove();
@@ -10,6 +10,9 @@
 
     const dialog = document.createElement('dialog');
     dialog.className = 'site-modal';
+    if (fitContent) {
+      dialog.classList.add('site-modal-fit-content');
+    }
     dialog.setAttribute('aria-labelledby', 'site-modal-title');
 
     const panel = document.createElement('div');

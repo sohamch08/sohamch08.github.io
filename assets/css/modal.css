@@ -23,6 +23,11 @@
     animation: siteModalFadeIn 0.25s ease-in-out;
 }
 
+.site-modal.site-modal-fit-content {
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+}
+
 .site-modal::-webkit-scrollbar {
     display: none;
 }

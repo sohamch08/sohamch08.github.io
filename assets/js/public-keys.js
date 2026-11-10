@@ -5,8 +5,11 @@
   // including in browsers that require transient user activation.
   function selectKey(field) {
     field.focus({ preventScroll: true });
-    field.select();
-    field.setSelectionRange(0, field.value.length);
+    const range = document.createRange();
+    range.selectNodeContents(field);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
   }
 
   function legacyCopy(field, button) {
@@ -45,9 +48,10 @@
 
     function openKeyViewer(message = '', trigger = viewButton) {
       const content = document.createElement('div');
-      const visibleField = field.cloneNode(false);
-      visibleField.removeAttribute('id');
-      visibleField.value = field.value;
+      const visibleField = document.createElement('pre');
+      visibleField.className = 'public-key-modal-text';
+      visibleField.tabIndex = 0;
+      visibleField.textContent = field.value.replace(/\r?\n$/, '');
       visibleField.setAttribute('aria-label', `${keyTitle} text`);
 
       if (message) {
@@ -57,7 +61,7 @@
       }
 
       content.append(visibleField);
-      window.SiteModal.open({ title: keyTitle, content, trigger });
+      window.SiteModal.open({ title: keyTitle, content, trigger, fitContent: true });
       return visibleField;
     }
 

@@ -246,21 +246,16 @@ a:hover {
     cursor: pointer;
 }
 
-.public-key-text {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    margin: 0.5rem 0 0;
-    padding: 0.7rem;
-    border: 1px solid #456056;
-    border-radius: 6px;
-    background: #141b19;
+.public-key-modal-text {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
     color: #d9f6e9;
     font: 0.875rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     word-break: normal;
-    resize: vertical;
 }
 
 .content a.public-key-download {
@@ -275,7 +270,7 @@ a:hover {
 
 .public-key-view:focus-visible,
 .public-key-download:focus-visible,
-.public-key-text:focus-visible {
+.public-key-modal-text:focus-visible {
     outline: 2px solid #7fffd4;
     outline-offset: 2px;
 }

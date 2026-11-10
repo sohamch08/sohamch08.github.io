@@ -34,7 +34,7 @@
       {% assign key_id = entry[0] %}
       {% assign key = entry[1] %}
       <!-- Encode newlines so the production HTML compressor preserves the armored key. -->
-      <textarea id="{{ key_id }}-key" class="public-key-text" readonly spellcheck="false" autocapitalize="off" wrap="soft" rows="10">{{ key.public_key | escape | newline_to_br | strip_newlines | replace: '<br />', '&#10;' }}</textarea>
+      <textarea id="{{ key_id }}-key" readonly>{{ key.public_key | escape | newline_to_br | strip_newlines | replace: '<br />', '&#10;' }}</textarea>
     {% endfor %}
   </div>
   <noscript><p>Download either public key to view or copy its text.</p></noscript>
