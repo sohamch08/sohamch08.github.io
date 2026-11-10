@@ -157,6 +157,7 @@ a:hover {
     align-items: center;
     gap: 0.4rem;
     margin: 0;
+    margin-inline-start: 0.4rem;
     padding: 0;
     border: 0;
     background: transparent;
