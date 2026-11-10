@@ -1,10 +1,23 @@
 (() => {
   const resetTimers = new WeakMap();
 
+  function closeOtherViewers(viewer) {
+    viewer.closest('.public-keys').querySelectorAll('.public-key-viewer[open]').forEach((other) => {
+      if (other !== viewer) {
+        other.open = false;
+      }
+    });
+  }
+
+  function openViewer(viewer) {
+    closeOtherViewers(viewer);
+    viewer.open = true;
+  }
+
   // Keep the text in the page so clipboard writes happen directly on the click,
   // including in browsers that require transient user activation.
   function selectKey(field) {
-    field.closest('details').open = true;
+    openViewer(field.closest('details'));
     field.focus({ preventScroll: true });
     field.select();
     field.setSelectionRange(0, field.value.length);
@@ -45,10 +58,17 @@
     viewButton.hidden = false;
 
     viewButton.addEventListener('click', () => {
-      viewer.open = !viewer.open;
+      if (viewer.open) {
+        viewer.open = false;
+      } else {
+        openViewer(viewer);
+      }
     });
 
     viewer.addEventListener('toggle', () => {
+      if (viewer.open) {
+        closeOtherViewers(viewer);
+      }
       viewButton.setAttribute('aria-expanded', String(viewer.open));
       viewButton.querySelector('[data-view-label]').textContent = viewer.open ? 'Hide key' : 'View key';
     });

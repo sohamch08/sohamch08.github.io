@@ -32,10 +32,10 @@
   {% for entry in site.data.public_keys %}
     {% assign key_id = entry[0] %}
     {% assign key = entry[1] %}
-    <details class="public-key-viewer" id="{{ key_id }}-viewer">
+    <details class="public-key-viewer" id="{{ key_id }}-viewer" name="public-key-viewers">
       <summary>{{ key.title }}</summary>
       <!-- Encode newlines so the production HTML compressor preserves the armored key. -->
-      <textarea id="{{ key_id }}-key" class="public-key-text" aria-label="{{ key.title }} text" readonly spellcheck="false" autocapitalize="off" wrap="off" rows="10">{{ key.public_key | escape | newline_to_br | strip_newlines | replace: '<br />', '&#10;' }}</textarea>
+      <textarea id="{{ key_id }}-key" class="public-key-text" aria-label="{{ key.title }} text" readonly spellcheck="false" autocapitalize="off" wrap="soft" rows="10">{{ key.public_key | escape | newline_to_br | strip_newlines | replace: '<br />', '&#10;' }}</textarea>
     </details>
   {% endfor %}
   <noscript><p>Open a key below the cards to select and copy its text, or download the file.</p></noscript>

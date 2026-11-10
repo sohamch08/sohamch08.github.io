@@ -283,8 +283,8 @@ a:hover {
     background: #141b19;
     color: #d9f6e9;
     font: 0.875rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
-    white-space: pre;
-    overflow-wrap: normal;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
     word-break: normal;
     resize: vertical;
 }
