@@ -156,13 +156,13 @@ a:hover {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    min-height: 1.4rem;
+    min-height: 1.6rem;
     margin-left: auto;
-    padding: 0 0.4rem;
+    padding: 0 0.5rem;
     border: 1px solid #527361;
     border-radius: 4px;
     color: #b9e6ce;
-    font: 0.62rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+    font: 0.75rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
     text-align: center;
     white-space: nowrap;
 }
