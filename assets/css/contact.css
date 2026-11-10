@@ -1,181 +1,199 @@
 body {
-    background-color: #1a1c1e;
-    color: #f5f5f5;
-    line-height: 1.5;
-    font-size: 1rem;
-    margin: 0;
-    padding: 2rem;
+  background-color: #1a1c1e;
+  color: #f5f5f5;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin: 0;
+  padding: 2rem;
 }
 
 .contact-email,
 .public-keys {
-    margin-top: 2.25rem;
+  margin-top: 2.25rem;
 }
 
 .contact-email-heading,
 .public-keys-heading {
-    margin-bottom: 0.85rem;
+  margin-bottom: 0.85rem;
 }
 
 .contact-email h2,
 .public-keys h2 {
-    margin: 0;
-    color: #7fffd4;
-    font-size: 1.2rem;
-    font-weight: 500;
+  margin: 0;
+  color: #7fffd4;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .contact-email-heading .fa-envelope,
 .public-keys-heading .fa-fingerprint {
-    margin-inline-end: 0.65rem;
+  margin-inline-end: 0.35rem;
 }
 
 .contact-email-addresses {
-    margin: 0;
-    color: #e3e9e6;
-    font-size: 0.9rem;
-    line-height: 1.65;
-    overflow-wrap: anywhere;
+  margin: 0;
+  color: #e3e9e6;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
 }
 
 .public-key {
-    position: relative;
-    min-width: 0;
-    padding: 0;
+  position: relative;
+  min-width: 0;
+  padding: 0;
 }
 
 .public-key + .public-key {
-    margin-top: 1.75rem;
+  margin-top: 1.75rem;
 }
 
 .public-key-identity {
-    container-type: inline-size;
+  container-type: inline-size;
 }
 
 .public-key-heading {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.65rem;
 }
 
 .public-key h3 {
-    margin: 0;
-    color: #e3e9e6;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.5;
+  margin: 0;
+  color: #e3e9e6;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .public-key-algorithm {
-    margin-left: auto;
-    color: #a7c5b8;
-    font: 0.8rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
-    white-space: nowrap;
+  margin-left: auto;
+  color: #a7c5b8;
+  font:
+    0.8rem/1.5 ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  white-space: nowrap;
 }
 
 .contact-label {
-    display: block;
-    color: #9ba9a2;
-    font: 0.63rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  display: block;
+  color: #9ba9a2;
+  font:
+    0.63rem/1.5 ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .public-key-fingerprint {
-    display: block;
-    margin: 0.3rem 0 0.6rem;
-    padding: 0;
-    background: transparent;
-    color: #d5e8de;
-    font: min(0.85rem, calc(100cqi / var(--fingerprint-width)))/1.7 ui-monospace, SFMono-Regular, Consolas, monospace;
-    white-space: nowrap;
+  display: block;
+  margin: 0.3rem 0 0.6rem;
+  padding: 0;
+  background: transparent;
+  color: #d5e8de;
+  font:
+    min(0.85rem, calc(100cqi / var(--fingerprint-width)))/1.7 ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  white-space: nowrap;
 }
 
 .public-key-tools {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.2rem 1.25rem;
-    font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.25rem;
+  font-size: 0.78rem;
 }
 
 .public-key-copy,
 .public-key-view,
 .content a.public-key-download {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.4rem;
-    min-height: 36px;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    color: #4fe8c1;
-    font: inherit;
-    font-size: 0.78rem;
-    line-height: 1.5;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.2s ease, text-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  min-height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #4fe8c1;
+  font: inherit;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
 }
 
 .public-key-copy:is(:hover, :focus-visible, :active),
 .public-key-view:is(:hover, :focus-visible, :active),
 .content a.public-key-download:is(:hover, :focus-visible, :active) {
-    color: #9affd8;
-    text-decoration: none;
-    text-shadow: 0 0 5px #9affd855;
+  color: #9affd8;
+  text-decoration: none;
+  text-shadow: 0 0 5px #9affd855;
 }
 
 .public-key-copy:focus-visible,
 .public-key-view:focus-visible,
 .public-key-download:focus-visible,
 .public-key-modal-text:focus-visible {
-    outline: 2px solid #7fffd4;
-    outline-offset: 4px;
+  outline: 2px solid #7fffd4;
+  outline-offset: 4px;
 }
 
 .public-key-modal-text {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    color: #d9f6e9;
-    font: 0.875rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-    word-break: normal;
-    max-height: min(40vh, 20rem);
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #527361 transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #d9f6e9;
+  font:
+    0.875rem/1.6 ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  max-height: min(40vh, 20rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #527361 transparent;
 }
 
 .public-key-status {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .public-key.is-error .public-key-status {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0.5rem 0 0;
-    clip-path: none;
-    color: #d1dbd7;
-    font-size: 0.8rem;
-    white-space: normal;
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0.5rem 0 0;
+  clip-path: none;
+  color: #d1dbd7;
+  font-size: 0.8rem;
+  white-space: normal;
 }
 
 .public-keys [hidden] {
-    display: none !important;
+  display: none !important;
 }
