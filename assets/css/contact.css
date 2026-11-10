@@ -246,32 +246,6 @@ a:hover {
     cursor: pointer;
 }
 
-.public-key-view[aria-expanded="true"] > i {
-    transform: rotate(90deg);
-}
-
-.public-key-viewer {
-    min-width: 0;
-    margin-top: 1rem;
-    padding: 0.4rem 1rem 1rem;
-    border: 1px solid #456056;
-    border-radius: 12px;
-    background: #18231e;
-}
-
-.public-key-viewer > summary {
-    width: fit-content;
-    min-height: 44px;
-    align-content: center;
-    color: #b1ffe2;
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-
-.has-key-viewers .public-key-viewer:not([open]) {
-    display: none;
-}
-
 .public-key-text {
     box-sizing: border-box;
     display: block;
@@ -300,7 +274,6 @@ a:hover {
 }
 
 .public-key-view:focus-visible,
-.public-key-viewer > summary:focus-visible,
 .public-key-download:focus-visible,
 .public-key-text:focus-visible {
     outline: 2px solid #7fffd4;

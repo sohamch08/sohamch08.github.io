@@ -21,7 +21,7 @@
           <button type="button" class="public-key-copy" aria-label="Copy {{ key.title }}" aria-describedby="{{ key_id }}-status" hidden><span data-copy-label>Copy</span><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
         </div>
         <div class="public-key-tools">
-          <button type="button" class="public-key-view" aria-controls="{{ key_id }}-viewer" aria-expanded="false" hidden><i class="fa-solid fa-caret-right" aria-hidden="true"></i><span data-view-label>View key</span></button>
+          <button type="button" class="public-key-view" data-key-target="{{ key_id }}-key" aria-haspopup="dialog" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i>View key</button>
           <a class="public-key-download" href="{{ '/assets/keys/' | append: key.filename | relative_url }}" download="soham-{{ key.filename }}">Download <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
         </div>
         <p class="public-key-status" id="{{ key_id }}-status" role="status" aria-live="polite" aria-atomic="true"></p>
@@ -29,14 +29,13 @@
     {% endfor %}
   </div>
 
-  {% for entry in site.data.public_keys %}
-    {% assign key_id = entry[0] %}
-    {% assign key = entry[1] %}
-    <details class="public-key-viewer" id="{{ key_id }}-viewer" name="public-key-viewers">
-      <summary>{{ key.title }}</summary>
+  <div class="public-key-sources" hidden>
+    {% for entry in site.data.public_keys %}
+      {% assign key_id = entry[0] %}
+      {% assign key = entry[1] %}
       <!-- Encode newlines so the production HTML compressor preserves the armored key. -->
-      <textarea id="{{ key_id }}-key" class="public-key-text" aria-label="{{ key.title }} text" readonly spellcheck="false" autocapitalize="off" wrap="soft" rows="10">{{ key.public_key | escape | newline_to_br | strip_newlines | replace: '<br />', '&#10;' }}</textarea>
-    </details>
-  {% endfor %}
-  <noscript><p>Open a key below the cards to select and copy its text, or download the file.</p></noscript>
+      <textarea id="{{ key_id }}-key" class="public-key-text" readonly spellcheck="false" autocapitalize="off" wrap="soft" rows="10">{{ key.public_key | escape | newline_to_br | strip_newlines | replace: '<br />', '&#10;' }}</textarea>
+    {% endfor %}
+  </div>
+  <noscript><p>Download either public key to view or copy its text.</p></noscript>
 </section>

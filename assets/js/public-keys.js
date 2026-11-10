@@ -1,23 +1,9 @@
 (() => {
   const resetTimers = new WeakMap();
 
-  function closeOtherViewers(viewer) {
-    viewer.closest('.public-keys').querySelectorAll('.public-key-viewer[open]').forEach((other) => {
-      if (other !== viewer) {
-        other.open = false;
-      }
-    });
-  }
-
-  function openViewer(viewer) {
-    closeOtherViewers(viewer);
-    viewer.open = true;
-  }
-
   // Keep the text in the page so clipboard writes happen directly on the click,
   // including in browsers that require transient user activation.
   function selectKey(field) {
-    openViewer(field.closest('details'));
     field.focus({ preventScroll: true });
     field.select();
     field.setSelectionRange(0, field.value.length);
@@ -50,27 +36,33 @@
   document.querySelectorAll('[data-public-key]').forEach((card) => {
     const button = card.querySelector('.public-key-copy');
     const viewButton = card.querySelector('.public-key-view');
-    const viewer = document.getElementById(viewButton.getAttribute('aria-controls'));
-    const field = viewer.querySelector('.public-key-text');
+    const field = document.getElementById(viewButton.dataset.keyTarget);
+    const keyTitle = card.querySelector('h3').textContent;
     const label = card.querySelector('[data-copy-label]');
     const status = card.querySelector('.public-key-status');
     button.hidden = false;
     viewButton.hidden = false;
 
-    viewButton.addEventListener('click', () => {
-      if (viewer.open) {
-        viewer.open = false;
-      } else {
-        openViewer(viewer);
-      }
-    });
+    function openKeyViewer(message = '', trigger = viewButton) {
+      const content = document.createElement('div');
+      const visibleField = field.cloneNode(false);
+      visibleField.removeAttribute('id');
+      visibleField.value = field.value;
+      visibleField.setAttribute('aria-label', `${keyTitle} text`);
 
-    viewer.addEventListener('toggle', () => {
-      if (viewer.open) {
-        closeOtherViewers(viewer);
+      if (message) {
+        const notice = document.createElement('p');
+        notice.textContent = message;
+        content.append(notice);
       }
-      viewButton.setAttribute('aria-expanded', String(viewer.open));
-      viewButton.querySelector('[data-view-label]').textContent = viewer.open ? 'Hide key' : 'View key';
+
+      content.append(visibleField);
+      window.SiteModal.open({ title: keyTitle, content, trigger });
+      return visibleField;
+    }
+
+    viewButton.addEventListener('click', () => {
+      openKeyViewer();
     });
 
     // Clicking the card or its Copy button copies the complete public key.
@@ -107,15 +99,13 @@
           status.textContent = '';
         }, 3000));
       } else {
-        selectKey(field);
+        const message = 'Automatic copying is blocked. The key is selected below. Use your device’s Copy command, or download the file.';
+        selectKey(openKeyViewer(message, button));
         card.classList.add('is-error');
         label.textContent = 'Try again';
-        status.textContent = 'Automatic copying is blocked. The key is selected below. Use your device’s Copy command, or download the file.';
+        status.textContent = message;
       }
     });
   });
 
-  document.querySelectorAll('.public-keys').forEach((section) => {
-    section.classList.add('has-key-viewers');
-  });
 })();
