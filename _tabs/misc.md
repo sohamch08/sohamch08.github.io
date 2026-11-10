@@ -4,17 +4,21 @@ order: 4
 permalink: /misc/
 title: Miscellaneous
 ---
+
 <link rel="stylesheet" href="{{ '/assets/css/misc.css' | relative_url }}">
 ## Reviewer
+- Reviewer for STOC 2027
 - Reviewer for FSTTCS 2026
 - Reviewer for ISAAC 2026
 - Sub reviewer for STACS 2026
 
 ## Teaching Assistantship
+
 - Algebra, Number Theory & Computation (TIFR) by Mrinal Kumar, 2026
 - Algorithms (TIFR) by T. Kavitha, 2025
 
 ## Research Internshipts
+
 <div class="internship-item">
     <div class="internship-time">Summer 2024</div>
     <div class="internship-description">Worked on derandomization of isolation lemma over polytopes under prof. <a href="https://www.cse.iitb.ac.in/~rgurjar/">Rohit Gurjar</a>, IIT Bombay</div>
