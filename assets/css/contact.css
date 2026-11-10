@@ -152,12 +152,19 @@ a:hover {
 }
 
 .public-key-algorithm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 1.4rem;
     margin-left: auto;
-    padding: 0.1rem 0.35rem;
+    padding: 0 0.4rem;
     border: 1px solid #527361;
     border-radius: 4px;
     color: #b9e6ce;
-    font: 0.62rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+    font: 0.62rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .public-key-fingerprint {
