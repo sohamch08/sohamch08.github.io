@@ -39,7 +39,6 @@ a:hover {
     text-shadow: 0 0 5px #9affd855;
 }
 
-.contact-email,
 .public-key {
     box-sizing: border-box;
     position: relative;
@@ -56,7 +55,6 @@ a:hover {
 
 .contact-email {
     margin-top: 1.75rem;
-    padding: 1rem 1.5rem;
 }
 
 .contact-email-heading {
@@ -317,10 +315,6 @@ a:hover {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .contact-email {
-        padding: 0.95rem 1.3rem;
-    }
-
     .public-key-identity {
         padding: 0.95rem 1.3rem 0.25rem;
     }
@@ -332,7 +326,6 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .contact-email,
     .public-key {
         transition: none;
     }
