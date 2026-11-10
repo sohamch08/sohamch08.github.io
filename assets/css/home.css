@@ -152,6 +152,35 @@ a:hover {
     text-shadow: 0 0 5px #9affd855;
 }
 
+.lookup-box .lookup-key-copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #4fe8c1;
+    font: inherit;
+    cursor: pointer;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.lookup-box .lookup-key-copy:is(:hover, :focus-visible, :active) {
+    color: #9affd8;
+    text-decoration: none;
+    text-shadow: 0 0 5px #9affd855;
+}
+
+.lookup-box .lookup-key-copy:focus-visible {
+    outline: 2px solid #7fffd4;
+    outline-offset: 4px;
+}
+
+.lookup-box .lookup-key-row:has([hidden]) {
+    display: none;
+}
+
 /* Terminal body specifics */
 .terminal-body {
     color: #7fffd4;

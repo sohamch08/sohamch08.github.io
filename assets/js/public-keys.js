@@ -67,8 +67,8 @@
     return visibleField;
   }
 
-  document.querySelectorAll('[data-sidebar-key]').forEach((button) => {
-    const field = document.getElementById(button.dataset.sidebarKey);
+  document.querySelectorAll('[data-key-copy-target]').forEach((button) => {
+    const field = document.getElementById(button.dataset.keyCopyTarget);
     const keyTitle = button.dataset.keyTitle;
     const icon = button.querySelector('i');
     const originalIcon = icon.className;
