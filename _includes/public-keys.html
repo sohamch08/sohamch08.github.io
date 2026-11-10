@@ -18,9 +18,9 @@
           </div>
           <span class="contact-label">Fingerprint{% if fingerprint_parts.size > 1 %} · {{ fingerprint_parts | first }}{% endif %}</span>
           <code class="public-key-fingerprint" style="--fingerprint-width: {{ display_fingerprint | size | times: 0.62 }}" aria-label="{{ key.title }} fingerprint: {{ key.fingerprint }}">{{ display_fingerprint }}</code>
-          <button type="button" class="public-key-copy" aria-label="Copy {{ key.title }}" aria-describedby="{{ key_id }}-status" hidden><span data-copy-label>Copy</span><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
         </div>
         <div class="public-key-tools">
+          <button type="button" class="public-key-copy" aria-label="Copy {{ key.title }}" aria-describedby="{{ key_id }}-status" hidden><i class="fa-regular fa-copy" aria-hidden="true"></i><span data-copy-label>Copy key</span></button>
           <button type="button" class="public-key-view" data-key-target="{{ key_id }}-key" aria-haspopup="dialog" hidden><i class="fa-regular fa-eye" aria-hidden="true"></i>View key</button>
           <a class="public-key-download" href="{{ '/assets/keys/' | append: key.filename | relative_url }}" download="soham-{{ key.filename }}">Download <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
         </div>

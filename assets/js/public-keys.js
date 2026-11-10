@@ -36,6 +36,44 @@
     return copied;
   }
 
+  async function copyText(text, button) {
+    if (window.isSecureContext && navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        return legacyCopy({ value: text }, button);
+      }
+    }
+    return legacyCopy({ value: text }, button);
+  }
+
+  document.querySelectorAll('[data-copy-email]').forEach((button) => {
+    const label = button.querySelector('[data-copy-label]');
+    const status = button.closest('[data-email-row]').querySelector('.copy-status');
+    button.hidden = false;
+    button.addEventListener('click', async () => {
+      clearTimeout(resetTimers.get(button));
+      const email = button.dataset.copyEmail;
+      if (await copyText(email, button)) {
+        label.textContent = 'Copied!';
+        status.textContent = 'Email address copied to clipboard.';
+        resetTimers.set(button, setTimeout(() => {
+          label.textContent = 'Copy';
+          status.textContent = '';
+        }, 3000));
+      } else {
+        const text = document.createElement('pre');
+        text.className = 'public-key-modal-text';
+        text.textContent = email;
+        text.tabIndex = 0;
+        window.SiteModal.open({ title: 'Email address', content: text, trigger: button, fitContent: true });
+        selectKey(text);
+        status.textContent = 'The address is selected in the popup. Use your device’s Copy command.';
+      }
+    });
+  });
+
   document.querySelectorAll('[data-public-key]').forEach((card) => {
     const button = card.querySelector('.public-key-copy');
     const viewButton = card.querySelector('.public-key-view');
@@ -69,29 +107,11 @@
       openKeyViewer();
     });
 
-    // Clicking the card or its Copy button copies the complete public key.
-    card.querySelector('.public-key-identity').addEventListener('click', (event) => {
-      if (!event.target.closest('.public-key-copy')) {
-        button.click();
-      }
-    });
-
     button.addEventListener('click', async () => {
       clearTimeout(resetTimers.get(card));
       card.classList.remove('is-copied', 'is-error');
       status.textContent = '';
-      let copied = false;
-
-      if (window.isSecureContext && navigator.clipboard?.writeText) {
-        try {
-          await navigator.clipboard.writeText(field.value);
-          copied = true;
-        } catch {
-          copied = legacyCopy(field, button);
-        }
-      } else {
-        copied = legacyCopy(field, button);
-      }
+      const copied = await copyText(field.value, button);
 
       if (copied) {
         card.classList.add('is-copied');
@@ -99,7 +119,7 @@
         status.textContent = 'Public key copied to clipboard.';
         resetTimers.set(card, setTimeout(() => {
           card.classList.remove('is-copied');
-          label.textContent = 'Copy';
+          label.textContent = 'Copy key';
           status.textContent = '';
         }, 3000));
       } else {
