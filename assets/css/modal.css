@@ -118,3 +118,28 @@ body:has(.site-modal[open]) {
         transition: none;
     }
 }
+
+.public-key-modal-text {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #d9f6e9;
+  font:
+    0.875rem/1.6 ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  max-height: min(40vh, 20rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #527361 transparent;
+}
+
+.public-key-modal-text:focus-visible {
+    outline: 2px solid #7fffd4;
+    outline-offset: 4px;
+}

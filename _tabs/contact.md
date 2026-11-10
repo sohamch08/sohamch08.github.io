@@ -5,7 +5,6 @@ permalink: /contact/
 order: 6
 ---
 <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/modal.css' | relative_url }}">
 
 Feel free to reach out to me through mail.
 
@@ -18,6 +17,3 @@ Feel free to reach out to me through mail.
 </section>
 
 {% include public-keys.html %}
-
-<script defer src="{{ '/assets/js/modal.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/public-keys.js' | relative_url }}"></script>

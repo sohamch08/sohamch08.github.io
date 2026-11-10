@@ -225,6 +225,41 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       line-height: $btn-size;
     }
 
+    .sidebar-key-actions {
+      display: flex;
+      flex-basis: 100%;
+      gap: v.$sb-btn-gap;
+
+      @include bp.xxxl {
+        gap: v.$sb-btn-gap-lg;
+      }
+    }
+
+    .sidebar-key-copy {
+      @extend %button;
+      @extend %sidebar-link-hover;
+      @extend %clickable-transition;
+
+      padding: 0;
+      border: 0;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .sidebar-key-actions [hidden] {
+      display: none !important;
+    }
+
+    .sidebar-key-status {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
     #mode-toggle {
       @extend %button;
       @extend %sidebar-links;

@@ -48,6 +48,54 @@
     return legacyCopy({ value: text }, button);
   }
 
+  function openKeyViewer(field, keyTitle, trigger, message = '') {
+    const content = document.createElement('div');
+    const visibleField = document.createElement('pre');
+    visibleField.className = 'public-key-modal-text';
+    visibleField.tabIndex = 0;
+    visibleField.textContent = field.value.replace(/\r?\n$/, '');
+    visibleField.setAttribute('aria-label', `${keyTitle} text`);
+
+    if (message) {
+      const notice = document.createElement('p');
+      notice.textContent = message;
+      content.append(notice);
+    }
+
+    content.append(visibleField);
+    window.SiteModal.open({ title: keyTitle, content, trigger, fitContent: true });
+    return visibleField;
+  }
+
+  document.querySelectorAll('[data-sidebar-key]').forEach((button) => {
+    const field = document.getElementById(button.dataset.sidebarKey);
+    const keyTitle = button.dataset.keyTitle;
+    const icon = button.querySelector('i');
+    const originalIcon = icon.className;
+    const originalTitle = button.title;
+    const status = document.getElementById('sidebar-key-status');
+    button.hidden = false;
+
+    button.addEventListener('click', async () => {
+      clearTimeout(resetTimers.get(button));
+      status.textContent = '';
+      if (await copyText(field.value, button)) {
+        icon.className = 'fa-solid fa-check';
+        button.title = `${keyTitle} copied!`;
+        status.textContent = `${keyTitle} copied to clipboard.`;
+        resetTimers.set(button, setTimeout(() => {
+          icon.className = originalIcon;
+          button.title = originalTitle;
+          status.textContent = '';
+        }, 3000));
+      } else {
+        const message = 'Automatic copying is blocked. The key is selected below. Use your device’s Copy command, or download it from the Contact page.';
+        selectKey(openKeyViewer(field, keyTitle, button, message));
+        status.textContent = message;
+      }
+    });
+  });
+
   document.querySelectorAll('[data-public-key]').forEach((card) => {
     const button = card.querySelector('.public-key-copy');
     const viewButton = card.querySelector('.public-key-view');
@@ -58,27 +106,8 @@
     button.hidden = false;
     viewButton.hidden = false;
 
-    function openKeyViewer(message = '', trigger = viewButton) {
-      const content = document.createElement('div');
-      const visibleField = document.createElement('pre');
-      visibleField.className = 'public-key-modal-text';
-      visibleField.tabIndex = 0;
-      visibleField.textContent = field.value.replace(/\r?\n$/, '');
-      visibleField.setAttribute('aria-label', `${keyTitle} text`);
-
-      if (message) {
-        const notice = document.createElement('p');
-        notice.textContent = message;
-        content.append(notice);
-      }
-
-      content.append(visibleField);
-      window.SiteModal.open({ title: keyTitle, content, trigger, fitContent: true });
-      return visibleField;
-    }
-
     viewButton.addEventListener('click', () => {
-      openKeyViewer();
+      openKeyViewer(field, keyTitle, viewButton);
     });
 
     button.addEventListener('click', async () => {
@@ -98,7 +127,7 @@
         }, 3000));
       } else {
         const message = 'Automatic copying is blocked. The key is selected below. Use your device’s Copy command, or download the file.';
-        selectKey(openKeyViewer(message, button));
+        selectKey(openKeyViewer(field, keyTitle, button, message));
         card.classList.add('is-error');
         label.textContent = 'Try again';
         status.textContent = message;
