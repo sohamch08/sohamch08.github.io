@@ -1,6 +1,6 @@
 <section class="public-keys" aria-labelledby="public-keys-title">
   <div class="public-keys-heading">
-    <h2 id="public-keys-title">Public keys</h2>
+    <h2 id="public-keys-title"><i class="fa-solid fa-fingerprint" aria-hidden="true"></i>Public keys</h2>
   </div>
 
   <div class="public-keys-list">
@@ -12,7 +12,6 @@
       <article class="public-key" data-public-key>
         <div class="public-key-identity">
           <div class="public-key-heading">
-            <span class="public-key-symbol" aria-hidden="true">{% if key_id == 'gpg' %}<i class="fa-solid fa-fingerprint"></i>{% else %}<i class="fa-solid fa-terminal"></i>{% endif %}</span>
             <h3 id="{{ key_id }}-title">{{ key.title }}</h3>
             <span class="public-key-algorithm">{{ key.algorithm }}</span>
           </div>

@@ -19,6 +19,9 @@ body {
 
 .contact-email h2,
 .public-keys h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     margin: 0;
     color: #7fffd4;
     font-size: 1.2rem;
@@ -53,13 +56,6 @@ body {
     flex-wrap: wrap;
     gap: 0.6rem;
     margin-bottom: 0.65rem;
-}
-
-.public-key-symbol {
-    display: inline-flex;
-    width: 1rem;
-    color: #7fffd4;
-    font-size: 1rem;
 }
 
 .public-key h3 {
