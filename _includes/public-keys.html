@@ -8,7 +8,7 @@
       {% assign key_id = entry[0] %}
       {% assign key = entry[1] %}
       {% assign fingerprint_parts = key.fingerprint | split: ':' %}
-      {% assign display_fingerprint = fingerprint_parts | last | remove: ' ' %}
+      {% assign display_fingerprint = fingerprint_parts | last %}
       <article class="public-key" data-public-key>
         <div class="public-key-identity">
           <div class="public-key-heading">
