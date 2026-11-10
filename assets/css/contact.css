@@ -56,14 +56,14 @@ a:hover {
 
 .contact-email {
     margin-top: 1.75rem;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
 }
 
 .contact-email-heading {
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 0.75rem;
 }
 
 .contact-email-heading > i {
@@ -80,7 +80,7 @@ a:hover {
 }
 
 .contact-email-address + .contact-email-address {
-    margin-top: 1rem;
+    margin-top: 0.6rem;
 }
 
 .contact-label {
@@ -318,7 +318,7 @@ a:hover {
     }
 
     .contact-email {
-        padding: 1.3rem;
+        padding: 0.95rem 1.3rem;
     }
 
     .public-key-identity {
