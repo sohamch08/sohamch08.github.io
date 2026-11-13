@@ -1,0 +1,30 @@
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <header class="profile-wrapper">
+    <a href="{{ site.Home.RelPermalink }}" id="avatar" class="rounded-circle">
+      <img src="{{ site.Params.avatar | relURL }}" width="180" height="180" alt="avatar" onerror="this.style.display='none'">
+    </a>
+    <a class="site-title d-block" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <p class="site-subtitle fst-italic mb-0"></p>
+  </header>
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <li class="nav-item{{ if .IsHome }} active{{ end }}">
+        <a href="{{ site.Home.RelPermalink }}" class="nav-link"><i class="fa-fw fas fa-home"></i><span>HOME</span></a>
+      </li>
+      {{ range site.RegularPages.ByWeight }}
+      <li class="nav-item{{ if eq .RelPermalink $.RelPermalink }} active{{ end }}">
+        <a href="{{ .RelPermalink }}" class="nav-link"><i class="fa-fw {{ .Params.icon }}"></i><span>{{ .Title | upper }}</span></a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+    {{ range hugo.Data.contact }}
+      {{ $url := .url }}
+      {{ if eq .type "github" }}{{ $url = printf "https://github.com/%s" site.Params.github }}{{ end }}
+      {{ if eq .type "email" }}{{ $url = printf "javascript:location.href = 'mailto:' + ['%s','%s'].join('@')" (index (split site.Params.email "@") 0) (index (split site.Params.email "@") 1) }}{{ end }}
+      <a {{ printf "href=\"%s\"" $url | safeHTMLAttr }} aria-label="{{ .type }}"{{ if not .noblank }} target="_blank" rel="noopener noreferrer"{{ end }}><i class="{{ .icon }}"></i></a>
+    {{ end }}
+    <span id="sidebar-key-status" class="sidebar-key-status" role="status" aria-live="polite" aria-atomic="true"></span>
+  </div>
+</aside>

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #
-# Interactively add a talk (or a new venue for an existing talk) to _tabs/talks.md
+# Interactively add a talk (or a new venue for an existing talk) to content/talks.md
 #
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-TALKS_FILE="${TALKS_FILE:-$SCRIPT_DIR/../_tabs/talks.md}"
+TALKS_FILE="${TALKS_FILE:-$SCRIPT_DIR/../content/talks.md}"
 
 [[ -f "$TALKS_FILE" ]] || { echo "Error: talks file not found at $TALKS_FILE" >&2; exit 1; }
 
@@ -57,9 +57,9 @@ strip_tag() {
 build_slides_block() {
   local slides="$1" poster="$2" add_url="$3" add_label="$4"
   local -a lines=()
-  [[ -n "$slides" ]] && lines+=("${I3}<a class=\"talk-link\" href=\"{{ \"${slides}\" | relative_url }}\" target=\"_blank\">[Slides]</a>")
-  [[ -n "$poster" ]] && lines+=("${I3}<a class=\"talk-link\" href=\"{{ \"${poster}\" | relative_url }}\" target=\"_blank\">[Poster]</a>")
-  [[ -n "$add_url" ]] && lines+=("${I3}<a class=\"talk-link\" href=\"{{ \"${add_url}\" | relative_url }}\" target=\"_blank\">[${add_label}]</a>")
+  [[ -n "$slides" ]] && lines+=("${I3}<a class=\"talk-link\" href=\"${slides}\" target=\"_blank\">[Slides]</a>")
+  [[ -n "$poster" ]] && lines+=("${I3}<a class=\"talk-link\" href=\"${poster}\" target=\"_blank\">[Poster]</a>")
+  [[ -n "$add_url" ]] && lines+=("${I3}<a class=\"talk-link\" href=\"${add_url}\" target=\"_blank\">[${add_label}]</a>")
   (( ${#lines[@]} == 0 )) && return 0
   printf '%s\n' "${I2}<div class=\"talk-slides\">"
   printf '%s\n' "${lines[@]}"
@@ -296,4 +296,4 @@ fi
 
 echo
 echo "Done. Review the change with:"
-echo "  git -C \"$(cd "$SCRIPT_DIR/.." && pwd)\" diff -- _tabs/talks.md"
+echo "  git -C \"$(cd "$SCRIPT_DIR/.." && pwd)\" diff -- content/talks.md"

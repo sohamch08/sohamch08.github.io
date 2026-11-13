@@ -1,4 +1,0 @@
----
-layout: null
----
-{{- site.data.public_keys.ssh.public_key -}}

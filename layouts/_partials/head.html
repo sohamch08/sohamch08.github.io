@@ -1,0 +1,70 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  {{ hugo.Generator }}
+  {{ $pageTitle := cond (eq .Kind "404") "404: Page not found" .Title }}
+  {{ $title := cond .IsHome site.Title (printf "%s | %s" $pageTitle site.Title) }}
+  <title>{{ $title }}</title>
+  <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:locale" content="en">
+  <meta name="description" content="{{ site.Params.description }}">
+  <meta property="og:description" content="{{ site.Params.description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta name="twitter:site" content="@{{ site.Params.twitter }}">
+  {{ $schema := dict "@context" "https://schema.org" "@type" "WebSite" "name" site.Title "url" site.Home.Permalink "description" site.Params.description }}
+  <script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+  <link rel="icon" type="image/png" href="{{ "assets/img/favicons/favicon-96x96.png" | relURL }}" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="{{ "assets/img/favicons/favicon.svg" | relURL }}">
+  <link rel="shortcut icon" href="{{ "assets/img/favicons/favicon.ico" | relURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "assets/img/favicons/apple-touch-icon.png" | relURL }}">
+  {{ if site.Params.pwa }}<link rel="manifest" href="{{ "assets/img/favicons/site.webmanifest" | relURL }}">{{ end }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  {{ $css := resources.Get "scss/chirpy.scss" | css.Sass (dict "transpiler" "dartsass" "includePaths" (slice "assets/scss") "targetPath" "assets/css/jekyll-theme-chirpy.css" "outputStyle" "compressed" "silenceDeprecations" (slice "color-functions" "global-builtin" "import")) }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+  {{ if .Params.toc }}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.css">{{ end }}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  {{ if not .IsHome }}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">{{ end }}
+  <script src="{{ "assets/js/dist/theme.min.js" | relURL }}"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}, {left: '$', right: '$', display: false}]});"></script>
+  {{ $libraries := slice "npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js" "npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js" }}
+  {{ if .IsHome }}
+    {{ $libraries = $libraries | append "npm/dayjs@1.11.18/dayjs.min.js" "npm/dayjs@1.11.18/locale/en.js" "npm/dayjs@1.11.18/plugin/relativeTime.js" "npm/dayjs@1.11.18/plugin/localizedFormat.js" }}
+  {{ else }}
+    {{ $libraries = $libraries | append "npm/glightbox@3.3.0/dist/js/glightbox.min.js" "npm/clipboard@2.0.11/dist/clipboard.min.js" }}
+  {{ end }}
+  {{ if and .Params.toc (or (strings.Contains .RawContent "<h2") (strings.Contains .RawContent "<h3")) }}
+    {{ $libraries = $libraries | append "npm/tocbot@4.36.4/dist/tocbot.min.js" }}
+  {{ end }}
+  <script defer src="https://cdn.jsdelivr.net/combine/{{ delimit $libraries "," }}"></script>
+  <script defer src="{{ if .IsHome }}{{ "assets/js/dist/home.min.js" | relURL }}{{ else }}{{ "assets/js/dist/page.min.js" | relURL }}{{ end }}"></script>
+  {{ if and site.Params.pwa hugo.IsProduction }}
+    {{ $swconf := resources.Get "swconf.js" | resources.ExecuteAsTemplate "assets/js/data/swconf.js" site }}
+    {{ $publish := $swconf.RelPermalink }}
+    <script defer src="{{ "app.min.js" | relURL }}?baseurl={{ strings.TrimSuffix "/" ("/" | relURL) }}&register=true"></script>
+  {{ end }}
+  {{ range hugo.Data.public_keys }}
+    {{ $key := resources.FromString (printf "assets/keys/%s" .filename) .public_key }}
+    {{ $publish := $key.RelPermalink }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ "assets/css/modal.css" | relURL }}">
+  <script defer src="{{ "assets/js/modal.js" | relURL }}"></script>
+  <script defer src="{{ "assets/js/public-keys.js" | relURL }}"></script>
+</head>

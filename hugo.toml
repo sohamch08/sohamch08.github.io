@@ -1,0 +1,40 @@
+baseURL = "https://sohamch08.github.io/"
+locale = "en"
+title = "Soham Chatterjee"
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+enableGitInfo = true
+
+[params]
+  description = "A minimal, responsive and feature-rich Jekyll theme for technical writing."
+  theme_mode = "dark"
+  avatar = "/assets/img/profile.jpg"
+  email = "soham.chatterjee@tifr.res.in"
+  github = "sohamch08"
+  twitter = "soham.chatterjee.123"
+  copyright_url = "https://twitter.com/username"
+  pwa = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.goldmark.extensions.typographer]
+  disableDefault = true
+
+[outputs]
+  home = ["HTML", "Atom"]
+
+[mediaTypes."application/atom+xml"]
+  suffixes = ["xml"]
+
+[outputFormats.Atom]
+  mediaType = "application/atom+xml"
+  baseName = "feed"
+  isPlainText = false
+
+[sitemap]
+  changeFreq = ""
+  priority = -1
+
+[build]
+  noJSConfigInAssets = true

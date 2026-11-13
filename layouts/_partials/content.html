@@ -1,0 +1,3 @@
+{{/* Preserve Chirpy's heading links for both Markdown and HTML headings. */}}
+{{- $content := replaceRE `(?s)<h([2-5]) id="([^"]+)"([^>]*)>(.*?)</h[2-5]>` `<h${1} id="${2}"${3}><span class="me-2">${4}</span><a href="#${2}" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h${1}>` . -}}
+{{- $content | safeHTML -}}

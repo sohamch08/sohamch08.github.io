@@ -13,7 +13,6 @@ _site
 
 # NPM dependencies
 node_modules
-package-lock.json
 
 # IDE configurations
 .idea
@@ -25,3 +24,8 @@ package-lock.json
 # Misc
 node_modules
 .gems
+
+# Hugo output and caches
+/public/
+/resources/
+.hugo_build.lock

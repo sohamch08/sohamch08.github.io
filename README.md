@@ -1,84 +1,69 @@
-<!-- markdownlint-disable-next-line -->
-<div align="center">
+# Soham Chatterjee's website
 
-  <!-- markdownlint-disable-next-line -->
-  # Chirpy Jekyll Theme
+This branch rebuilds the existing site with Hugo. The original Chirpy styles,
+fonts, sidebar, content, URLs, scripts, images, and PDFs are retained. The footer
+keeps the original theme attribution for visual parity; page metadata identifies
+Hugo as the generator.
 
-  A minimal, responsive, and feature-rich Jekyll theme for technical writing.
+## Preview and build
 
-  [![CI](https://img.shields.io/github/actions/workflow/status/cotes2020/jekyll-theme-chirpy/ci.yml?logo=github)][ci]&nbsp;
-  [![Codacy Badge](https://img.shields.io/codacy/grade/4e556876a3c54d5e8f2d2857c4f43894?logo=codacy)][codacy]&nbsp;
-  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy?color=goldenrod)][license]&nbsp;
-  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?&logo=RubyGems&logoColor=ghostwhite&label=gem&color=orange)][gem]&nbsp;
-  [![Open in Dev Containers](https://img.shields.io/badge/Dev_Containers-Open-deepskyblue?logo=linuxcontainers)][open-container]
+Install Hugo 0.169.0 and the standalone Dart Sass 1.93.3 binary. On macOS:
 
-  [**Live Demo** →][demo]
+```sh
+brew install hugo sass/sass/sass
+hugo server --disableFastRender
+```
 
-  [![Devices Mockup](https://chirpy-img.netlify.app/commons/devices-mockup.png)][demo]
+Alternatively, install the pinned tools with `mise install`. The Node version of
+Sass cannot replace standalone Dart Sass for Hugo's embedded compiler protocol.
+Hugo compiles the Sass directly, following its
+[official Sass workflow](https://gohugo.io/functions/css/sass/).
 
-</div>
+Open the URL printed by Hugo, usually `http://localhost:1313/`.
+To build and check the production output:
 
-## Features
+```sh
+bash tools/test.sh
+```
 
-- Dark Theme
-- Localized UI language
-- Pinned Posts on Home Page
-- Hierarchical Categories
-- Trending Tags
-- Table of Contents
-- Last Modified Date
-- Syntax Highlighting
-- Mathematical Expressions
-- Mermaid Diagrams & Flowcharts
-- Dark Mode Images
-- Embed Media
-- Comment Systems
-- Built-in Search
-- Atom Feeds
-- PWA
-- Web Analytics
-- SEO & Performance Optimization
+The build is written to `public/`. Python 3 is needed for the link and output
+checks. Ruby, Bundler, and Jekyll are not needed to preview or build the website.
+Offline caching is enabled in production and disabled in development so edits
+appear immediately.
 
-## Documentation
+## Edit the site
 
-To learn how to use, develop, and upgrade the project, please refer to the [Wiki][wiki].
+- `content/_index.md`: homepage.
+- `content/*.md`: the six navigation pages. Front matter controls title, URL,
+  icon, and navigation order (`weight`). Existing HTML is retained within the
+  Markdown to preserve the design precisely.
+- `layouts/`: Hugo page templates, shared partials, and public-key shortcodes.
+- `assets/scss/`: the original theme Sass, compiled by Hugo.
+- `static/assets/css/`: page-specific styles.
+- `static/assets/`: PDFs, images, and prebuilt JavaScript.
+- `data/public_keys.yml`: key text and metadata. Hugo generates the download
+  files from this same data. See [public-key instructions](docs/PUBLIC_KEYS.md).
+- `hugo.toml`: site identity, canonical URL, and build settings.
 
-## Contributing
+The `scripts/add-talk.sh` helper edits `content/talks.md`.
 
-Contributions (_pull requests_, _issues_, and _discussions_) are what make the open-source community such an amazing place
-to learn, inspire, and create. Any contributions you make are greatly appreciated.
-For details, see the "[Contributing Guidelines][contribute-guide]".
+## Rebuild theme JavaScript
 
-## Credits
+The browser bundles are checked in, so Node is optional for ordinary site work.
+Only after editing `assets/js-source/`, run:
 
-### Contributors
+```sh
+npm ci
+npm run build:js
+```
 
-Thanks to [all the contributors][contributors] involved in the development of the project!
+Commit the changed bundles alongside their sources. The theme's original MIT
+license notices are retained. The bundled Bootstrap stylesheet is retained in
+`assets/scss/vendors/_bootstrap.scss` to keep the CSS identical to the original.
 
-[![all-contributors](https://contrib.rocks/image?repo=cotes2020/jekyll-theme-chirpy&columns=16)][contributors]
-<sub> — Made with [contrib.rocks](https://contrib.rocks)</sub>
+## GitHub Pages
 
-### Third-Party Assets
-
-This project is built on the [Jekyll][jekyllrb] ecosystem and some [great libraries][lib], and is developed using [VS Code][vscode] as well as tools provided by [JetBrains][jetbrains] under a non-commercial open-source software license.
-
-The avatar and favicon for the project's website are from [ClipartMAX][clipartmax].
-
-## License
-
-This project is published under [MIT License][license].
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[ci]: https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml?query=event%3Apush+branch%3Amaster
-[codacy]: https://app.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
-[license]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE
-[open-container]: https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/cotes2020/jekyll-theme-chirpy
-[jekyllrb]: https://jekyllrb.com/
-[clipartmax]: https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/
-[demo]: https://cotes2020.github.io/chirpy-demo/
-[wiki]: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
-[contribute-guide]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/docs/CONTRIBUTING.md
-[contributors]: https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors
-[lib]: https://github.com/cotes2020/chirpy-static-assets
-[vscode]: https://code.visualstudio.com/
-[jetbrains]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
+The Pages workflow builds with Hugo and Dart Sass, checks the generated files,
+and uploads `public/`. Automatic deployment stays limited to `main` and
+`master`. Work on `hugo-migration` can be reviewed locally without changing the
+live site. Once merged, GitHub Pages should use **GitHub Actions** as its source.

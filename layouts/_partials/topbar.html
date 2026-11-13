@@ -1,0 +1,12 @@
+<header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
+  {{ $title := cond (eq .Kind "404") "404: Page not found" .Title }}
+  <div id="topbar" class="d-flex align-items-center justify-content-between px-lg-3 h-100">
+    <nav id="breadcrumb" aria-label="Breadcrumb">
+      {{ if .IsHome }}<span>Home</span>{{ else }}
+      <span><a href="{{ site.Home.RelPermalink }}">Home</a></span> <span>{{ $title }}</span>
+      {{ end }}
+    </nav>
+    <button type="button" id="sidebar-trigger" class="btn btn-link" aria-label="Sidebar"><i class="fas fa-bars fa-fw"></i></button>
+    <div id="topbar-title">{{ if .IsHome }}{{ site.Title }}{{ else }}{{ $title }}{{ end }}</div>
+  </div>
+</header>

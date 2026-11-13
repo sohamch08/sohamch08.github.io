@@ -78,7 +78,7 @@ begin
   abort 'Private key material is not supported.' if text.match?(/PRIVATE KEY|SECRET KEY/)
   algorithm, fingerprint = key_id == 'gpg' ? inspect_gpg(text) : inspect_ssh(text)
 
-  destination = Pathname(__dir__).join('../_data/public_keys.yml').expand_path
+  destination = Pathname(__dir__).join('../data/public_keys.yml').expand_path
   keys = YAML.safe_load(destination.read)
   keys.fetch(key_id).merge!('algorithm' => algorithm, 'fingerprint' => fingerprint, 'public_key' => text)
   destination.write(YAML.dump(keys).delete_prefix("---\n"))

@@ -1,60 +1,23 @@
 import babel from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import fs from 'fs';
-import pkg from './package.json';
 
-const SRC_DEFAULT = '_javascript';
-const SRC_PWA = `${SRC_DEFAULT}/pwa`;
-const DIST = 'assets/js/dist';
-
-const banner = `/*!
- * ${pkg.name} v${pkg.version} | © ${pkg.since} ${pkg.author} | ${pkg.license} Licensed | ${pkg.homepage}
- */`;
-const frontmatter = '---\npermalink: /:basename\n---\n';
+const source = 'assets/js-source';
 const isProd = process.env.BUILD === 'production';
+const banner = `/*!
+ * jekyll-theme-chirpy v7.4.1 | © 2019 Cotes Chung | MIT Licensed | https://github.com/cotes2020/jekyll-theme-chirpy/
+ */`;
 
-let hasWatched = false;
-
-function cleanup() {
-  fs.rmSync(DIST, { recursive: true, force: true });
-  console.log(`> Directory "${DIST}" has been cleaned.`);
-}
-
-function insertFrontmatter() {
+function build(filename, { pwa = false, outputName = null } = {}) {
   return {
-    name: 'insert-frontmatter',
-    generateBundle(_, bundle) {
-      for (const chunkOrAsset of Object.values(bundle)) {
-        if (chunkOrAsset.type === 'chunk') {
-          chunkOrAsset.code = frontmatter + chunkOrAsset.code;
-        }
-      }
-    }
-  };
-}
-
-function build(
-  filename,
-  { src = SRC_DEFAULT, jekyll = false, outputName = null } = {}
-) {
-  const input = `${src}/${filename}.js`;
-  const shouldWatch = hasWatched ? false : true;
-
-  if (!hasWatched) {
-    hasWatched = true;
-  }
-
-  return {
-    input,
+    input: `${source}/${pwa ? 'pwa/' : ''}${filename}.js`,
     output: {
-      file: `${DIST}/${filename}.min.js`,
+      file: pwa ? `static/${filename}.min.js` : `static/assets/js/dist/${filename}.min.js`,
       format: 'iife',
       ...(outputName !== null && { name: outputName }),
       banner,
-      sourcemap: !isProd && !jekyll
+      sourcemap: !isProd
     },
-    ...(shouldWatch && { watch: { include: `${SRC_DEFAULT}/**/*.js` } }),
     plugins: [
       babel({
         babelHelpers: 'bundled',
@@ -65,22 +28,14 @@ function build(
         ]
       }),
       nodeResolve(),
-      isProd && terser(),
-      jekyll && insertFrontmatter()
+      isProd && terser()
     ]
   };
 }
 
-cleanup();
-
 export default [
-  build('commons'),
-  build('home'),
-  build('categories'),
-  build('page'),
-  build('post'),
-  build('misc'),
+  ...['commons', 'home', 'categories', 'page', 'post', 'misc'].map((name) => build(name)),
   build('theme', { outputName: 'Theme' }),
-  build('app', { src: SRC_PWA, jekyll: true }),
-  build('sw', { src: SRC_PWA, jekyll: true })
+  build('app', { pwa: true }),
+  build('sw', { pwa: true })
 ];

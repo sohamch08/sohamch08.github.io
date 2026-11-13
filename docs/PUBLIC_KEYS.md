@@ -1,6 +1,6 @@
 # Updating the website's public keys
 
-The Contact page reads `_data/public_keys.yml`. Its key text also supplies the
+The Contact page reads `data/public_keys.yml`. Its key text also supplies the
 download files, so a single update changes copying, viewing and downloading.
 
 To replace the GPG key, export your chosen public key to an ASCII armored `.asc`
@@ -26,7 +26,7 @@ These commands update website data only. They do not generate keys or change
 your GPG keyring or SSH configuration. GPG updates require `gpg`; SSH updates
 require `ssh-keygen`.
 
-You can edit titles and display labels directly in `_data/public_keys.yml`.
+You can edit titles and display labels directly in `data/public_keys.yml`.
 Keep the algorithm, fingerprint and public key text consistent. The update
 command handles these three values together and preserves the other fields.
 
