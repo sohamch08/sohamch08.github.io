@@ -99,7 +99,7 @@
         </a>
       {% endif %}
     {% endfor %}
-    <div class="sidebar-key-actions" role="group" aria-label="Copy public keys">
+    <!--<div class="sidebar-key-actions" role="group" aria-label="Copy public keys">
       {% for entry in site.data.public_keys %}
         {% assign key_id = entry[0] %}
         {% assign key = entry[1] %}
@@ -108,7 +108,7 @@
         </button>
         <textarea id="sidebar-{{ key_id }}-key" hidden readonly>{{ key.public_key | escape | newline_to_br | strip_newlines | replace: '<br />', '&#10;' }}</textarea>
       {% endfor %}
-    </div>
+    </div>-->
     <span id="sidebar-key-status" class="sidebar-key-status" role="status" aria-live="polite" aria-atomic="true"></span>
   </div>
   <!-- .sidebar-bottom -->
