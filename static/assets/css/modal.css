@@ -130,10 +130,11 @@ body:has(.site-modal[open]) {
     SFMono-Regular,
     Consolas,
     monospace;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
+  white-space: pre;
+  overflow-wrap: normal;
   word-break: normal;
   max-height: min(40vh, 20rem);
+  overflow-x: auto;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #527361 transparent;
