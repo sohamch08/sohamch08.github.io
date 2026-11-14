@@ -1,7 +1,7 @@
-name: Build and Deploy
+name: Build and Deploy Hugo
 on:
   push:
-    branches: [main, master]
+    branches: [main]
     paths-ignore:
       - .gitignore
       - README.md
@@ -23,6 +23,7 @@ env:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

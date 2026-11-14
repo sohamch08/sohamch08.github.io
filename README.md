@@ -63,7 +63,11 @@ license notices are retained. The bundled Bootstrap stylesheet is retained in
 
 ## GitHub Pages
 
-The Pages workflow builds with Hugo and Dart Sass, checks the generated files,
-and uploads `public/`. Automatic deployment stays limited to `main` and
-`master`. Work on `hugo-migration` can be reviewed locally without changing the
-live site. Once merged, GitHub Pages should use **GitHub Actions** as its source.
+The Pages workflow builds `main` with Hugo and Dart Sass, checks the generated
+files, and uploads `public/`. GitHub Pages uses **GitHub Actions** as its source.
+Only `main` can deploy, including manually triggered workflow runs.
+
+The `jekyll` branch preserves the complete Jekyll setup from before the Hugo
+migration. Switch to it with `git switch jekyll` to work with the old site, and
+return with `git switch main`. Changes on `jekyll` do not deploy to the live
+site. Keep edits to the two versions on their respective branches.
