@@ -7,7 +7,35 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TALKS_FILE="${TALKS_FILE:-$SCRIPT_DIR/../content/talks.md}"
 
+usage() {
+  cat <<'EOF'
+Usage: scripts/add-talk.sh [--year YYYY]
+
+Interactively add a talk or a venue to content/talks.md.
+The year defaults to the current year. Set TALKS_FILE to edit another file.
+EOF
+}
+
+YEAR="$(date +%Y)"
+while (( $# > 0 )); do
+  case "$1" in
+    --year)
+      [[ $# -ge 2 && "$2" =~ ^[1-9][0-9]{3}$ ]] || {
+        echo 'Error: --year requires a four-digit year.' >&2; exit 1
+      }
+      YEAR="$2"
+      shift 2
+      ;;
+    -h|--help) usage; exit 0 ;;
+    *) usage >&2; exit 1 ;;
+  esac
+done
+
 [[ -f "$TALKS_FILE" ]] || { echo "Error: talks file not found at $TALKS_FILE" >&2; exit 1; }
+
+# Keep all temporary files beside the source for atomic replacement and cleanup.
+WORK_DIR="$(mktemp -d "${TALKS_FILE}.XXXXXX")"
+trap 'rm -rf "$WORK_DIR"' EXIT
 
 I1="    "
 I2="        "
@@ -24,7 +52,7 @@ trim() {
 
 ask() {
   local prompt="$1" ans
-  read -rp "$prompt" ans
+  read -rp "$prompt" ans || { echo 'Error: input ended before the talk was complete.' >&2; return 1; }
   trim "$ans"
 }
 
@@ -86,7 +114,8 @@ build_new_talk_item() {
 # $TALKS_FILE right before line number $2, then move the result into place.
 splice_before_line() {
   local content_file="$1" before_line="$2"
-  local tmp; tmp="$(mktemp)"
+  local tmp="$WORK_DIR/talks.md"
+  cp -p "$TALKS_FILE" "$tmp"
   local n; n="$(total_lines)"
   if (( before_line > n )); then
     cat "$TALKS_FILE" "$content_file" > "$tmp"
@@ -103,7 +132,8 @@ splice_before_line() {
 # replace lines [$2,$3] of $TALKS_FILE with the contents of file $1
 replace_lines() {
   local content_file="$1" start="$2" end="$3"
-  local tmp; tmp="$(mktemp)"
+  local tmp="$WORK_DIR/talks.md"
+  cp -p "$TALKS_FILE" "$tmp"
   {
     head -n "$((start - 1))" "$TALKS_FILE"
     cat "$content_file"
@@ -114,19 +144,23 @@ replace_lines() {
 
 # ---------- main flow ----------
 
-YEAR="$(date +%Y)"
 echo "Using year: $YEAR"
 
-Y_START="$(find_in_range 1 "$(total_lines)" "<div class=\"year-header\">${YEAR}</div>")"
+# Only edit the Talks section; attendance has its own titles and year groups.
+T_START="$(find_in_range 1 "$(total_lines)" '<h2 id="talks-presentations"')"
+[[ -n "$T_START" ]] || { echo 'Error: Talks section not found.' >&2; exit 1; }
+T_END_EXCL="$(find_in_range "$((T_START + 1))" "$(total_lines)" '<section class="attendance-section"')"
+[[ -n "$T_END_EXCL" ]] || T_END_EXCL="$(( $(total_lines) + 1 ))"
+
+Y_START="$(find_in_range "$T_START" "$((T_END_EXCL - 1))" "<div class=\"year-header\">${YEAR}</div>")"
 
 if [[ -z "$Y_START" ]]; then
   echo "Year $YEAR not found yet -- it will be created."
   YEAR_EXISTS=0
 else
   YEAR_EXISTS=1
-  Y_END_EXCL="$(awk -v start="$Y_START" \
-    'NR>start && index($0,"class=\"year-header\"")>0 { print NR; exit }' "$TALKS_FILE")"
-  [[ -z "$Y_END_EXCL" ]] && Y_END_EXCL="$(( $(total_lines) + 1 ))"
+  Y_END_EXCL="$(find_in_range "$((Y_START + 1))" "$((T_END_EXCL - 1))" 'class="year-header"')"
+  [[ -n "$Y_END_EXCL" ]] || Y_END_EXCL="$T_END_EXCL"
 fi
 
 # Collect talk-item blocks (start, end, title) within this year's section.
@@ -143,8 +177,11 @@ if [[ "$YEAR_EXISTS" == "1" ]]; then
       continue
     fi
     close="$(find_exact_after "$open" '</div>')"
-    [[ -z "$close" ]] && { echo "Error: could not find end of talk-item block starting at line $open" >&2; exit 1; }
+    if [[ -z "$close" ]] || (( close >= Y_END_EXCL )); then
+      echo "Error: could not find end of talk-item block starting at line $open" >&2; exit 1
+    fi
     title_line="$(find_in_range "$open" "$close" 'class="talk-title"')"
+    [[ -n "$title_line" ]] || { echo "Error: talk title missing at line $open." >&2; exit 1; }
     title="$(strip_tag "$(sed -n "${title_line}p" "$TALKS_FILE")")"
     BLOCK_START+=("$open"); BLOCK_END+=("$close"); BLOCK_TITLE+=("$title")
     pos=$(( close + 1 ))
@@ -161,9 +198,13 @@ if [[ "$YEAR_EXISTS" == "1" && "${#BLOCK_TITLE[@]}" -gt 0 ]]; then
   done
   choice="$(ask 'Use an existing talk title? Enter its number, or leave blank for a new talk: ')"
   if [[ -n "$choice" ]]; then
-    [[ "$choice" =~ ^[0-9]+$ ]] && (( choice >= 1 && choice <= ${#BLOCK_TITLE[@]} )) || {
+    if [[ ! "$choice" =~ ^[0-9]+$ || ${#choice} -gt 9 ]]; then
       echo "Error: invalid selection." >&2; exit 1
-    }
+    fi
+    choice=$((10#$choice))
+    if (( choice < 1 || choice > ${#BLOCK_TITLE[@]} )); then
+      echo "Error: invalid selection." >&2; exit 1
+    fi
     idx=$((choice - 1))
     MODE="add_venue"
     SEL_START="${BLOCK_START[$idx]}"; SEL_END="${BLOCK_END[$idx]}"
@@ -192,8 +233,7 @@ if [[ -n "$ADD_URL" ]]; then
   [[ -n "$custom_label" ]] && ADD_LABEL="$custom_label"
 fi
 
-NEW_ROW_FILE="$(mktemp)"
-trap 'rm -f "$NEW_ROW_FILE"' EXIT
+NEW_ROW_FILE="$WORK_DIR/venue"
 build_venue_row "$DESC" "$SLIDES" "$POSTER" "$ADD_URL" "$ADD_LABEL" > "$NEW_ROW_FILE"
 
 if [[ "$MODE" == "add_venue" ]]; then
@@ -222,7 +262,7 @@ if [[ "$MODE" == "add_venue" ]]; then
 
     OLD_TITLE_TEXT="$(strip_tag "$(sed -n "${title_line}p" "$TALKS_FILE")")"
 
-    CONVERTED="$(mktemp)"
+    CONVERTED="$WORK_DIR/converted"
     {
       printf '%s\n' '<div class="talk-item">'
       printf '%s\n' "${I1}<div class=\"talk-title\">${OLD_TITLE_TEXT}</div>"
@@ -244,11 +284,11 @@ if [[ "$MODE" == "add_venue" ]]; then
     splice_before_line "$NEW_ROW_FILE" "$((title_line + 1))"
   fi
 else
-  NEW_ITEM_FILE="$(mktemp)"
+  NEW_ITEM_FILE="$WORK_DIR/item"
   build_new_talk_item "$TITLE" "$DESC" "$SLIDES" "$POSTER" "$ADD_URL" "$ADD_LABEL" > "$NEW_ITEM_FILE"
 
   if [[ "$YEAR_EXISTS" == "1" ]]; then
-    CONTENT="$(mktemp)"
+    CONTENT="$WORK_DIR/content"
     cat "$NEW_ITEM_FILE" > "$CONTENT"
     printf '\n' >> "$CONTENT"
     if [[ "${#BLOCK_START[@]}" -gt 0 ]]; then
@@ -261,7 +301,6 @@ else
     rm -f "$CONTENT"
   else
     # brand new year section: find correct descending-order position
-    n="$(total_lines)"
     insert_at=""
     while IFS=: read -r lineno rest; do
       yr="$(printf '%s' "$rest" | sed -E 's/.*<div class="year-header">([0-9]+)<\/div>.*/\1/')"
@@ -269,26 +308,17 @@ else
         insert_at="$lineno"
         break
       fi
-    done < <(grep -n 'class="year-header"' "$TALKS_FILE")
+    done < <(awk -v start="$T_START" -v end="$T_END_EXCL" \
+      'NR>start && NR<end && index($0,"class=\"year-header\"")>0 { print NR ":" $0 }' "$TALKS_FILE")
 
-    CONTENT="$(mktemp)"
-    if [[ -n "$insert_at" ]]; then
-      {
-        printf '<div class="year-header">%s</div>\n' "$YEAR"
-        printf '\n'
-        cat "$NEW_ITEM_FILE"
-        printf '\n'
-      } > "$CONTENT"
-      splice_before_line "$CONTENT" "$insert_at"
-    else
-      {
-        printf '\n'
-        printf '<div class="year-header">%s</div>\n' "$YEAR"
-        printf '\n'
-        cat "$NEW_ITEM_FILE"
-      } > "$CONTENT"
-      splice_before_line "$CONTENT" "$((n + 1))"
-    fi
+    [[ -n "$insert_at" ]] || insert_at="$T_END_EXCL"
+    CONTENT="$WORK_DIR/content"
+    {
+      printf '\n<div class="year-header">%s</div>\n\n' "$YEAR"
+      cat "$NEW_ITEM_FILE"
+      printf '\n'
+    } > "$CONTENT"
+    splice_before_line "$CONTENT" "$insert_at"
     rm -f "$CONTENT"
   fi
   rm -f "$NEW_ITEM_FILE"

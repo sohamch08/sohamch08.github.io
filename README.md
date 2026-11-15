@@ -83,7 +83,19 @@ Dart Sass directory comes before Ruby or Node Sass executables on `PATH`.
   files from this same data. See [public-key instructions](docs/PUBLIC_KEYS.md).
 - `hugo.toml`: site identity, canonical URL, and build settings.
 
-The `scripts/add-talk.sh` helper edits `content/talks.md`.
+Add a talk interactively with:
+
+```sh
+./scripts/add-talk.sh
+./scripts/add-talk.sh --year 2025
+```
+
+The helper edits `content/talks.md` and defaults to the current year. Select an
+existing title to add another venue, or leave the selection blank to add a new
+talk. New talks and venues appear first within their year or title; year sections
+stay in descending order, before the workshops and conferences section. Links
+are optional and can be external URLs or site paths such as `/assets/slides.pdf`.
+Set `TALKS_FILE` to try the helper on a copy of the page.
 
 ## Rebuild theme JavaScript
 
