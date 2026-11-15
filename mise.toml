@@ -1,8 +1,0 @@
-[tools]
-hugo = "0.169.0"
-"github:sass/dart-sass" = "1.93.3"
-# Ruby is only needed by the optional public-key update helper.
-ruby = "3.3"
-
-[env]
-GEM_HOME = false

@@ -7,17 +7,40 @@ Hugo as the generator.
 
 ## Preview and build
 
-Install Hugo 0.169.0 and the standalone Dart Sass 1.93.3 binary. On macOS:
+Install [Hugo](https://gohugo.io/installation/) and
+[standalone Dart Sass](https://sass-lang.com/install/#install-anywhere-standalone),
+with both `hugo` and `sass` on `PATH`. Local builds are verified with Fedora's
+Hugo 0.162.1; the Pages workflow uses Hugo 0.169.0. Both use Dart Sass 1.93.3.
+
+On Fedora, install Hugo with `sudo dnf install hugo`. For Dart Sass, download
+the standalone archive for your operating system and architecture from the
+[official releases](https://github.com/sass/dart-sass/releases/tag/1.93.3),
+extract it, and add the extracted `dart-sass` directory to `PATH`.
+For example, if extracted to `~/.local/share/dart-sass`, add this to `~/.zshrc`
+(or `~/.bashrc` for Bash), then open a new terminal:
+
+```sh
+export PATH="$HOME/.local/share/dart-sass:$PATH"
+```
+
+On macOS with Homebrew:
 
 ```sh
 brew install hugo sass/sass/sass
-hugo server --disableFastRender
 ```
 
-Alternatively, install the pinned tools with `mise install`. The Node version of
-Sass cannot replace standalone Dart Sass for Hugo's embedded compiler protocol.
+The Node version of Sass cannot replace standalone Dart Sass for Hugo's
+embedded compiler protocol.
 Hugo compiles the Sass directly, following its
 [official Sass workflow](https://gohugo.io/functions/css/sass/).
+
+Verify the installed tools and start the preview:
+
+```sh
+hugo version
+sass --version
+hugo server --disableFastRender
+```
 
 Open the URL printed by Hugo, usually `http://localhost:1313/`.
 To build and check the production output:
@@ -30,6 +53,21 @@ The build is written to `public/`. Python 3 is needed for the link and output
 checks. Ruby, Bundler, and Jekyll are not needed to preview or build the website.
 Offline caching is enabled in production and disabled in development so edits
 appear immediately.
+
+### Sass errors
+
+If Hugo reports `TOCSS-DART` with `unexpected EOF when executing "sass"`, check
+which executable it finds:
+
+```sh
+command -v sass
+sass --version
+```
+
+The permission hint in this error is generic. A leftover RubyGems launcher
+such as `~/.gems/bin/sass` can exit with `Gem::GemNotFoundException` before
+Hugo connects to the compiler, causing the same error. Ensure the standalone
+Dart Sass directory comes before Ruby or Node Sass executables on `PATH`.
 
 ## Edit the site
 

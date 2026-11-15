@@ -7,13 +7,13 @@ To replace the GPG key, export your chosen public key to an ASCII armored `.asc`
 file, then run from the repository root:
 
 ```sh
-mise exec -- ruby tools/update-public-key.rb gpg /path/to/public-key.asc
+ruby tools/update-public-key.rb gpg /path/to/public-key.asc
 ```
 
 To replace the SSH key:
 
 ```sh
-mise exec -- ruby tools/update-public-key.rb ssh /path/to/key.pub
+ruby tools/update-public-key.rb ssh /path/to/key.pub
 ```
 
 The command detects the algorithm and fingerprint from the replacement key.
@@ -24,7 +24,8 @@ key. Changing only the display label does not change the key's algorithm.
 
 These commands update website data only. They do not generate keys or change
 your GPG keyring or SSH configuration. GPG updates require `gpg`; SSH updates
-require `ssh-keygen`.
+require `ssh-keygen`. These optional helpers also require Ruby; the site build
+does not.
 
 You can edit titles and display labels directly in `data/public_keys.yml`.
 Keep the algorithm, fingerprint and public key text consistent. The update
