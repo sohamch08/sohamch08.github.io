@@ -5,6 +5,7 @@ weight = 3
 icon = "fa-solid fa-microphone"
 toc = true
 +++
+
 <link rel="stylesheet" href="/assets/css/talks.css">
 
 <nav class="talks-navigation" aria-label="On this page">
@@ -15,7 +16,15 @@ toc = true
 <h2 id="talks-presentations" class="talks-section-title">Talks</h2>
 
 <div class="year-header">2026</div>
-
+<div class="talk-item">
+    <div class="talk-title">High Dimensional Expanders II: Coboundary and Cocycle Expansion</div>
+    <div class="talk-venue-row">
+        <div class="talk-description">TIFR, Student Seminar</div>
+        <div class="talk-slides">
+            <a class="talk-link" href="https://www.tcs.tifr.res.in/~student_seminar/talks/2026-11-27/" target="_blank">[Link]</a>
+        </div>
+    </div>
+</div>
 <div class="talk-item">
     <div class="talk-title">Introduction to High Dimensional Expanders</div>
     <div class="talk-venue-row">
