@@ -1,0 +1,14 @@
+{{ $sections := partial "html-sections.html" (dict "html" .Content "level" 2) }}
+{{ $sections.intro | safeHTML }}
+{{ range $sections.sections }}
+  {{ .heading | safeHTML }}
+  {{ $items := partial "html-sections.html" (dict "html" .body "level" 3) }}
+  {{ $items.intro | safeHTML }}
+  {{ range $items.sections }}
+    <div class="internship-item">
+      <div class="internship-time">{{ .title | safeHTML }}</div>
+      {{ $body := replace .body "<p>" `<p class="internship-description">` 1 }}
+      {{ replace $body "<p>" `<p class="internship-abstract">` | safeHTML }}
+    </div>
+  {{ end }}
+{{ end }}

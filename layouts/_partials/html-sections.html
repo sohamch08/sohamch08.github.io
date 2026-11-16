@@ -1,0 +1,14 @@
+{{/* Group rendered Markdown by heading level. Render first so fenced code,
+     escaped headings, inline formatting, and LaTeX are handled by Goldmark. */}}
+{{- $level := .level -}}
+{{- $boundary := "<!-- hugo-heading-boundary -->" -}}
+{{- $chunks := split (replaceRE (printf `(<h%d\b)` $level) (printf `%s${1}` $boundary) .html) $boundary -}}
+{{- $sections := slice -}}
+{{- $headingPattern := printf `(?s)^<h%d\b[^>]*>.*?</h%d>` $level $level -}}
+{{- range after 1 $chunks -}}
+  {{- $heading := index (findRE $headingPattern . 1) 0 -}}
+  {{- $title := replaceRE `(?s)^<h[1-6]\b[^>]*>(.*?)</h[1-6]>$` "$1" $heading -}}
+  {{- $body := strings.TrimSpace (strings.TrimPrefix $heading .) -}}
+  {{- $sections = $sections | append (dict "heading" $heading "title" $title "body" $body) -}}
+{{- end -}}
+{{- return (dict "intro" (index $chunks 0) "sections" $sections) -}}

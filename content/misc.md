@@ -4,6 +4,7 @@ url = "/misc/"
 weight = 4
 icon = "fa-solid fa-briefcase"
 toc = true
+layout = "misc"
 styles = ["misc"]
 +++
 
@@ -20,26 +21,26 @@ styles = ["misc"]
 
 ## Research Internshipts
 
-{{< internship when="Summer 2024" >}}
+### Summer 2024
+
 Worked on derandomization of isolation lemma over polytopes under prof. [Rohit Gurjar](https://www.cse.iitb.ac.in/~rgurjar/), IIT Bombay
 
 In this project I tried to extend the idea of bounding the number of vectors in the integer lattice which has $L_1$ norm less than twice the shortest vector for 0-1 matrices with $k$-column sum to derandomize isolation lemma over more general polytopes. Additionally I read about isolating a path connecting in a black-box layered graph.
-{{< /internship >}}
 
-{{< internship when="Dec'23-Jul'24" >}}
+### Dec'23-Jul'24
+
 Quantum Property Testing of Junta Functions and Partially Symmetric Functions with prof. [Arijit Ghosh](https://sites.google.com/site/homepagearijitghosh/), ISI Kolkata
 
 In this project I learned about Quantum Boolean Functions and some basics of Quantum algorithms for property testing from the Survey by [Montanaro-Osborne, 2008](https://arxiv.org/abs/0810.2435). I learned about Classical and Quantum Junta Function testing. We worked on finding a more efficient Quantum Algorithm for testing Paritally symmetric boolean functions by improving the classical algorithm in Blais-Weinstein-Yoshida's Paper.
-{{< /internship >}}
 
-{{< internship when="Summer 2023" >}}
+### Summer 2023
+
 Reading project on Factorization of Arithmetic Circuits under prof. [Nitin Saxena](https://www.cse.iitk.ac.in/users/nitin/), IIT Kanpur
 
 In the project I learned factorization techniques and closure of of VP and VBP under factorization. I also read closure of VF with bounded individual degree from Oliviera, 2016 paper and we worked on removing the bounded individual degree condition
-{{< /internship >}}
 
-{{< internship when="Dec 2022" >}}
+### Dec 2022
+
 Computational Number Theroy and Algebra for Algebraic Comlexity Theory under prof. [Nitin Saxena](https://www.cse.iitk.ac.in/users/nitin/), IIT Kanpur
 
 I did a basic study of Computational Number Theory and Algebra from Nitin Saxena's course and about Arithmetic Circuits from [Amir Shpilka's Survey](https://www.nowpublishers.com/article/Details/TCS-039) and [Ramprasad Saptharishi's Survey](https://github.com/dasarpmar/lowerbounds-survey) on Arithmetic Circuits.
-{{< /internship >}}

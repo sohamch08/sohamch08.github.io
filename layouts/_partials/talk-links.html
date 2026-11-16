@@ -1,0 +1,1 @@
+{{- return (replaceRE `(?s)<a href="([^"]+)"[^>]*>(.*?)</a>` `<a class="talk-link" href="$1" target="_blank">[$2]</a>` .) -}}

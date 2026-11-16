@@ -1,0 +1,25 @@
+{{ $page := . }}
+{{ $columns := partial "html-sections.html" (dict "html" .Content "level" 2) }}
+{{ $columns.intro | safeHTML }}
+<div class="two-col">
+  {{ range $columns.sections }}
+    <div class="col">
+      <div class="col-heading">{{ .title | safeHTML }}</div>
+      {{ $newtab := in ($page.Params.new_tab_columns | default slice) (.title | plainify | string) }}
+      {{ $semesters := partial "html-sections.html" (dict "html" .body "level" 3) }}
+      {{ $semesters.intro | safeHTML }}
+      {{ range $semesters.sections }}
+        {{ $label := .title | plainify }}
+        {{ $pattern := `^Semester ([0-9]+) — (.+) ([0-9]{4})$` }}
+        {{ if not (findRE $pattern $label) }}{{ errorf "Invalid semester heading %q in %s. Use: Semester 1 — Aug–Dec 2026" $label $page.File.Path }}{{ end }}
+        <div class="sem-row">
+          <div class="sem-label"><span class="sem-num">Sem {{ replaceRE $pattern "$1" $label }}</span><span class="sem-date">{{ replaceRE $pattern "$2" $label }}<br>{{ replaceRE $pattern "$3" $label }}</span></div>
+          <div class="sem-divider"></div>
+          <div class="course-list">
+            {{ partial "course-items.html" (dict "html" .body "newtab" $newtab) }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>

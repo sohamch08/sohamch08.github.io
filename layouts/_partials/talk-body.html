@@ -1,8 +1,0 @@
-{{- $parts := split (strings.TrimSpace .text) "\n\n" -}}
-{{- $description := .page.RenderString (dict "display" "inline") (index $parts 0) -}}
-{{- $links := "" -}}
-{{- if gt (len $parts) 1 -}}
-  {{- $links = .page.RenderString (dict "display" "inline") (delimit (after 1 $parts) "\n\n") -}}
-  {{- $links = replaceRE `(?s)<a href="([^"]+)"[^>]*>(.*?)</a>` `<a class="talk-link" href="$1" target="_blank">[$2]</a>` $links -}}
-{{- end -}}
-{{- return (dict "description" $description "links" $links) -}}

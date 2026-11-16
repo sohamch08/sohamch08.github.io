@@ -1,0 +1,22 @@
+{{ $sections := partial "html-sections.html" (dict "html" .Content "level" 2) }}
+{{ replaceRE `<h1\b` `<h1 class="page-title"` $sections.intro | safeHTML }}
+{{ range $index, $section := $sections.sections }}
+  {{ if eq $index 0 }}
+    <section class="home-section" aria-labelledby="updates-title">
+      <h2 id="updates-title">{{ .title | safeHTML }}</h2>
+      {{ $updates := partial "html-sections.html" (dict "html" .body "level" 3) }}
+      {{ $updates.intro | safeHTML }}
+      {{ range $updates.sections }}
+        <div class="update-item">
+          <h3>{{ .title | safeHTML }}</h3>
+          {{ .body | safeHTML }}
+        </div>
+      {{ end }}
+    </section>
+  {{ else if eq $index 1 }}
+    <section class="home-section lookup-box" aria-labelledby="looking-for-something">
+      <h2 id="looking-for-something">{{ .title | safeHTML }}</h2>
+      {{ replaceRE `</ul>\s*<ul class="lookup-key-list">` "" .body | safeHTML }}
+    </section>
+  {{ else }}{{ .heading | safeHTML }}{{ .body | safeHTML }}{{ end }}
+{{ end }}

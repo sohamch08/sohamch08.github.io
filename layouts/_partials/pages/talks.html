@@ -1,0 +1,26 @@
+{{ partial "talks-navigation.html" . }}
+{{ $sections := partial "html-sections.html" (dict "html" .Content "level" 2) }}
+{{ $sections.intro | safeHTML }}
+{{ range $index, $section := $sections.sections }}
+  {{ if eq $index 0 }}
+    <h2 id="talks-presentations" class="talks-section-title">{{ .title | safeHTML }}</h2>
+    {{ $years := partial "html-sections.html" (dict "html" .body "level" 3) }}
+    {{ $years.intro | safeHTML }}
+    {{ range $years.sections }}
+      <h3 class="year-header">{{ .title | safeHTML }}</h3>
+      {{ $talks := partial "html-sections.html" (dict "html" .body "level" 4) }}
+      {{ $talks.intro | safeHTML }}
+      {{ range $talks.sections }}{{ partial "talk-item.html" . }}{{ end }}
+    {{ end }}
+  {{ else if eq $index 1 }}
+    <section class="attendance-section" aria-labelledby="workshops-conferences">
+      <h2 id="workshops-conferences" class="talks-section-title">{{ .title | safeHTML }}</h2>
+      {{ $years := partial "html-sections.html" (dict "html" .body "level" 3) }}
+      {{ replace $years.intro "<p>" `<p class="attendance-intro">` 1 | safeHTML }}
+      {{ range $years.sections }}
+        <h3 class="attendance-year">{{ .title | safeHTML }}</h3>
+        {{ partial "attendance-list.html" .body }}
+      {{ end }}
+    </section>
+  {{ else }}{{ .heading | safeHTML }}{{ .body | safeHTML }}{{ end }}
+{{ end }}

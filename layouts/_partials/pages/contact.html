@@ -1,0 +1,11 @@
+{{ $body := .Content }}
+{{/* The email section is the heading and paragraph preceding the key controls. */}}
+{{ range findRE `(?s)<h2\b[^>]*>.*?</h2>\s*<p>.*?</p>` $body 1 }}
+  {{ $section := partial "html-sections.html" (dict "html" . "level" 2) }}
+  {{ $email := index $section.sections 0 }}
+  {{ $emailHeading := replaceRE `id="[^"]+"` `id="email-title"` $email.heading }}
+  {{ $heading := printf `<div class="contact-email-heading">%s</div>` $emailHeading }}
+  {{ $addresses := replace $email.body "<p>" `<p class="contact-email-addresses">` 1 }}
+  {{ $body = replace $body . (printf `<section class="contact-email" aria-labelledby="email-title">%s%s</section>` $heading $addresses) }}
+{{ end }}
+{{ $body | safeHTML }}

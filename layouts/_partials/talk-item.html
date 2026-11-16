@@ -1,0 +1,22 @@
+<div class="talk-item">
+  {{ if findRE `<ul>` .body }}
+    <div class="talk-title">{{ .title | safeHTML }}</div>
+    {{ range findRE `(?s)<li>.*?</li>` .body }}
+      {{ $item := replaceRE `(?s)^<li>(.*?)</li>$` "$1" . }}
+      {{ $parts := split (replaceRE `</?p>` "" $item) "<br>" }}
+      <div class="talk-venue-row">
+        <div class="talk-description">{{ index $parts 0 | strings.TrimSpace | safeHTML }}</div>
+        {{ if gt (len $parts) 1 }}<div class="talk-slides">{{ partial "talk-links.html" (delimit (after 1 $parts) "<br>") | safeHTML }}</div>{{ end }}
+      </div>
+    {{ end }}
+  {{ else }}
+    {{ $paragraphs := findRE `(?s)<p>.*?</p>` .body }}
+    <div class="talk-header">
+      <div class="talk-title">{{ .title | safeHTML }}</div>
+      {{ if gt (len $paragraphs) 1 }}
+        <div class="talk-slides">{{ partial "talk-links.html" (replaceRE `</?p>` "" (delimit (after 1 $paragraphs) "\n")) | safeHTML }}</div>
+      {{ end }}
+    </div>
+    {{ with $paragraphs }}<div class="talk-description">{{ replaceRE `</?p>` "" (index . 0) | safeHTML }}</div>{{ end }}
+  {{ end }}
+</div>

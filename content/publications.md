@@ -8,14 +8,14 @@ styles = ["publications"]
 +++
 
 {{< publication title="Deterministic list decoding of Reed-Solomon codes" authors="Joint work with [Prahladh Harsha](https://www.tifr.res.in/~prahladh/) (TIFR) and [Mrinal Kumar](https://mrinalkr.bitbucket.io) (TIFR)" details="[STOC 2026](https://dl.acm.org/doi/10.1145/3798129.3800908)" pdf="/assets/deterministicGS.pdf" eccc="https://eccc.weizmann.ac.il/report/2025/170/" arxiv="https://arxiv.org/abs/2511.05176" >}}
-We show that Reed-Solomon codes of dimension $k$ and block length $n$ over any finite field $\mathbb{F}$ can be *deterministically* list decoded from agreement $\sqrt{(k-1)n}$ in time $\text{poly}(n, \log |\mathbb{F}|)$.
+We show that Reed-Solomon codes of dimension $k$ and block length $n$ over any finite field $\mathbb{F}$ can be _deterministically_ list decoded from agreement $\sqrt{(k-1)n}$ in time $\text{poly}(n, \log |\mathbb{F}|)$.
 
 Prior to this work, the list decoding algorithms for Reed-Solomon codes, from the celebrated results of Sudan and Guruswami-Sudan, were either randomized with time complexity $\text{poly}(n, \log |\mathbb{F}|)$ or were deterministic with time complexity depending polynomially on the characteristic of the underlying field. In particular, over a prime field $\mathbb{F}$, no deterministic algorithms running in time $\text{poly}(n, \log |\mathbb{F}|)$ were known for this problem.
 
-Our main technical ingredient is a deterministic algorithm for solving the bivariate polynomial factorization instances that appear in the algorithm of Sudan and Guruswami-Sudan with only a $\text{poly}(\log |\mathbb{F}|)$ dependence on the field size in its time complexity for every finite field $\mathbb{F}$. While the question of obtaining efficient deterministic algorithms for polynomial factorization over finite fields is a fundamental open problem even for *univariate* polynomials of degree $2$, we show that additional information from the received word can be used to obtain such an algorithm for instances that appear in the course of list decoding Reed-Solomon codes.
+Our main technical ingredient is a deterministic algorithm for solving the bivariate polynomial factorization instances that appear in the algorithm of Sudan and Guruswami-Sudan with only a $\text{poly}(\log |\mathbb{F}|)$ dependence on the field size in its time complexity for every finite field $\mathbb{F}$. While the question of obtaining efficient deterministic algorithms for polynomial factorization over finite fields is a fundamental open problem even for _univariate_ polynomials of degree $2$, we show that additional information from the received word can be used to obtain such an algorithm for instances that appear in the course of list decoding Reed-Solomon codes.
 {{< /publication >}}
 
-# Dissertation {.page-title}
+# Dissertation
 
 {{< publication title="Exponential Sums and Weil Bounds: A Survey of Elementary Methods and Decoding Applications" authors="MSc Project Report under [Mrinal Kumar](https://mrinalkr.bitbucket.io) (TIFR)" details="May, 2026" pdf="/assets/msc-project.pdf" repo="https://github.com/sohamch08/msc-project-tifr" >}}
 This talk is a survey on techniques for estimating the number of solutions to polynomial equations over a finite field $\mathbb{F}_q$. We use exponential sums-constructed from additive and multiplicative character-to establish these counts. By analyzing the algebraic and orthogonality properties of Gaussian and Jacobi sums, we build a mathematical framework to derive bounds for equations over $\mathbb{F}_q$ and its extensions.

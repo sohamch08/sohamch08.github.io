@@ -1,5 +1,0 @@
-{{ $body := partial "talk-body.html" (dict "page" .Page "text" .Inner) }}
-<div class="talk-venue-row">
-  <div class="talk-description">{{ $body.description }}</div>
-  {{ with $body.links }}<div class="talk-slides">{{ . | safeHTML }}</div>{{ end }}
-</div>

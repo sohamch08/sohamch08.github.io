@@ -1,0 +1,5 @@
+<article class="page">
+  <h1 class="page-title">{{ .page.Title }}</h1>
+  {{ $body := replaceRE `<h1\b` `<h1 class="page-title"` .content }}
+  <div class="content">{{ partial "content.html" $body }}</div>
+</article>

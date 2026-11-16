@@ -1,6 +1,3 @@
 {{ define "main" }}
-<article class="page">
-  <h1 class="page-title">{{ .Title }}</h1>
-  <div class="content">{{ partial "content.html" .Content }}</div>
-</article>
+{{ partial "page.html" (dict "page" . "content" .Content) }}
 {{ end }}

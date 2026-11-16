@@ -1,0 +1,12 @@
+{{ $body := replace . "<ul>" `<ul class="attendance-list">` }}
+{{ range findRE `(?s)<li>.*?</li>` $body }}
+  {{ $old := . }}
+  {{ $parts := split (replaceRE `(?s)^<li>(.*?)</li>$` "$1" .) "<br>" }}
+  {{ $header := index $parts 0 }}
+  {{ $title := replaceRE `(?s)<a\b[^>]*>(.*?)</a>` "$1" $header }}
+  {{ $href := replaceRE `(?s).*?<a href="([^"]+)".*` "$1" $header }}
+  {{ $description := index $parts 1 | strings.TrimSpace }}
+  {{ $new := printf `<li><div class="talk-header"><div class="talk-title">%s</div><div class="talk-slides"><a class="talk-link" href="%s" target="_blank" rel="noopener noreferrer" aria-label="Link to %s">[Link]</a></div></div><div class="talk-description">%s</div></li>` $title $href ($title | plainify) $description }}
+  {{ $body = replace $body $old $new }}
+{{ end }}
+{{ $body | safeHTML }}

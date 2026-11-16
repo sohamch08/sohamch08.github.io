@@ -1,7 +1,0 @@
-<div class="internship-item">
-  <div class="internship-time">{{ .Get "when" }}</div>
-  {{ $body := .Page.RenderString (dict "display" "block") .Inner }}
-  {{ $body = replace $body "<p>" "<p class=\"internship-description\">" 1 }}
-  {{ $body = replace $body "<p>" "<p class=\"internship-abstract\">" }}
-  {{ $body | safeHTML }}
-</div>

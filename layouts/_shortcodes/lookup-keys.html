@@ -1,7 +1,2 @@
-<section class="home-section lookup-box" aria-labelledby="looking-for-something">
-  <h2 id="looking-for-something">Looking for something?</h2>
-  {{ $list := .Page.RenderString (dict "display" "block") .Inner }}
-  {{ $rows := partial "lookup-key-rows.html" . }}
-  {{ replaceRE `</ul>\s*$` (printf "%s</ul>" $rows) $list | safeHTML }}
-  <span class="visually-hidden" id="key-copy-status" role="status" aria-live="polite" aria-atomic="true"></span>
-</section>
+<ul class="lookup-key-list">{{ partial "lookup-key-rows.html" . }}</ul>
+<span class="visually-hidden" id="key-copy-status" role="status" aria-live="polite" aria-atomic="true"></span>
