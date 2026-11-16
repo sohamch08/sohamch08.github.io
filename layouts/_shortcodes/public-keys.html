@@ -20,7 +20,7 @@
     {{ end }}
   </div>
   <div class="public-key-sources" hidden>
-    {{ range $id, $key := hugo.Data.public_keys }}<textarea id="{{ $id }}-key" readonly>{{ $key.public_key }}</textarea>{{ end }}
+    {{ range $id, $key := hugo.Data.public_keys }}<textarea id="{{ $id }}-key" readonly>{{ (resources.Get $key.source).Content }}</textarea>{{ end }}
   </div>
   <noscript><p>Download either public key to view or copy its text.</p></noscript>
 </section>

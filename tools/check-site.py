@@ -63,10 +63,14 @@ for path, doc in documents.items():
 for name in ['feed.xml', 'sitemap.xml']:
     ET.parse(root / name)
 assert json.loads((root / 'assets/js/data/search.json').read_text()) == []
-for filename, marker in [('gpg.asc', 'BEGIN PGP PUBLIC KEY BLOCK'), ('ssh.pub', ' ')]:
+assets = Path(__file__).resolve().parent.parent / 'assets'
+for filename, source, marker in [('gpg.asc', 'gpg_key.asc', 'BEGIN PGP PUBLIC KEY BLOCK'),
+                                 ('ssh.pub', 'id_ed25519.pub', ' ')]:
     text = (root / 'assets/keys' / filename).read_text()
     if marker not in text or '{{' in text:
         errors.append(f'Invalid download: {filename}')
+    if (root / 'assets/keys' / filename).read_bytes() != (assets / source).read_bytes():
+        errors.append(f'Key download differs from asset: {filename}')
 
 contact = (root / 'contact/index.html').read_text()
 key_sources = re.findall(r'<textarea\b[^>]*id=["\']?([^\s"\'>]+)["\']?[^>]*>(.*?)</textarea>', contact, re.S)

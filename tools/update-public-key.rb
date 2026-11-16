@@ -80,7 +80,10 @@ begin
 
   destination = Pathname(__dir__).join('../data/public_keys.yml').expand_path
   keys = YAML.safe_load(destination.read)
-  keys.fetch(key_id).merge!('algorithm' => algorithm, 'fingerprint' => fingerprint, 'public_key' => text)
+  key = keys.fetch(key_id)
+  asset = Pathname(__dir__).join('../assets', key.fetch('source')).expand_path
+  asset.write(text)
+  key.merge!('algorithm' => algorithm, 'fingerprint' => fingerprint)
   destination.write(YAML.dump(keys).delete_prefix("---\n"))
   puts "Updated #{key_id.upcase}: #{algorithm}"
   puts "Fingerprint: #{fingerprint}"

@@ -61,7 +61,7 @@
     <script defer src="{{ "app.min.js" | relURL }}?baseurl={{ strings.TrimSuffix "/" ("/" | relURL) }}&register=true"></script>
   {{ end }}
   {{ range hugo.Data.public_keys }}
-    {{ $key := resources.FromString (printf "assets/keys/%s" .filename) .public_key }}
+    {{ $key := resources.Get .source | resources.Copy (printf "assets/keys/%s" .filename) }}
     {{ $publish := $key.RelPermalink }}
   {{ end }}
   <link rel="stylesheet" href="{{ "assets/css/modal.css" | relURL }}">

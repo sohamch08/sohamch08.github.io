@@ -122,6 +122,7 @@ body:has(.site-modal[open]) {
 .public-key-modal-text {
   margin: 0;
   padding: 0;
+  padding-inline-end: 1.5rem;
   border: 0;
   background: transparent;
   color: #d9f6e9;
@@ -136,6 +137,7 @@ body:has(.site-modal[open]) {
   max-height: min(40vh, 20rem);
   overflow-x: auto;
   overflow-y: auto;
+  scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: #527361 transparent;
 }

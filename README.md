@@ -79,8 +79,9 @@ Dart Sass directory comes before Ruby or Node Sass executables on `PATH`.
 - `assets/scss/`: the original theme Sass, compiled by Hugo.
 - `static/assets/css/`: page-specific styles.
 - `static/assets/`: PDFs, images, and prebuilt JavaScript.
-- `data/public_keys.yml`: key text and metadata. Hugo generates the download
-  files from this same data. See [public-key instructions](docs/PUBLIC_KEYS.md).
+- `assets/gpg_key.asc` and `assets/id_ed25519.pub`: public key files used for
+  copying, viewing, and downloading. `data/public_keys.yml` stores their paths
+  and display metadata. See [public-key instructions](docs/PUBLIC_KEYS.md).
 - `hugo.toml`: site identity, canonical URL, and build settings.
 
 Add a talk interactively with:
