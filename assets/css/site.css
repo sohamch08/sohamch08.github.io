@@ -1,0 +1,121 @@
+/* Shared visual language: the coursework page's dark ground, mint, and fine rules. */
+:root {
+  --site-font: 'Montserrat', Arial, sans-serif;
+  --bs-font-sans-serif: var(--site-font);
+  --bs-body-font-family: var(--site-font);
+  --site-bg: #1a1c1e;
+  --site-text: #f0f0f0;
+  --site-muted: #aaa;
+  --site-accent: #7fffd4;
+  --site-link: #4fe8c1;
+  --site-accent-hover: #9affd8;
+  --site-link-glow: 0 0 5px #9affd855;
+  --site-rule: #34383b;
+  --site-rule-soft: #292d30;
+  --main-bg: var(--site-bg);
+  --text-color: var(--site-text);
+  --heading-color: var(--site-accent);
+  --link-color: var(--site-link);
+  --link-underline-color: transparent;
+  --text-muted-color: var(--site-muted);
+  --main-border-color: var(--site-rule);
+}
+
+html { color-scheme: dark; scroll-padding-top: 1.5rem; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--site-bg);
+  color: var(--site-text);
+  font-family: var(--site-font);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#main-wrapper.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 260px);
+  min-height: 100dvh;
+  margin: 0 0 0 260px;
+  padding: 0 2rem;
+}
+
+#main-wrapper.site-wrapper > main,
+#main-wrapper.site-wrapper > header { width: 100%; max-width: 1320px; margin-inline: auto; }
+#topbar-wrapper { background: transparent; border-bottom: 1px solid var(--site-rule); }
+#topbar-title { color: var(--site-text); font-family: inherit; }
+#sidebar-trigger { color: var(--site-accent); }
+#sidebar { border-right-color: var(--site-rule); }
+#sidebar a:hover { text-decoration: none; }
+
+#main-content { flex: 1; min-width: 0; padding: 2.5rem 0 1rem; line-height: 1.6; }
+.page { min-width: 0; }
+main h1.page-title { display: block; margin: 0 0 1.75rem; font-size: 2rem; font-weight: 600; line-height: 1.25; }
+main h1, main h2, main h3, main h4 {
+  color: var(--site-accent);
+  font-family: inherit;
+  letter-spacing: normal;
+}
+main h2 { margin: 2.5rem 0 1rem; padding-bottom: 0.55rem; border-bottom: 1px solid var(--site-rule); font-size: 1.15rem; font-weight: 600; line-height: 1.5; }
+main h3 { margin: 1.5rem 0 0.5rem; font-size: 1rem; font-weight: 600; }
+main p { margin: 0 0 1rem; }
+main .content { margin-top: 0; font-size: 1rem; overflow-wrap: anywhere; }
+main ul { padding-left: 1.4rem; }
+a, .content a:not(.img-link) {
+  color: var(--site-link);
+  border-bottom: 0;
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+a:hover, .content a:not(.img-link):hover {
+  color: var(--site-accent-hover);
+  border-bottom: 0;
+  text-decoration: none;
+  text-shadow: var(--site-link-glow);
+  background: transparent;
+}
+#main-wrapper :is(a:any-link, .abstract-box, .public-key-copy, .public-key-view, .lookup-key-copy) {
+  text-decoration: none;
+}
+.lookup-key-copy:hover,
+.public-key-copy:is(:hover, :focus-visible),
+.public-key-view:is(:hover, :focus-visible),
+.abstract-box:hover { color: var(--site-accent-hover); text-shadow: var(--site-link-glow); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--site-accent); outline-offset: 4px; }
+
+/* Section links share the fine dividers used throughout the site. */
+.talks-navigation, .config-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.75rem;
+  margin: 0 0 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--site-rule);
+  font-size: 0.95rem;
+}
+
+.skip-link { position: absolute; top: -5rem; left: 1rem; z-index: 100; padding: 0.5rem 1rem; background: var(--site-bg); }
+.skip-link:focus { top: 0.5rem; }
+
+#back-to-top { border: 1px solid var(--site-rule); border-radius: 0; box-shadow: none; background: var(--site-bg); color: var(--site-accent); }
+.site-modal { background: var(--site-bg); color: var(--site-text); border: 1px solid var(--site-rule); border-radius: 2px; box-shadow: 0 12px 48px #0006; }
+.site-modal h3 { color: var(--site-accent); font-family: inherit; }
+
+@media (min-width: 1650px) {
+  #main-wrapper.site-wrapper { width: calc(100% - 300px); margin-left: 300px; }
+}
+@media (max-width: 849px) {
+  #main-wrapper.site-wrapper { width: 100%; margin: 0; padding: 0 1.25rem; }
+  #topbar { gap: 1rem; }
+  #sidebar-trigger { flex: 0 0 2.75rem; min-height: 2.75rem; padding: 0; border: 0; text-align: left; }
+  #sidebar-trigger .fa-fw { width: auto; }
+  #topbar-title { flex: 1; min-width: 0; width: auto; text-align: right; }
+}
+@media (max-width: 768px) {
+  #main-content { padding-top: 2rem; }
+  main h1.page-title { font-size: 1.75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}

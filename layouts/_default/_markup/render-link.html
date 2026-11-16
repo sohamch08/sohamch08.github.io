@@ -1,0 +1,1 @@
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if in (.Page.Params.new_tab_links | default slice) .Destination }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>{{- /* Avoid whitespace before punctuation after inline links. */ -}}

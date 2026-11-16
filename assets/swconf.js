@@ -1,13 +1,17 @@
 const swconf = {
   cacheName: 'chirpy-hugo-{{ now.UnixNano }}',
   resources: [
-    {{ "assets/css/jekyll-theme-chirpy.css" | relURL | jsonify | safeJS }},
+    {{ (partial "theme-css.html" .).RelPermalink | jsonify | safeJS }},
+    {{ range (readDir "assets/css") }}{{ partial "asset.html" (printf "assets/css/%s" .Name) | jsonify | safeJS }},{{ end }}
+    {{ range (readDir "static/assets/fonts") }}{{ printf "assets/fonts/%s" .Name | relURL | jsonify | safeJS }},{{ end }}
+    {{ range (readDir "static/assets/css") }}{{ partial "asset.html" (printf "assets/css/%s" .Name) | jsonify | safeJS }},{{ end }}
+    {{ "assets/img/profile.jpg" | relURL | jsonify | safeJS }},
     {{ .Home.RelPermalink | jsonify | safeJS }},
     {{ range .RegularPages.ByWeight }}{{ .RelPermalink | jsonify | safeJS }},{{ end }}
-    {{ range (readDir "static/assets/js/dist") }}{{ printf "assets/js/dist/%s" .Name | relURL | jsonify | safeJS }},{{ end }}
-    {{ "assets/js/modal.js" | relURL | jsonify | safeJS }},
-    {{ "assets/js/public-keys.js" | relURL | jsonify | safeJS }},
-    {{ "assets/js/publications.js" | relURL | jsonify | safeJS }}
+    {{ range (readDir "static/assets/js/dist") }}{{ partial "asset.html" (printf "assets/js/dist/%s" .Name) | jsonify | safeJS }},{{ end }}
+    {{ partial "asset.html" "assets/js/modal.js" | jsonify | safeJS }},
+    {{ partial "asset.html" "assets/js/public-keys.js" | jsonify | safeJS }},
+    {{ partial "asset.html" "assets/js/publications.js" | jsonify | safeJS }}
   ],
   interceptor: {paths: [], urlPrefixes: []},
   purge: false

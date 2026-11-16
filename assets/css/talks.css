@@ -1,0 +1,18 @@
+.talk-item, .attendance-list > li { display: flex; flex-direction: column; padding: 0.85rem 0; gap: 0.25rem; }
+.talk-header, .talk-venue-row { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.talk-title { font-size: 1rem; font-weight: 600; color: var(--site-text); }
+.talk-description { font-size: 0.9rem; color: var(--site-muted); }
+.talk-item + .talk-item, .attendance-list > li + li { border-top: 1px solid var(--site-rule-soft); }
+.talk-slides { display: flex; flex-wrap: wrap; gap: 0.75rem; flex-shrink: 0; }
+.talk-link { font-size: 0.875rem; white-space: nowrap; }
+.year-header, .attendance-year { margin: 1.5rem 0 0.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--site-rule); color: var(--site-accent); font-size: 1.1rem; font-weight: 600; }
+.talk-venue-row { padding: 0.2rem 0; }
+.talk-venue-row:not(:last-child) { border-bottom: 1px solid var(--site-rule-soft); }
+.attendance-section { margin-top: 3rem; }
+.attendance-intro { color: var(--site-muted); font-size: 0.9rem; }
+.attendance-list { list-style: none; margin: 0; padding: 0; }
+@media (max-width: 575px) {
+  .talk-header, .talk-venue-row { flex-direction: column; align-items: stretch; gap: 0.25rem; }
+}
+/* Markdown year headings retain the original div's line height. */
+.year-header { line-height: 1.6; }

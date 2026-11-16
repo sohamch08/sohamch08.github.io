@@ -1,10 +1,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+  <meta name="theme-color" content="#1a1c1e">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   {{ hugo.Generator }}
   {{ $pageTitle := cond (eq .Kind "404") "404: Page not found" .Title }}
   {{ $title := cond .IsHome site.Title (printf "%s | %s" $pageTitle site.Title) }}
@@ -27,20 +26,17 @@
   <link rel="shortcut icon" href="{{ "assets/img/favicons/favicon.ico" | relURL }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "assets/img/favicons/apple-touch-icon.png" | relURL }}">
   {{ if site.Params.pwa }}<link rel="manifest" href="{{ "assets/img/favicons/site.webmanifest" | relURL }}">{{ end }}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  {{ $css := resources.Get "scss/chirpy.scss" | css.Sass (dict "transpiler" "dartsass" "includePaths" (slice "assets/scss") "targetPath" "assets/css/jekyll-theme-chirpy.css" "outputStyle" "compressed" "silenceDeprecations" (slice "color-functions" "global-builtin" "import")) }}
+  <link rel="preload" href="{{ "assets/fonts/montserrat-regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ partial "asset.html" "assets/css/fonts.css" }}">
+  {{ $css := partial "theme-css.html" . }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
   {{ if .Params.toc }}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.css">{{ end }}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
   {{ if not .IsHome }}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">{{ end }}
-  <script src="{{ "assets/js/dist/theme.min.js" | relURL }}"></script>
+  <script src="{{ partial "asset.html" "assets/js/dist/theme.min.js" }}"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}, {left: '$', right: '$', display: false}]});"></script>
@@ -54,7 +50,7 @@
     {{ $libraries = $libraries | append "npm/tocbot@4.36.4/dist/tocbot.min.js" }}
   {{ end }}
   <script defer src="https://cdn.jsdelivr.net/combine/{{ delimit $libraries "," }}"></script>
-  <script defer src="{{ if .IsHome }}{{ "assets/js/dist/home.min.js" | relURL }}{{ else }}{{ "assets/js/dist/page.min.js" | relURL }}{{ end }}"></script>
+  <script defer src="{{ if .IsHome }}{{ partial "asset.html" "assets/js/dist/home.min.js" }}{{ else }}{{ partial "asset.html" "assets/js/dist/page.min.js" }}{{ end }}"></script>
   {{ if and site.Params.pwa hugo.IsProduction }}
     {{ $swconf := resources.Get "swconf.js" | resources.ExecuteAsTemplate "assets/js/data/swconf.js" site }}
     {{ $publish := $swconf.RelPermalink }}
@@ -64,7 +60,10 @@
     {{ $key := resources.Get .source | resources.Copy (printf "assets/keys/%s" .filename) }}
     {{ $publish := $key.RelPermalink }}
   {{ end }}
-  <link rel="stylesheet" href="{{ "assets/css/modal.css" | relURL }}">
-  <script defer src="{{ "assets/js/modal.js" | relURL }}"></script>
-  <script defer src="{{ "assets/js/public-keys.js" | relURL }}"></script>
+  <link rel="stylesheet" href="{{ partial "asset.html" "assets/css/modal.css" }}">
+  <script defer src="{{ partial "asset.html" "assets/js/modal.js" }}"></script>
+  <script defer src="{{ partial "asset.html" "assets/js/public-keys.js" }}"></script>
+  <link rel="stylesheet" href="{{ partial "asset.html" "assets/css/site.css" }}">
+  {{ if eq .RelPermalink ("/publications/" | relURL) }}<script defer src="{{ partial "asset.html" "assets/js/publications.js" }}"></script>{{ end }}
+  {{ range .Params.styles }}<link rel="stylesheet" href="{{ partial "asset.html" (printf "assets/css/%s.css" .) }}">{{ end }}
 </head>

@@ -1,0 +1,15 @@
+<div class="publication-item">
+  <div class="publication-title">
+    <div>{{ .Page.RenderString (dict "display" "inline") (.Get "title") }}</div>
+    <div class="publication-buttons">
+      <button type="button" class="abstract-box" onclick="openModal(this)" aria-haspopup="dialog">Abstract</button>
+      {{ range $name := slice "pdf" "eccc" "arxiv" "repo" }}
+        {{ with $.Get $name }}<a class="pdf-box" href="{{ . }}" target="_blank" rel="noopener">{{ if eq $name "arxiv" }}Arxiv{{ else if eq $name "repo" }}Repo{{ else }}{{ upper $name }}{{ end }}</a>{{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <div class="publication-authors">{{ .Page.RenderString (dict "display" "inline") (.Get "authors") }}</div>
+  {{ $details := .Page.RenderString (dict "display" "inline") (.Get "details") }}
+  <div class="publication-details">{{ replace $details "<a " "<a target=\"_blank\" rel=\"noopener\" " | safeHTML }}</div>
+  <div class="abstract" style="display:none;">{{ .Page.RenderString (dict "display" "block") .Inner }}</div>
+</div>

@@ -1,5 +1,5 @@
 <section class="public-keys" aria-labelledby="public-keys-title">
-  <div class="public-keys-heading"><h2 id="public-keys-title"><i class="fa-solid fa-fingerprint" aria-hidden="true"></i>Public keys</h2></div>
+  <div class="public-keys-heading"><h2 id="public-keys-title">Public keys</h2></div>
   <div class="public-keys-list">
     {{ range $id, $key := hugo.Data.public_keys }}
     {{ $parts := split $key.fingerprint ":" }}

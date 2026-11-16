@@ -1,9 +1,8 @@
 # Soham Chatterjee's website
 
-This branch rebuilds the existing site with Hugo. The original Chirpy styles,
-fonts, sidebar, content, URLs, scripts, images, and PDFs are retained. The footer
-keeps the original theme attribution for visual parity; page metadata identifies
-Hugo as the generator.
+This branch rebuilds the existing site with Hugo. The site uses a shared dark theme with mint accents, sidebar navigation,
+and simple sections inspired by the coursework page. Content, URLs, images,
+and PDFs are retained. The site adapts the original Chirpy theme.
 
 ## Preview and build
 
@@ -73,11 +72,16 @@ Dart Sass directory comes before Ruby or Node Sass executables on `PATH`.
 
 - `content/_index.md`: homepage.
 - `content/*.md`: the six navigation pages. Front matter controls title, URL,
-  icon, and navigation order (`weight`). Existing HTML is retained within the
-  Markdown to preserve the design precisely.
+  navigation order (`weight`), and page-specific styles (`styles`). Text, links,
+  and lists use Markdown; reusable shortcodes preserve the custom layouts.
 - `layouts/`: Hugo page templates, shared partials, and public-key shortcodes.
 - `assets/scss/`: the original theme Sass, compiled by Hugo.
-- `static/assets/css/`: page-specific styles.
+- `assets/css/fonts.css` and `static/assets/fonts/`: self-hosted Montserrat fonts.
+- `assets/css/site.css`: shared colors, typography, navigation, and layout.
+- `assets/css/home.css`: homepage sections and lookup-list spacing.
+- `assets/css/contact.css`: contact details and public-key layout.
+- `assets/css/talks.css`: talks and event layouts.
+- `static/assets/css/`: other page-specific layouts using the shared theme variables.
 - `static/assets/`: PDFs, images, and prebuilt JavaScript.
 - `assets/gpg_key.asc` and `assets/id_ed25519.pub`: public key files used for
   copying, viewing, and downloading. `data/public_keys.yml` stores their paths
@@ -97,6 +101,39 @@ talk. New talks and venues appear first within their year or title; year section
 stay in descending order, before the workshops and conferences section. Links
 are optional and can be external URLs or site paths such as `/assets/slides.pdf`.
 Set `TALKS_FILE` to try the helper on a copy of the page.
+
+### Writing content
+
+Keep HTML in the Hugo templates under `layouts/`, and write page content in
+Markdown. Shortcodes handle the layout and interactive controls:
+
+- Home: `updates` / `update` and `lookup-keys`.
+- Contact: `email` and `public-keys`.
+- Publications: `publication`; its body is the abstract in Markdown.
+- Coursework: `course-columns` / `course-column` / `semester`; semester bodies
+  are Markdown lists. A backslash at the end of a course line puts its subtitle
+  on the next line.
+- Talks: `talk`, with a venue paragraph followed by optional Markdown links.
+  Use nested `venue` blocks for a talk given at several venues. The `attendance`
+  block contains year headings and Markdown event lists.
+- Miscellaneous: `internship`, with a description paragraph and a second
+  paragraph for the project details.
+
+For example:
+
+```markdown
+{{< talk title="Introduction to High Dimensional Expanders" >}}
+TIFR, Student Seminar
+
+[Link](https://www.tcs.tifr.res.in/~student_seminar/talks/2026-10-16/)
+{{< /talk >}}
+```
+
+The talk helper (`scripts/add-talk.sh`, backed by `tools/add-talk.py`) writes
+this format and keeps the newest talk or venue first. Python 3 is required.
+It uses backtick-quoted parameters for titles containing quotation marks or LaTeX.
+The homepage's `new_tab_links` front-matter list preserves the links that open
+in a new tab. Course columns can set `newtab="true"` for their note links.
 
 ## Rebuild theme JavaScript
 

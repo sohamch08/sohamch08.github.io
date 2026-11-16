@@ -20,7 +20,7 @@
   #breadcrumb {
     font-size: 1rem;
     color: var(--text-muted-color);
-    padding-left: 0.5rem;
+    padding-left: 0;
 
     a:hover {
       @extend %link-hover;

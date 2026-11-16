@@ -1,0 +1,27 @@
+<div class="sem-row">
+  <div class="sem-label"><span class="sem-num">Sem {{ .Get "number" }}</span><span class="sem-date">{{ .Get "dates" }}<br>{{ .Get "year" }}</span></div>
+  <div class="sem-divider"></div>
+  <div class="course-list">
+    {{ $newtab := eq (.Parent.Get "newtab") "true" }}
+    {{ $body := .Page.RenderString (dict "display" "block") .Inner }}
+    {{ range findRE `(?s)<li>.*?</li>` $body }}
+      {{ $item := replaceRE `(?s)^<li>(.*?)</li>$` "$1" . }}
+      {{ $parts := split $item "<br>" }}
+      {{ $header := index $parts 0 }}
+      {{ $links := findRE `(?s)<a\b[^>]*>.*?</a>` $header }}
+      <div class="course-item">
+        {{ if $links }}
+          <div class="course-header">
+            <span class="course-name">{{ replaceRE `(?s)<a\b[^>]*>.*?</a>` "" $header | strings.TrimSpace | safeHTML }}</span>
+            {{ range $links }}
+              {{ $link := replace . "<a " "<a class=\"scribe-link\" " }}
+              {{ if $newtab }}{{ $link = replace $link "<a " "<a target=\"_blank\" " }}{{ end }}
+              {{ $link | safeHTML }}
+            {{ end }}
+          </div>
+        {{ else }}{{ $header | safeHTML }}{{ end }}
+        {{ if gt (len $parts) 1 }}<span class="sub">{{ index $parts 1 | strings.TrimSpace | safeHTML }}</span>{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>

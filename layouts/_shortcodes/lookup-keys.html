@@ -1,6 +1,7 @@
-{{ range $id, $key := hugo.Data.public_keys }}
-<li class="lookup-key-row">
-  <span class="lookup-icon"><i class="{{ if eq $id "gpg" }}fa-solid fa-fingerprint{{ else }}fa-solid fa-key{{ end }}" aria-hidden="true"></i></span>
-  <span>My {{ $key.title }} <button type="button" class="lookup-key-copy" data-key-copy-target="sidebar-{{ $id }}-key" data-key-title="{{ $key.title }}" aria-label="Copy {{ $key.title }}" title="Copy {{ $key.title }}" aria-describedby="sidebar-key-status" hidden><i class="fa-regular fa-copy" aria-hidden="true"></i></button></span>
-</li>
-{{ end }}
+<section class="home-section lookup-box" aria-labelledby="looking-for-something">
+  <h2 id="looking-for-something">Looking for something?</h2>
+  {{ $list := .Page.RenderString (dict "display" "block") .Inner }}
+  {{ $rows := partial "lookup-key-rows.html" . }}
+  {{ replaceRE `</ul>\s*$` (printf "%s</ul>" $rows) $list | safeHTML }}
+  <span class="visually-hidden" id="key-copy-status" role="status" aria-live="polite" aria-atomic="true"></span>
+</section>

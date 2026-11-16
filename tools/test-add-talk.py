@@ -11,21 +11,26 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = (ROOT / 'content/talks.md').read_text()
-ATTENDANCE = '<section class="attendance-section"'
-YEAR = re.compile(r'<div class="year-header">([0-9]{4})</div>')
-ITEM = re.compile(r'^<div class="talk-item">.*?^</div>', re.M | re.S)
+ATTENDANCE = '{{< attendance >}}'
+YEAR = re.compile(r'^### ([0-9]{4}) \{\.year-header\}$', re.M)
+ITEM = re.compile(r'^\{\{< talk title=.*?^\{\{< /talk >\}\}', re.M | re.S)
 
 
 def year_section(text, year):
     talks = text.split(ATTENDANCE, 1)[0]
-    start = talks.index(f'<div class="year-header">{year}</div>')
+    start = talks.index(f'### {year} {{.year-header}}')
     next_year = YEAR.search(talks, start + 1)
     return talks[start:next_year.start() if next_year else len(talks)]
 
 
 def descriptions(text):
-    return [' '.join(value.split()) for value in re.findall(
-        r'<div class="talk-description">(.*?)</div>', text, re.S)]
+    body = text.split('\n', 1)[1].rsplit('{{< /talk >}}', 1)[0].strip()
+    venues = re.findall(r'\{\{< venue >\}\}\n(.*?)\{\{< /venue >\}\}', body, re.S)
+    return [' '.join(value.strip().split('\n\n', 1)[0].split()) for value in (venues or [body])]
+
+
+def links(text):
+    return re.findall(r'\]\(([^)]*)\)', text)
 
 
 class AddTalkTests(unittest.TestCase):
@@ -53,8 +58,8 @@ class AddTalkTests(unittest.TestCase):
         updated = self.path.read_text()
         self.assertEqual(updated.split(ATTENDANCE, 1)[1],
                          original.split(ATTENDANCE, 1)[1])
-        self.assertEqual(updated.split('<h2 id="talks-presentations"', 1)[0],
-                         original.split('<h2 id="talks-presentations"', 1)[0])
+        self.assertEqual(updated.split('## Talks {#talks-presentations', 1)[0],
+                         original.split('## Talks {#talks-presentations', 1)[0])
         self.assertEqual(stat.S_IMODE(self.path.stat().st_mode), 0o644)
         self.assertEqual(list(self.path.parent.iterdir()), [self.path])
         return updated
@@ -90,11 +95,11 @@ class AddTalkTests(unittest.TestCase):
                 updated = self.assert_success(result)
                 blocks = ITEM.findall(year_section(updated, year))
                 self.assertIn('Test talk', blocks[0])
-                self.assertIn('href="/assets/slides.pdf"', blocks[0])
+                self.assertIn('(/assets/slides.pdf)', blocks[0])
                 self.assertIn('[Poster]', blocks[0])
                 self.assertIn('[Recording]', blocks[0])
                 self.assertEqual(blocks[1:], ITEM.findall(year_section(SOURCE, year)))
-                self.assertNotIn('{{', blocks[0])
+                self.assertNotIn('<div', blocks[0])
 
     def test_add_venue_to_every_existing_talk(self):
         # Covers both layouts, multiline descriptions, links, and linkless talks.
@@ -111,10 +116,27 @@ class AddTalkTests(unittest.TestCase):
                     self.assertEqual(len(blocks), len(original_blocks))
                     self.assertEqual(descriptions(blocks[index]),
                                      ['New seminar, New city'] + descriptions(old_block))
-                    self.assertEqual(re.findall(r'href="([^"]*)"', blocks[index]),
+                    self.assertEqual(links(blocks[index]),
                                      ['https://example.org/new'] +
-                                     re.findall(r'href="([^"]*)"', old_block))
+                                     links(old_block))
                     self.assertEqual(updated.replace(blocks[index], old_block, 1), SOURCE)
+
+    def test_quoted_title_and_latex_are_preserved(self):
+        title = 'The "BPL" puzzle: $\\mathsf{BPL}$'
+        result = self.run_helper(
+            ['', title, 'Test seminar', 'Test city', '', '', ''],
+            '--year', str(self.years[0]))
+        updated = self.assert_success(result)
+        block = ITEM.findall(year_section(updated, self.years[0]))[0]
+        self.assertIn('title=`' + title + '`', block)
+        result = self.run_helper(
+            ['1', 'Another seminar', 'Another city', '', '', ''],
+            '--year', str(self.years[0]))
+        second_update = self.assert_success(result, updated)
+        block = ITEM.findall(year_section(second_update, self.years[0]))[0]
+        self.assertIn('title=`' + title + '`', block)
+        self.assertEqual(descriptions(block)[:2],
+                         ['Another seminar, Another city', 'Test seminar, Test city'])
 
     def test_invalid_input_never_changes_source(self):
         cases = [([], ['--year']), ([], ['--year', '20xx']),

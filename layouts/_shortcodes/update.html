@@ -1,0 +1,4 @@
+<div class="update-item">
+  <h3>{{ .Page.RenderString (dict "display" "inline") (.Get "title") }}</h3>
+  {{ .Page.RenderString (dict "display" "block") .Inner }}
+</div>

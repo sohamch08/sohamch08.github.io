@@ -1,3 +1,5 @@
 {{/* Preserve Chirpy's heading links for both Markdown and HTML headings. */}}
-{{- $content := replaceRE `(?s)<h([2-5]) id="([^"]+)"([^>]*)>(.*?)</h[2-5]>` `<h${1} id="${2}"${3}><span class="me-2">${4}</span><a href="#${2}" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h${1}>` . -}}
+{{- $html := replaceRE `<h3 class="(year-header|attendance-year)" id="[^"]+">` `<h3 class="$1">` . -}}
+{{- $html = replaceRE `<h([2-5]) class="([^"]+)" id="([^"]+)">` `<h${1} id="$3" class="$2">` $html -}}
+{{- $content := replaceRE `(?s)<h([2-5]) id="([^"]+)"([^>]*)>(.*?)</h[2-5]>` `<h${1} id="${2}"${3}><span class="me-2">${4}</span><a href="#${2}" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h${1}>` $html -}}
 {{- $content | safeHTML -}}

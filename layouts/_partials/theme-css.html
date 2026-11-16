@@ -1,0 +1,2 @@
+{{ $css := resources.Get "scss/chirpy.scss" | css.Sass (dict "transpiler" "dartsass" "includePaths" (slice "assets/scss") "targetPath" "assets/css/jekyll-theme-chirpy.css" "outputStyle" "compressed" "silenceDeprecations" (slice "color-functions" "global-builtin" "import")) | fingerprint }}
+{{- return $css -}}

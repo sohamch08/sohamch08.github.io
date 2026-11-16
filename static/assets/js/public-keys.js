@@ -73,7 +73,7 @@
     const icon = button.querySelector('i');
     const originalIcon = icon.className;
     const originalTitle = button.title;
-    const status = document.getElementById('sidebar-key-status');
+    const status = document.getElementById('key-copy-status');
     button.hidden = false;
 
     button.addEventListener('click', async () => {

@@ -1,0 +1,6 @@
+{{ range $id, $key := hugo.Data.public_keys }}
+<li class="lookup-key-row">
+  <span>My {{ $key.title }} <button type="button" class="lookup-key-copy" data-key-copy-target="lookup-{{ $id }}-key" data-key-title="{{ $key.title }}" aria-label="Copy {{ $key.title }}" title="Copy {{ $key.title }}" aria-describedby="key-copy-status" hidden><i class="fa-regular fa-copy" aria-hidden="true"></i></button></span>
+  <textarea id="lookup-{{ $id }}-key" readonly hidden>{{ (resources.Get $key.source).Content }}</textarea>
+</li>
+{{ end }}

@@ -1,21 +1,21 @@
 .two-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 0;
   max-width: 100%;
 }
-.col { padding: 0 2.5rem; }
-.col:first-child { padding-left: 0; border-right: 1px solid #2e3035; }
-.col:last-child  { padding-right: 0; }
+.two-col > .col { min-width: 0; padding: 0 2.5rem; }
+.two-col > .col:first-child { padding-left: 0; border-right: 1px solid var(--site-rule); }
+.two-col > .col:last-child  { padding-right: 0; }
 
 @media (max-width: 768px) {
   .two-col {
     grid-template-columns: 1fr;
   }
-  .col { padding: 0; }
-  .col:first-child {
+  .two-col > .col { min-width: 0; padding: 0; }
+  .two-col > .col:first-child {
     border-right: none;
-    border-bottom: 1px solid #2e3035;
+    border-bottom: 1px solid var(--site-rule);
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
   }
@@ -24,10 +24,9 @@
 .col-heading {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #7fffd4;
-  letter-spacing: 0.04em;
+  color: var(--site-accent);
   padding-bottom: 0.6rem;
-  border-bottom: 1px solid #7fffd4;
+  border-bottom: 1px solid var(--site-accent);
   margin-bottom: 0.4rem;
 }
 .sem-row {
@@ -35,7 +34,7 @@
   flex-direction: row;
   gap: 0;
   padding: 11px 0;
-  border-bottom: 1px solid #252729;
+  border-bottom: 1px solid var(--site-rule-soft);
 }
 .sem-label {
   width: 65px;
@@ -53,12 +52,12 @@
 .sem-label .sem-date {
   display: block;
   font-size: 13px;
-  color: #777;
+  color: var(--site-muted);
   line-height: 1.4;
 }
 .sem-divider {
   width: 1px;
-  background: #2e3035;
+  background: var(--site-rule);
   flex-shrink: 0;
   margin: 2px 0;
 }
@@ -70,10 +69,11 @@
   padding-top: 1px;
   padding-left: 16px;
   flex: 1;
+  min-width: 0;
 }
 .course-item {
   line-height: 1.45;
-  color: #f0f0f0;
+  color: var(--site-text);
   position: relative;
 }
 .course-item::before {
@@ -93,18 +93,26 @@
 }
 .course-header .course-name {
   flex: 1;
+  min-width: 0;
 }
 .course-item .sub {
   display: block;
   font-size: 14.5px;
-  color: #999;
+  color: var(--site-muted);
   margin-top: 1px;
 }
 .scribe-link {
   font-size: 13.5px;
-  color: #7fffd4;
+  color: var(--site-accent);
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
 }
-.scribe-link:hover { text-decoration: underline; }
+.scribe-link:hover { text-decoration: none; }
+
+/* Keep semester rows readable alongside the desktop sidebar. */
+@media (min-width: 850px) and (max-width: 1100px) {
+  .two-col { grid-template-columns: 1fr; }
+  .two-col > .col { padding: 0; }
+  .two-col > .col:first-child { border-right: 0; border-bottom: 1px solid var(--site-rule); padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
+}

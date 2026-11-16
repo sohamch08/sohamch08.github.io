@@ -19,7 +19,7 @@ enableGitInfo = true
   unsafe = true
 
 [markup.goldmark.extensions.typographer]
-  disableDefault = true
+  disable = true
 
 [outputs]
   home = ["HTML", "Atom"]
@@ -38,3 +38,24 @@ enableGitInfo = true
 
 [build]
   noJSConfigInAssets = true
+
+# Mount custom styles and scripts as Hugo resources so live preview invalidates
+# fingerprinted assets when their source files change.
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+
+[[module.mounts]]
+  source = "static/assets/css"
+  target = "assets/css"
+
+[[module.mounts]]
+  source = "static/assets/js"
+  target = "assets/js"
+
+# Keep LaTeX intact when rendering Markdown, including inside shortcodes.
+[markup.goldmark.extensions.passthrough]
+  enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+  block = [['\[', '\]'], ['$$', '$$']]
+  inline = [['\(', '\)'], ['$', '$']]
