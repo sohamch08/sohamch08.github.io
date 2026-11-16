@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 
 root = Path(sys.argv[1] if len(sys.argv) > 1 else 'public').resolve()
 routes = ['index.html', 'publications/index.html', 'courses/index.html',
-          'projects-talks/index.html', 'misc/index.html', 'resources/index.html',
+          'projects-talks/index.html', 'misc/index.html', 'projects/index.html',
           'contact/index.html', '404.html']
 
 class Document(HTMLParser):
