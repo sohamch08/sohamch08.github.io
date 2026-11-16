@@ -1,6 +1,6 @@
 /* Shared visual language: the coursework page's dark ground, mint, and fine rules. */
 :root {
-  --site-font: 'Montserrat', Arial, sans-serif;
+  --site-font: 'Source Sans 3', Arial, sans-serif;
   --bs-font-sans-serif: var(--site-font);
   --bs-body-font-family: var(--site-font);
   --site-bg: #1a1c1e;
