@@ -16,6 +16,7 @@ styles = ["misc"]
 
 ## Teaching Assistantship
 
+- Algorithms (TIFR) by Nikhil Kumar & T. Kavitha, 2026
 - Algebra, Number Theory & Computation (TIFR) by Mrinal Kumar, 2026
 - Algorithms (TIFR) by T. Kavitha, 2025
 
