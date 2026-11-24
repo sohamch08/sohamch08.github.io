@@ -16,7 +16,7 @@ styles = ["talks"]
 
 TIFR, Student Seminar
 
-[Link](https://www.tcs.tifr.res.in/~student_seminar/talks/2026-11-27/)
+[Link](https://www.tcs.tifr.res.in/~student_seminar/talks/2026-12-04/)
 
 #### Introduction to High Dimensional Expanders
 
