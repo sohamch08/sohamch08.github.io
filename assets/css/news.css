@@ -12,4 +12,5 @@ main .news-list {
 }
 
 .news-list > li + li { border-top: 1px solid var(--site-rule-soft); }
+.news-date { display: flex; align-items: center; align-self: start; gap: 0.35em; }
 .news-list time { color: var(--site-muted); font-variant-numeric: tabular-nums; }

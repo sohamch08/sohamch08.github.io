@@ -1,7 +1,13 @@
+{{ $icons := dict "talk" "microphone" "paper" "file-alt" "award" "award" "teaching" "book-reader" "visit" "map-marker" }}
 <ul class="news-list">
   {{ range .entries }}
     <li>
-      <time datetime="{{ .date }}">{{ time.Format "Jan 2006" (printf "%s-01" .date) }}</time>
+      <span class="news-date">
+        {{ with index $icons (.type | default "") }}
+          <svg aria-hidden="true" focusable="false" width="16" height="16" fill="currentColor"><use href="{{ "assets/img/unicons/news.svg" | relURL }}#{{ . }}"></use></svg>
+        {{ end }}
+        <time datetime="{{ .date }}">{{ time.Format "Jan'06" (printf "%s-01" .date) }}</time>
+      </span>
       <span>{{ $.page.RenderString .text }}</span>
     </li>
   {{ end }}
