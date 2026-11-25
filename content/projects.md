@@ -13,6 +13,11 @@ sample = "assets/msc-project.pdf#page=12"
 repo = "https://github.com/sohamch08/lumina"
 
 [[params.linux_tools]]
+name = "TIFR VPN TUI"
+description = "An unofficial tool for connecting to the TIFR VPN from the terminal."
+repo = "https://github.com/sohamch08/tifrvpn-tui"
+
+[[params.linux_tools]]
 name = "HyprZoom"
 description = "Fixes Zoom chat placement and screen-sharing controls on Hyprland."
 repo = "https://github.com/sohamch08/hyprZoom"
@@ -23,7 +28,7 @@ description = "Zsh shortcuts for comparing files and previewing transfers with r
 repo = "https://github.com/sohamch08/rclone-easy"
 
 [[params.linux_tools]]
-name = "TIFR VPN TUI"
-description = "An unofficial tool for connecting to the TIFR VPN from the terminal."
-repo = "https://github.com/sohamch08/tifrvpn-tui"
+name = "Neomutt"
+description = "A terminal email client setup for easy use with plenty of themes"
+repo = "https://github.com/sohamch08/neomutt"
 +++
