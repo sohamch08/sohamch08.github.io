@@ -18,6 +18,18 @@ sentence in Markdown. Set `type` to `talk`, `paper`, `award`, `teaching`, or
 Hugo sorts the entries by month for both the homepage
 and the full archive at `/news/`.
 
+In the `text` field, ordinary Markdown links appear in mint. Wrap a
+conference name, fellowship, or other milestone in `**double asterisks**`
+for soft gold. To link a conference name, use `[**STOC 2026**](https://acm-stoc.org/stoc2026/)`.
+Dates and icons are gray automatically.
+
+```toml
+[[params.entries]]
+date = "2026-06"
+type = "talk"
+text = "I presented our [paper on Reed-Solomon codes](/publications/) at **STOC 2026**."
+```
+
 ## Contact
 
 Keep `layout = "contact"` in front matter. Use `## Email`, followed by the email
