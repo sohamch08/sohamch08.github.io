@@ -1,0 +1,34 @@
+{{ with .Params.lumina }}
+  {{ $sample := .sample | relURL }}
+  <section id="lumina" class="lumina-feature" aria-label="Lumina LaTeX theme">
+    <div class="lumina-copy">
+      <h2>Lumina</h2>
+      <p>{{ .description }}</p>
+      <div class="lumina-links">
+        <a href="{{ $sample }}" target="_blank" rel="noopener">View sample PDF <span aria-hidden="true">↗</span></a>
+        <a href="{{ .repo }}" target="_blank" rel="noopener" aria-label="Lumina on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      </div>
+    </div>
+    <a class="lumina-sample" href="{{ $sample }}" target="_blank" rel="noopener" aria-label="Open the Finite Fields chapter typeset with Lumina">
+      <img class="lumina-cover" src="{{ "assets/img/projects/lumina-cover.webp" | relURL }}" width="541" height="700" alt="">
+      <img class="lumina-chapter" src="{{ "assets/img/projects/lumina-finite-fields.webp" | relURL }}" width="670" height="668" alt="Finite Fields chapter with a boxed definition">
+    </a>
+  </section>
+{{ end }}
+{{ with .Params.linux_tools }}
+  <section id="linux-tools" class="linux-tools" aria-label="Linux tools">
+    <h2>Linux tools</h2>
+    <ul class="linux-tool-list" role="list">
+      {{ range . }}
+        <li id="{{ .name | anchorize }}">
+          <h3>{{ .name }}</h3>
+          <p>{{ .description }}</p>
+          <a class="project-repo" href="{{ .repo }}" aria-label="GitHub repo for {{ .name }}">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub repo
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
+{{ .Content }}
