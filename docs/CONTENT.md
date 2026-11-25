@@ -13,8 +13,9 @@ followed by `{{< lookup-keys >}}` for the generated key controls.
 
 Add a `[[params.entries]]` block in `content/news.md` for each announcement.
 Set `date` to the announcement month in quotes (`"YYYY-MM"`) and `text` to a
-sentence in Markdown. Set `type` to `talk`, `paper`, `award`, `teaching`, or
-`visit` to show the corresponding icon next to the date (for example, `Aug'26`).
+sentence in Markdown. Set `type` to `talk`, `paper`, `award`, `teaching`, `ta`,
+or `visit` to show the corresponding icon next to the date (for example, `Aug'26`).
+Use `type = "ta"` for the classroom board icon on teaching assistant announcements.
 Hugo sorts the entries by month for both the homepage
 and the full archive at `/news/`.
 
