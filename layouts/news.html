@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="page">
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ $byYear := newScratch }}
+  {{ $years := slice }}
+  {{ range sort (.Params.entries | default slice) "date" "desc" }}
+    {{ $year := substr .date 0 4 }}
+    {{ $years = $years | append $year }}
+    {{ $byYear.Add $year (slice .) }}
+  {{ end }}
+  {{ range $year := uniq $years }}
+    <section aria-labelledby="news-{{ $year }}">
+      <h2 id="news-{{ $year }}">{{ $year }}</h2>
+      {{ partial "news-list.html" (dict "page" $ "entries" ($byYear.Get $year)) }}
+    </section>
+  {{ else }}
+    <p>No news entries yet.</p>
+  {{ end }}
+</article>
+{{ end }}

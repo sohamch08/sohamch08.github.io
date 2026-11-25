@@ -5,9 +5,16 @@ turn their structure into the existing layouts. Keep HTML in `layouts/`.
 
 ## Home
 
-Use a `#` heading for the introduction. The first `##` section contains updates,
-each under a `###` heading. The second `##` section contains the lookup list,
+Use a `#` heading for the introduction. The first `##` section shows the five
+newest entries from the News page. The second `##` section contains the lookup list,
 followed by `{{< lookup-keys >}}` for the generated key controls.
+
+## News
+
+Add a `[[params.entries]]` block in `content/news.md` for each announcement.
+Set `date` to the announcement month in quotes (`"YYYY-MM"`) and `text` to a
+sentence in Markdown. Hugo sorts the entries by month for both the homepage
+and the full archive at `/news/`.
 
 ## Contact
 

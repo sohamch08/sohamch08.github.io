@@ -2,15 +2,12 @@
 {{ replaceRE `<h1\b` `<h1 class="page-title"` $sections.intro | safeHTML }}
 {{ range $index, $section := $sections.sections }}
   {{ if eq $index 0 }}
-    <section class="home-section" aria-labelledby="updates-title">
-      <h2 id="updates-title">{{ .title | safeHTML }}</h2>
-      {{ $updates := partial "html-sections.html" (dict "html" .body "level" 3) }}
-      {{ $updates.intro | safeHTML }}
-      {{ range $updates.sections }}
-        <div class="update-item">
-          <h3>{{ .title | safeHTML }}</h3>
-          {{ .body | safeHTML }}
-        </div>
+    <section id="updates-title" class="home-section" aria-labelledby="news">
+      <h2 id="news">{{ .title | safeHTML }}</h2>
+      {{ .body | safeHTML }}
+      {{ with site.GetPage "/news" }}
+        {{ partial "news-list.html" (dict "page" . "entries" (first 5 (sort (.Params.entries | default slice) "date" "desc"))) }}
+        <a href="{{ .RelPermalink }}">View all news</a>
       {{ end }}
     </section>
   {{ else if eq $index 1 }}

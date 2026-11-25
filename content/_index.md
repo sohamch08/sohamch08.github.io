@@ -1,7 +1,7 @@
 +++
 title = "Home"
-styles = ["home"]
-new_tab_links = ["https://www.cmi.ac.in/", "https://mrinalkr.bitbucket.io/", "https://simons.berkeley.edu/programs/pseudorandomness-high-dimensional-expansion", "/assets/cv.pdf", "https://github.com/sohamch08/HyprLife"]
+styles = ["home", "news"]
+new_tab_links = ["https://www.cmi.ac.in/", "https://mrinalkr.bitbucket.io/", "/assets/cv.pdf", "https://github.com/sohamch08/HyprLife"]
 +++
 
 # Hi, I am Soham Chatterjee.
@@ -19,15 +19,7 @@ My primary research interests lie in Theoretical Computer Science. Broadly, I am
 
 Beyond research work, I enjoy typesetting my notes in LaTeX. It has become a favorite hobby of mine over the years. I have been using it for more than five years and have created a [custom theme](https://github.com/sohamch08/lumina) with which I typeset my lecture notes and reports.
 
-## Updates
-
-### Visiting Graduate Student at the Simons Institute
-
-I am currently visiting the Simons Institute for the Theory of Computing at UC Berkeley as part of the [Pseudorandomness & High-Dimensional Expansion](https://simons.berkeley.edu/programs/pseudorandomness-high-dimensional-expansion) program.
-
-### TCS Research Scholar Program (2026)
-
-Awarded a four-year fellowship supporting my Ph.D. research.
+## News
 
 ## Looking for something?
 

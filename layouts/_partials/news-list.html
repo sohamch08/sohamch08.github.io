@@ -1,0 +1,8 @@
+<ul class="news-list">
+  {{ range .entries }}
+    <li>
+      <time datetime="{{ .date }}">{{ time.Format "Jan 2006" (printf "%s-01" .date) }}</time>
+      <span>{{ $.page.RenderString .text }}</span>
+    </li>
+  {{ end }}
+</ul>

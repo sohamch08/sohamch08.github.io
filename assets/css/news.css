@@ -1,0 +1,15 @@
+main .news-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.news-list > li {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding-block: 0.55rem;
+}
+
+.news-list > li + li { border-top: 1px solid var(--site-rule-soft); }
+.news-list time { color: var(--site-muted); font-variant-numeric: tabular-nums; }
