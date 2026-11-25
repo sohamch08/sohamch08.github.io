@@ -21,3 +21,4 @@ main .news-list {
 }
 .news-date { display: flex; align-items: center; align-self: start; gap: 0.35em; color: var(--site-muted); }
 .news-list time { font-variant-numeric: tabular-nums; }
+.news-link-icon { width: 1em; height: 1em; vertical-align: -0.12em; }

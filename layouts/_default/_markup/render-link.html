@@ -1,1 +1,8 @@
-<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if in (.Page.Params.new_tab_links | default slice) .Destination }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>{{- /* Avoid whitespace before punctuation after inline links. */ -}}
+{{- $iconOnly := and (eq .Page.Layout "news") (not .Text) -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $iconOnly }} aria-label="{{ .Title | default .Destination }}"{{ end }}{{ if in (.Page.Params.new_tab_links | default slice) .Destination }} target="_blank" rel="noopener"{{ end }}>
+  {{- if $iconOnly -}}
+    <svg class="news-link-icon" aria-hidden="true" focusable="false" fill="currentColor"><use href="{{ "assets/img/unicons/news.svg" | relURL }}#external-link-alt"></use></svg>
+  {{- else -}}
+    {{ .Text | safeHTML }}
+  {{- end -}}
+</a>{{- /* Avoid whitespace before punctuation after inline links. */ -}}

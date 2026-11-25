@@ -23,7 +23,13 @@ In the `text` field, use `<span class='gold'>STOC 2026</span>` for conferences
 and milestones, and `<span class='blue'>IIT Hyderabad</span>` for institutions
 and seminar venues. To color a link, put the Markdown link inside the span,
 as in `<span class='gold'>[STOC 2026](https://acm-stoc.org/stoc2026/)</span>`.
-Ordinary links are mint. Dates and icons are gray.
+Ordinary links are mint. Dates and category icons are gray.
+
+To show just the clickable external-link icon, leave the Markdown link text
+empty and give the destination a descriptive title inside the parentheses.
+For example, `STOC'26 [](https://acm-stoc.org/stoc2026/ 'STOC 2026 conference website')`
+places the icon after the conference name. The title also labels the link for
+screen readers.
 
 ```toml
 [[params.entries]]
