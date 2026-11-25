@@ -6,42 +6,42 @@ styles = ["news"]
 new_tab_links = ["https://simons.berkeley.edu/programs/pseudorandomness-high-dimensional-expansion"]
 
 [[params.entries]]
-date = "2026-11"
-type = "talk"
-text = "I’ll give my [second talk on high dimensional expanders](https://www.tcs.tifr.res.in/~student_seminar/talks/2026-12-04/), on coboundary and cocycle expansion, at the <span class='blue'>TIFR Student Seminar</span> on 4 December."
-
-[[params.entries]]
-date = "2026-10"
-type = "talk"
-text = "I gave an [introduction to high dimensional expanders](https://www.tcs.tifr.res.in/~student_seminar/talks/2026-10-16/) at the <span class='blue'>TIFR Student Seminar</span>."
-
-[[params.entries]]
 date = "2026-09"
 type = "visit"
-text = "I am visiting the <span class='blue'>Simons Institute at UC Berkeley</span> as a graduate student in the [Pseudorandomness & High-Dimensional Expansion](https://simons.berkeley.edu/programs/pseudorandomness-high-dimensional-expansion) program."
+text = "Visited <span class='blue'>Simons Institute at UC Berkeley</span> for the <span class='gold'>Pseudorandomness & High-Dimensional Expansion</span> [](https://simons.berkeley.edu/programs/pseudorandomness-high-dimensional-expansion 'Simons Institute program page') program."
 
 [[params.entries]]
 date = "2026-08"
 type = "award"
-text = "I received the <span class='gold'>TCS Research Scholar Program fellowship</span>, which supports my Ph.D. research for four years."
+text = "I have been awarded the <span class='gold'>TCS Research Scholar Program Fellowship</span>, which supports my Ph.D. research for  <span class='blue'>four years</span>."
+
+[[params.entries]]
+date = "2026-08"
+type = "ta"
+text = "Teaching Assistant for <span class='blue'>Algorithms</span> at STCS, TIFR."
 
 [[params.entries]]
 date = "2026-07"
 type = "talk"
-text = "I spoke at <span class='blue'>IIT Hyderabad</span> about [deterministic list decoding of Reed-Solomon codes](https://cse.iith.ac.in/talks/2026-07-09-Talk-Soham-Chatterjee.html)."
+text = "Invited talk on <span class='blue'>Deterministic List Decoding of Reed-Solomon Codes</span> at <span class='gold'>IIT Hyderabad</span>."
+
+[[params.entries]]
+date = "2026-07"
+type = "talk"
+text = "Invited talk on <span class='blue'>Deterministic List Decoding of Reed-Solomon Codes</span> at <span class='gold'>Recent Advances in Applied Mathematic (RAAM)</span>."
 
 [[params.entries]]
 date = "2026-06"
-type = "talk"
-text = "I presented our [paper on deterministic list decoding of Reed-Solomon codes](/publications/) at <span class='gold'>STOC</span> in Salt Lake City."
+type = "visit"
+text = "Attended the <span class='gold'>9th Workshop on Algebraic Complexity Theory (WACT)</span> [](https://sites.google.com/view/wact2026/home) at <span class='blue'>University of Copenhagen, Denmark<span>."
 
 [[params.entries]]
 date = "2026-02"
 type = "paper"
-text = "Our paper on deterministic list decoding of Reed-Solomon codes, joint with Prahladh Harsha and Mrinal Kumar, was accepted to <span class='gold'>STOC 2026</span>."
+text = "<span class='blue'>Deterministic List Decoding of Reed-Solomon Codes</span> [](https://dl.acm.org/doi/10.1145/3798129.3800908) accepted to <span class='gold'>STOC'26</span>."
 
 [[params.entries]]
-date = "2025-11"
-type = "paper"
-text = "Our preprint [Deterministic List Decoding of Reed-Solomon Codes](https://arxiv.org/abs/2511.05176) is available on arXiv."
+date = "2026-01"
+type = "visit"
+text = "Attended the <span class='gold'>Complexity Update Meeting</span> [](https://www.imsc.res.in/~meena/CT-update-meeting-Jan2026.html) at <span class='blue'>IMSc<span>."
 +++
