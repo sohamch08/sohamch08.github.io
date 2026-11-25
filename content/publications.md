@@ -1,5 +1,6 @@
 +++
 title = "Publications"
+inset_content = true
 url = "/publications/"
 weight = 1
 icon = "fa-solid fa-graduation-cap"

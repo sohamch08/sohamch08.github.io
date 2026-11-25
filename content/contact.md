@@ -1,5 +1,6 @@
 +++
 title = "Contact"
+inset_content = true
 url = "/contact/"
 weight = 6
 icon = "fa-solid fa-envelope"

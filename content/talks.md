@@ -1,5 +1,6 @@
 +++
 title = "Talks & Events"
+inset_content = true
 url = "/projects-talks/"
 weight = 3
 icon = "fa-solid fa-microphone"

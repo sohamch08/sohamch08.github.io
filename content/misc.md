@@ -1,5 +1,6 @@
 +++
 title = "Miscellaneous"
+inset_content = true
 url = "/misc/"
 weight = 4
 icon = "fa-solid fa-briefcase"

@@ -35,22 +35,20 @@ body {
 #main-wrapper.site-wrapper {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 260px);
   min-height: 100dvh;
-  margin: 0 0 0 260px;
-  padding: 0 2rem;
 }
 
-#main-wrapper.site-wrapper > main,
-#main-wrapper.site-wrapper > header { width: 100%; max-width: 1320px; margin-inline: auto; }
+#main-wrapper.site-wrapper > .container { flex: 1; min-height: 0; }
+.site-wrapper > .content-inset { width: calc(100% - 4rem); }
+#main-wrapper.site-wrapper > header { width: calc(100% - 4rem); max-width: 1320px; margin-inline: auto; }
 #topbar-wrapper { background: transparent; border-bottom: 1px solid var(--site-rule); }
 #topbar-title { color: var(--site-text); font-family: inherit; }
 #sidebar-trigger { color: var(--site-accent); }
 #sidebar { border-right-color: var(--site-rule); }
 #sidebar a:hover { text-decoration: none; }
 
-#main-content { flex: 1; min-width: 0; padding: 2.5rem 0 1rem; line-height: 1.6; }
-.page { min-width: 0; }
+#main-content { min-width: 0; padding-block: 2.5rem 1rem; line-height: 1.6; }
+.page { min-width: 0; padding-inline: 0.25rem; }
 main h1.page-title { display: block; margin: 0 0 1.75rem; font-size: 2rem; font-weight: 600; line-height: 1.25; }
 main h1, main h2, main h3, main h4 {
   color: var(--site-accent);
@@ -102,11 +100,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--site-accent); o
 .site-modal { background: var(--site-bg); color: var(--site-text); border: 1px solid var(--site-rule); border-radius: 2px; box-shadow: 0 12px 48px #0006; }
 .site-modal h3 { color: var(--site-accent); font-family: inherit; }
 
-@media (min-width: 1650px) {
-  #main-wrapper.site-wrapper { width: calc(100% - 300px); margin-left: 300px; }
-}
 @media (max-width: 849px) {
-  #main-wrapper.site-wrapper { width: 100%; margin: 0; padding: 0 1.25rem; }
+  #main-wrapper.site-wrapper > header { width: calc(100% - 2.5rem); }
   #topbar { gap: 1rem; }
   #sidebar-trigger { flex: 0 0 2.75rem; min-height: 2.75rem; padding: 0; border: 0; text-align: left; }
   #sidebar-trigger .fa-fw { width: auto; }
