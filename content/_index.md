@@ -17,7 +17,7 @@ My primary research interests lie in Theoretical Computer Science. Broadly, I am
 - Algebraic Complexity Theory
 - Computational Complexity Theory
 
-Beyond research work, I enjoy typesetting my notes in LaTeX. It has become a favorite hobby of mine over the years. I have been using it for more than five years and have created a [custom theme](https://github.com/sohamch08/lumina) with which I typeset my lecture notes and reports.
+Beyond research work, I enjoy typesetting my notes in LaTeX and tinkering around my Linux Desktop.
 
 ## News
 

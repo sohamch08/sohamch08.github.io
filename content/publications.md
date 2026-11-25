@@ -8,7 +8,7 @@ toc = true
 styles = ["publications"]
 +++
 
-{{< publication title="Deterministic list decoding of Reed-Solomon codes" authors="Joint work with [Prahladh Harsha](https://www.tifr.res.in/~prahladh/) (TIFR) and [Mrinal Kumar](https://mrinalkr.bitbucket.io) (TIFR)" details="[STOC 2026](https://dl.acm.org/doi/10.1145/3798129.3800908)" pdf="/assets/deterministicGS.pdf" eccc="https://eccc.weizmann.ac.il/report/2025/170/" arxiv="https://arxiv.org/abs/2511.05176" >}}
+{{< publication title="Deterministic list decoding of Reed-Solomon codes" authors="Joint work with [Prahladh Harsha](https://www.tifr.res.in/~prahladh/) (TIFR) and [Mrinal Kumar](https://mrinalkr.bitbucket.io) (TIFR)" details="Accepted in [STOC 2026](https://dl.acm.org/doi/10.1145/3798129.3800908)" pdf="/assets/deterministicGS.pdf" eccc="https://eccc.weizmann.ac.il/report/2025/170/" arxiv="https://arxiv.org/abs/2511.05176" doi="https://dl.acm.org/doi/10.1145/3798129.3800908">}}
 We show that Reed-Solomon codes of dimension $k$ and block length $n$ over any finite field $\mathbb{F}$ can be _deterministically_ list decoded from agreement $\sqrt{(k-1)n}$ in time $\text{poly}(n, \log |\mathbb{F}|)$.
 
 Prior to this work, the list decoding algorithms for Reed-Solomon codes, from the celebrated results of Sudan and Guruswami-Sudan, were either randomized with time complexity $\text{poly}(n, \log |\mathbb{F}|)$ or were deterministic with time complexity depending polynomially on the characteristic of the underlying field. In particular, over a prime field $\mathbb{F}$, no deterministic algorithms running in time $\text{poly}(n, \log |\mathbb{F}|)$ were known for this problem.

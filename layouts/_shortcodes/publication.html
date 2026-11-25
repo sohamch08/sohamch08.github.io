@@ -3,7 +3,7 @@
     <div>{{ .Page.RenderString (dict "display" "inline") (.Get "title") }}</div>
     <div class="publication-buttons">
       <button type="button" class="abstract-box" onclick="openModal(this)" aria-haspopup="dialog">Abstract</button>
-      {{ range $name := slice "pdf" "eccc" "arxiv" "repo" }}
+      {{ range $name := slice "pdf" "eccc" "arxiv" "doi" "repo" }}
         {{ with $.Get $name }}<a class="pdf-box" href="{{ . }}" target="_blank" rel="noopener">{{ if eq $name "arxiv" }}Arxiv{{ else if eq $name "repo" }}Repo{{ else }}{{ upper $name }}{{ end }}</a>{{ end }}
       {{ end }}
     </div>
