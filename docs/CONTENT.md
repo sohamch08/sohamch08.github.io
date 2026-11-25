@@ -1,7 +1,7 @@
 # Writing page content
 
 Write headings, paragraphs, links, and lists in Markdown. Hugo's page templates
-turn their structure into the existing layouts. Keep HTML in `layouts/`.
+turn their structure into the existing layouts. Keep layout HTML in `layouts/`.
 
 ## Home
 
@@ -19,16 +19,17 @@ Use `type = "ta"` for the classroom board icon on teaching assistant announcemen
 Hugo sorts the entries by month for both the homepage
 and the full archive at `/news/`.
 
-In the `text` field, ordinary Markdown links appear in mint. Wrap a
-conference name, fellowship, or other milestone in `**double asterisks**`
-for soft gold. To link a conference name, use `[**STOC 2026**](https://acm-stoc.org/stoc2026/)`.
-Dates and icons are gray automatically.
+In the `text` field, use `<span class='gold'>STOC 2026</span>` for conferences
+and milestones, and `<span class='blue'>IIT Hyderabad</span>` for institutions
+and seminar venues. To color a link, put the Markdown link inside the span,
+as in `<span class='gold'>[STOC 2026](https://acm-stoc.org/stoc2026/)</span>`.
+Ordinary links are mint. Dates and icons are gray.
 
 ```toml
 [[params.entries]]
 date = "2026-06"
 type = "talk"
-text = "I presented our [paper on Reed-Solomon codes](/publications/) at **STOC 2026**."
+text = "I presented our [paper on Reed-Solomon codes](/publications/) at <span class='gold'>STOC 2026</span>."
 ```
 
 ## Contact
