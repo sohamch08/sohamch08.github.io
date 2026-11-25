@@ -11,7 +11,7 @@
       <li class="nav-item{{ if .IsHome }} active{{ end }}">
         <a href="{{ site.Home.RelPermalink }}" class="nav-link"><i class="fa-fw fas fa-home"></i><span>HOME</span></a>
       </li>
-      {{ range site.RegularPages.ByWeight }}
+      {{ range where site.RegularPages.ByWeight "Params.hide_from_sidebar" "ne" true }}
       <li class="nav-item{{ if eq .RelPermalink $.RelPermalink }} active{{ end }}">
         <a href="{{ .RelPermalink }}" class="nav-link"><i class="fa-fw {{ .Params.icon }}"></i><span>{{ .Title | upper }}</span></a>
       </li>

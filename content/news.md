@@ -1,8 +1,7 @@
 +++
 title = "News"
 layout = "news"
-weight = -1
-icon = "fa-solid fa-newspaper"
+hide_from_sidebar = true
 styles = ["news"]
 new_tab_links = ["https://simons.berkeley.edu/programs/pseudorandomness-high-dimensional-expansion"]
 
